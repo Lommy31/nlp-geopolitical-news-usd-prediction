@@ -1,4 +1,4 @@
-# NLP Geopolitical News and USD-IDR Prediction
+# NLP Geopolitical News and USD Prediction
 
 This project investigates whether information contained in global geopolitical and economic news can help explain and predict movements in the USD-IDR exchange rate.
 
@@ -10,7 +10,7 @@ Natural Language Processing (NLP) techniques are used to extract useful informat
 
 ## Project Objective
 
-The main objective of this project is to investigate whether global geopolitical and economic news provides useful information for analyzing and predicting fluctuations in the USD-IDR exchange rate.
+The main objective of this project is to investigate whether global geopolitical and economic news provides useful information for analyzing and predicting fluctuations in the USD exchange rate.
 
 The project aims to:
 - Collect news articles related to major geopolitical and economic events.
