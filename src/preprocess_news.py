@@ -6,7 +6,7 @@ from bisect import bisect_left
 
 import pandas as pd
 
-NEWS_PATH = "data/raw/news_scraped.csv"
+NEWS_PATH = "data/raw/news_merged.csv"
 FX_PATH = "data/processed/usd_idr_jisdor_clean.csv"
 OUTPUT_PATH = "data/processed/news_clean.csv"
 
@@ -24,20 +24,16 @@ BLOCKED_DOMAINS = {
     "investorplace.com",
 }
 
-# single-company stock picks / earnings calls aren't geopolitical news even
-# when they happen to mention "dollar" or "Fed"
+# single-company stock picks / earnings calls aren't geopolitical news
 SINGLE_COMPANY_MARKERS = re.compile(r"\((?:NYSE|NASDAQ):|earnings call transcript", re.IGNORECASE)
 
-# press releases mirrored onto a domain that isn't itself in BLOCKED_DOMAINS
+# press releases mirrored onto a domain not itself in BLOCKED_DOMAINS
 WIRE_SERVICE_MARKERS = ("/prnewswire/", "/business wire/", "globe newswire", "accesswire")
 
-# placeholder-generator vocabulary -- essentially never appears in real English
-# news, so a hit means a broken page (empty CMS block) got scraped instead
+# placeholder-generator vocabulary, a hit means a broken page got scraped
 LOREM_IPSUM_MARKERS = ("pellentesque", "ullamcorper", "consectetur", "adipiscing")
 
-# generic single words like "tariff" or "bank" match too much unrelated content
-# (a utility tariff, a pharma trial, a mortgage startup) -- anchor each topic
-# to the specific phrases its own query was built around
+# generic words like "tariff" or "bank" match too much unrelated content
 ANCHOR_TERMS = {
     "US Fiscal Stimulus + Rising Treasury Yields": ("treasury yield", "fiscal stimulus", "federal reserve", "inflation"),
     "Federal Reserve Monetary Policy": ("federal reserve", "the fed", "jerome powell", "interest rate"),
@@ -86,13 +82,22 @@ def is_placeholder_content(text):
     return any(m in text_lower for m in LOREM_IPSUM_MARKERS)
 
 
+def fix_spaced_punctuation(text):
+    # collapses scraping artifacts like "U . S ." or "6 . 9 %"
+    text = re.sub(r"\b([A-Z])\s+\.(?=\s+[A-Z]\s+\.|\s|$)", r"\1.", text)
+    text = re.sub(r"(\d)\s+\.\s+(\d)", r"\1.\2", text)
+    text = re.sub(r"(?<=[A-Z]\.)\s+(?=[A-Z]\.)", "", text)
+    return re.sub(r"\s+([.,;:!?%])", r"\1", text)
+
+
 def clean_text(text):
     text = unicodedata.normalize("NFKC", str(text))
     junk = BOILERPLATE_LINES + PAYWALL_MARKERS
     lines = [line.strip() for line in text.split("\n")]
     lines = [line for line in lines if line and not any(m in line.lower() for m in junk)]
     text = "\n\n".join(lines)
-    return re.sub(r"[ \t]+", " ", text).strip()
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    return fix_spaced_punctuation(text)
 
 
 def is_single_company_content(text):
@@ -130,6 +135,8 @@ def main():
 
     df = pd.read_csv(NEWS_PATH)
     print(f"loaded {len(df)} raw articles")
+
+    df["Title"] = df["Title"].apply(fix_spaced_punctuation)
 
     df = df[~df["Source"].isin(BLOCKED_DOMAINS)]
     print(f"{len(df)} left after dropping press-release / stock-picking domains")

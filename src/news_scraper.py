@@ -8,8 +8,7 @@ from datetime import datetime, timedelta
 import requests
 from bs4 import BeautifulSoup
 
-# a few already-saved rows have oversized Text fields from before MAX_TEXT_LENGTH
-# existed; raise the limit so resuming can still read past them
+# some saved rows predate MAX_TEXT_LENGTH and exceed the default field limit
 csv.field_size_limit(sys.maxsize)
 
 GDELT_ENDPOINT = "https://api.gdeltproject.org/api/v2/doc/doc"
@@ -26,8 +25,7 @@ END_DATE = datetime(2026, 9, 1)
 if "--probe" in sys.argv:
     START_DATE = END_DATE - timedelta(days=60)
 
-# task-recommended outlets only, so we're not pulling from wire-mirrors, press
-# release farms or stock-picking blogs that just happen to mention "dollar"
+# task-recommended outlets only, avoids wire-mirrors and press release farms
 DOMAIN_ALLOWLIST = ["cnbc.com", "reuters.com", "apnews.com", "tradingeconomics.com"]
 
 # add outlets here if DOMAIN_ALLOWLIST doesn't have enough volume across 5 years
@@ -35,12 +33,9 @@ FALLBACK_DOMAINS = ["bbc.com", "aljazeera.com"]
 
 MAX_RECORDS_PER_CALL = 250
 MAX_ARTICLES_PER_EVENT = 200
-MAX_ARTICLES_PER_WINDOW = 5  # caps how many a single window can contribute, so
-                              # one dense period (e.g. 2021-2022) can't eat the
-                              # whole per-event budget before later years get a turn
+MAX_ARTICLES_PER_WINDOW = 5  # prevents one dense period from using the whole budget
 MIN_TEXT_LENGTH = 200
-MAX_TEXT_LENGTH = 20_000  # a real news article is a few thousand chars; way past
-                           # this means extract_text() swept up a broken page
+MAX_TEXT_LENGTH = 20_000  # past this, extract_text() likely swept up a broken page
 GDELT_DELAY = 1.2
 FETCH_DELAY = 1.0
 OUTPUT_PATH = "data/raw/news_scraped_v2.csv"
@@ -155,8 +150,7 @@ def query_gdelt(query, start, end):
         response.raise_for_status()
         return response.json().get("articles", [])
     except (requests.RequestException, ValueError) as e:
-        # distinguish a real "no articles" from a failed/blocked request --
-        # otherwise both look like 0 candidates in the log
+        # surfaces failed/blocked requests instead of looking like 0 results
         print(f"  request failed for window {start.date()}-{end.date()}: {e}")
         return []
 

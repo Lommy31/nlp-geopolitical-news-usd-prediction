@@ -1,39 +1,59 @@
-# NLP Geopolitical News and USD Prediction
+# Geopolitical Sentiment and USD/IDR Exchange Rate Dynamics: An NLP-Driven Time-Series Analysis
 
-This project investigates whether information contained in global geopolitical and economic news can help explain and predict movements in the USD-IDR exchange rate.
+## Overview
 
-The project combines two main data sources:
-1. News articles related to major geopolitical and economic events.
-2. Daily USD-IDR exchange rate data.
+This project investigates whether global geopolitical and economic news carries information that helps explain and predict movements in the USD/IDR exchange rate. It combines two data streams: news articles covering major geopolitical and economic events, and daily USD/IDR exchange rate data, then uses NLP techniques to extract structured signal from the news text for analysis against exchange rate movements.
 
-Natural Language Processing (NLP) techniques are used to extract useful information from news text, which is then analyzed together with historical exchange-rate movements.
+## Objective
 
-## Project Objective
+- Collect news articles covering major geopolitical and economic events from 2021 to 2026.
+- Collect daily USD/IDR exchange rate data from Bank Indonesia for the same period.
+- Clean and filter both datasets to remove noise, duplicates, and irrelevant content.
+- Align news events with exchange rate observations on a shared trading-day calendar.
+- Apply NLP techniques to extract information from news articles for use in later modeling stages.
 
-The main objective of this project is to investigate whether global geopolitical and economic news provides useful information for analyzing and predicting fluctuations in the USD exchange rate.
+## Data Sources
 
-The project aims to:
-- Collect news articles related to major geopolitical and economic events.
-- Collect daily USD-IDR exchange-rate data.
-- Prepare and organize the news and exchange-rate datasets for further analysis.
-- Apply NLP techniques to extract information from news articles.
-- Align news events with exchange-rate movements based on their dates.
-- Develop and evaluate a predictive approach using information extracted from news.
-- Compare the performance of models using news information with appropriate non-textual baselines.
+**News data** is collected via the GDELT Project's DOC 2.0 API, which indexes hundreds of thousands of global news sources and supports keyword search over a specified date range. Eleven topic queries cover Fed policy, US-China/Taiwan tensions, US fiscal stimulus, banking crises, US elections, trade tariffs, Indonesian Rupiah/Bank Indonesia policy, the Russia-Ukraine war, Middle East conflict and oil shocks, BOJ/ECB policy shifts, and emerging market currency contagion.
 
-## Dataset
+**Exchange rate data** is the JISDOR (Jakarta Interbank Spot Dollar Rate), Bank Indonesia's official USD/IDR reference rate, exported from BI's public statistics portal (`https://www.bi.go.id/id/statistik/informasi-kurs/jisdor/Default.aspx`). JISDOR is published only on days the market is open, so it also serves as the authoritative trading-day calendar used later for alignment.
 
-The news dataset contains selected articles related to major geopolitical and economic events that may influence USD movements.
+## Repository Structure
 
-The dataset contains 10 selected articles covering events from 2021 to 2025, including:
-- US fiscal stimulus and Treasury yields
-- Federal Reserve tapering
-- US-China and Taiwan tensions
-- Pelosi's Taiwan visit
-- Silicon Valley Bank (SVB) banking crisis
-- Federal Reserve policy
-- US presidential election
-- Trump tariffs and global trade tensions
-- US-China trade escalation
+```
+data/
+  raw/         raw scraped news and the JISDOR export
+  processed/   cleaned and aligned datasets, ready for analysis
+src/
+  news_scraper.py      scrapes news candidates from GDELT and fetches article text
+  merge_news_data.py   merges and deduplicates raw scrape files into one file
+  preprocess_fx.py      cleans the JISDOR exchange rate data
+  preprocess_news.py    cleans, filters, and temporally aligns the news data
+report/
+  pipeline_writeup.md   detailed methodology writeup
+  task1_workflow.mmd     workflow diagram (Mermaid)
+```
 
-The article text was collected from accessible news articles or accessible versions of the referenced articles.
+## How to Run
+
+```bash
+pip install -r requirements.txt
+python3 src/preprocess_fx.py
+python3 src/merge_news_data.py
+python3 src/preprocess_news.py
+```
+
+Running `news_scraper.py` first is only needed if new raw data is being collected; it is resumable and safe to interrupt. `preprocess_fx.py` must run before `preprocess_news.py`, since the news cleaning step depends on the trading-day calendar derived from the exchange rate data.
+
+## Current Dataset
+
+- `data/processed/usd_idr_jisdor_clean.csv`: 1,202 daily USD/IDR observations, 1 September 2021 to 1 September 2026.
+- `data/processed/news_clean.csv`: 388 cleaned, deduplicated, and date-aligned news articles across 7 event categories, covering the same period.
+
+See `report/pipeline_writeup.md` for a full explanation of the scraping approach, cleaning pipeline, and temporal alignment strategy, including the reasoning behind each design decision.
+
+## Group Members
+
+- Deira Aisya Refani (24/532821/PA/22539)
+- Nareswari Ayu Prabowo (24/532991/PA/22558)
+- Yohana Butar Butar (24/546690/PA/23212)
