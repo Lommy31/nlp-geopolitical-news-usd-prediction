@@ -25,65 +25,68 @@ END_DATE = datetime(2026, 9, 1)
 if "--probe" in sys.argv:
     START_DATE = END_DATE - timedelta(days=60)
 
-# task-recommended outlets only, avoids wire-mirrors and press release farms
-DOMAIN_ALLOWLIST = ["cnbc.com", "reuters.com", "apnews.com", "tradingeconomics.com"]
-
-# add outlets here if DOMAIN_ALLOWLIST doesn't have enough volume across 5 years
+# task-recommended outlets, widened with FALLBACK_DOMAINS -- the strict 4-domain
+# list left Russia-Ukraine/EM-contagion/Middle-East queries with almost no results
 FALLBACK_DOMAINS = ["bbc.com", "aljazeera.com"]
+DOMAIN_ALLOWLIST = ["cnbc.com", "reuters.com", "apnews.com", "tradingeconomics.com"] + FALLBACK_DOMAINS
 
 MAX_RECORDS_PER_CALL = 250
 MAX_ARTICLES_PER_EVENT = 200
 MAX_ARTICLES_PER_WINDOW = 5  # prevents one dense period from using the whole budget
 MIN_TEXT_LENGTH = 200
 MAX_TEXT_LENGTH = 20_000  # past this, extract_text() likely swept up a broken page
-GDELT_DELAY = 1.2
+GDELT_DELAY = 5.5  # GDELT's own API tells you to keep it to 1 request per 5s
 FETCH_DELAY = 1.0
 OUTPUT_PATH = "data/raw/news_scraped_v2.csv"
 FIELDNAMES = ["Date", "Title", "Source", "URL", "Event", "Keyword", "Category", "Text"]
 
+# NOTE: the 7 well-covered queries (Fiscal Stimulus, Fed Policy, US-China,
+# Banking Crisis, US Election, Trump Tariffs, Indonesian Rupiah) are commented
+# out for this run so scraping time goes entirely to the 4 thin categories
+# below. Restore them before doing a full from-scratch run.
 QUERIES = [
-    {
-        "event": "US Fiscal Stimulus + Rising Treasury Yields",
-        "category": "Fiscal Policy / Interest Rates",
-        "keyword": "US fiscal stimulus; Treasury yields; USD; inflation",
-        "query": '(dollar OR USD) ("treasury yields" OR "fiscal stimulus" OR inflation) sourcelang:eng',
-    },
-    {
-        "event": "Federal Reserve Monetary Policy",
-        "category": "Monetary Policy",
-        "keyword": "Federal Reserve; rate cut; rate hike; Powell; interest rates",
-        "query": '(dollar OR USD) ("Federal Reserve" OR "interest rate" OR Powell OR tapering) sourcelang:eng',
-    },
-    {
-        "event": "US-China / Taiwan Tensions",
-        "category": "Geopolitical Tension",
-        "keyword": "US-China tensions; Taiwan; geopolitics; USD",
-        "query": '(dollar OR USD) ("US-China" OR Taiwan OR "South China Sea") sourcelang:eng',
-    },
-    {
-        "event": "Banking & Financial Crisis",
-        "category": "Banking / Financial Crisis",
-        "keyword": "banking crisis; bank collapse; SVB; Federal Reserve; USD",
-        "query": '(dollar OR USD) ("bank collapse" OR "banking crisis" OR SVB) sourcelang:eng',
-    },
-    {
-        "event": "US Presidential Election",
-        "category": "US Election / Fiscal & Trade Policy",
-        "keyword": "US presidential election; Trump; election; USD",
-        "query": '(dollar OR USD) ("presidential election" OR "US election") sourcelang:eng',
-    },
-    {
-        "event": "Trump Tariffs / Global Trade War",
-        "category": "Trade Policy / Geopolitical",
-        "keyword": "Trump tariffs; trade war; China; USD; markets",
-        "query": '(dollar OR USD) (tariff OR "trade war") sourcelang:eng',
-    },
-    {
-        "event": "Indonesian Rupiah / Bank Indonesia Policy",
-        "category": "Domestic Monetary Policy",
-        "keyword": "Bank Indonesia; rupiah; IDR; BI rate",
-        "query": '(rupiah OR IDR OR "Bank Indonesia") (dollar OR USD OR "exchange rate") sourcelang:eng',
-    },
+    # {
+    #     "event": "US Fiscal Stimulus + Rising Treasury Yields",
+    #     "category": "Fiscal Policy / Interest Rates",
+    #     "keyword": "US fiscal stimulus; Treasury yields; USD; inflation",
+    #     "query": '(dollar OR USD) ("treasury yields" OR "fiscal stimulus" OR inflation) sourcelang:eng',
+    # },
+    # {
+    #     "event": "Federal Reserve Monetary Policy",
+    #     "category": "Monetary Policy",
+    #     "keyword": "Federal Reserve; rate cut; rate hike; Powell; interest rates",
+    #     "query": '(dollar OR USD) ("Federal Reserve" OR "interest rate" OR Powell OR tapering) sourcelang:eng',
+    # },
+    # {
+    #     "event": "US-China / Taiwan Tensions",
+    #     "category": "Geopolitical Tension",
+    #     "keyword": "US-China tensions; Taiwan; geopolitics; USD",
+    #     "query": '(dollar OR USD) ("US-China" OR Taiwan OR "South China Sea") sourcelang:eng',
+    # },
+    # {
+    #     "event": "Banking & Financial Crisis",
+    #     "category": "Banking / Financial Crisis",
+    #     "keyword": "banking crisis; bank collapse; SVB; Federal Reserve; USD",
+    #     "query": '(dollar OR USD) ("bank collapse" OR "banking crisis" OR SVB) sourcelang:eng',
+    # },
+    # {
+    #     "event": "US Presidential Election",
+    #     "category": "US Election / Fiscal & Trade Policy",
+    #     "keyword": "US presidential election; Trump; election; USD",
+    #     "query": '(dollar OR USD) ("presidential election" OR "US election") sourcelang:eng',
+    # },
+    # {
+    #     "event": "Trump Tariffs / Global Trade War",
+    #     "category": "Trade Policy / Geopolitical",
+    #     "keyword": "Trump tariffs; trade war; China; USD; markets",
+    #     "query": '(dollar OR USD) (tariff OR "trade war") sourcelang:eng',
+    # },
+    # {
+    #     "event": "Indonesian Rupiah / Bank Indonesia Policy",
+    #     "category": "Domestic Monetary Policy",
+    #     "keyword": "Bank Indonesia; rupiah; IDR; BI rate",
+    #     "query": '(rupiah OR IDR OR "Bank Indonesia") (dollar OR USD OR "exchange rate") sourcelang:eng',
+    # },
     {
         "event": "Russia-Ukraine War & Sanctions",
         "category": "Geopolitical Conflict / Sanctions",
