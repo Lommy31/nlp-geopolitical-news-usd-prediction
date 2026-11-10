@@ -1,0 +1,13 @@
+article_id,status,reason
+1,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+28,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+38,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+48,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+63,legitimate_forward_date,Tanggal berlakunya penurunan tarif IT Juli 2022 dibicarakan prospektif pada 2021; bukan bukti leakage.
+78,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+108,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+121,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+128,legitimate_forward_date,Jadwal penghentian LIBOR Juni 2023 dibicarakan pada 2022; bukan bukti leakage.
+190,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+192,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.
+212,confirmed_later_related_content,Cuplikan berita/kartu rekomendasi lain bertanggal sesudah tanggal artikel; konteks diperiksa pada future_date_flags.csv.

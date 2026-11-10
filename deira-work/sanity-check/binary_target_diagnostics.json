@@ -1,0 +1,106 @@
+{
+  "computed_on": "2026-11-10",
+  "scope": "Diagnostics only; no pipeline implementation, training, or performance evaluation.",
+  "input_sha256": {
+    "data/processed/news_clean.csv": "81ff1e273e49d678fc86f0377c78b08be91004a3a248e660d58d6ec73176c4b1",
+    "data/processed/usd_idr_jisdor_clean.csv": "faf181306cdb65c1d74f913ef698fe45008e721969372bb17f79175d20fe87a0"
+  },
+  "fx_rows": 1202,
+  "adjacent_fixing_pairs": 1201,
+  "next_fixing_class_counts": {
+    "DOWN": 523,
+    "UP": 665,
+    "FLAT": 13
+  },
+  "nonflat_pairs_before_feature_warmup": 1188,
+  "global_nonflat_majority_fraction_not_a_fitted_baseline": 0.5597643097643098,
+  "news_articles": 435,
+  "calendar_aligned_news_days_before_timestamp_validation": 212,
+  "single_article_news_days": 134,
+  "multiple_article_news_days": 78,
+  "flat_pairs": [
+    {
+      "decision_date": "2021-11-23",
+      "target_date": "2021-11-24",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2021-11-25",
+      "target_date": "2021-11-26",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2021-12-16",
+      "target_date": "2021-12-17",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2022-05-10",
+      "target_date": "2022-05-11",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2022-07-14",
+      "target_date": "2022-07-15",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2023-08-16",
+      "target_date": "2023-08-18",
+      "target": "FLAT",
+      "realized_target_gap_days": 2
+    },
+    {
+      "decision_date": "2023-12-05",
+      "target_date": "2023-12-06",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2025-08-04",
+      "target_date": "2025-08-05",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2025-10-14",
+      "target_date": "2025-10-15",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2025-12-02",
+      "target_date": "2025-12-03",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2026-06-04",
+      "target_date": "2026-06-05",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2026-06-18",
+      "target_date": "2026-06-19",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    },
+    {
+      "decision_date": "2026-07-21",
+      "target_date": "2026-07-22",
+      "target": "FLAT",
+      "realized_target_gap_days": 1
+    }
+  ],
+  "important_limitations": [
+    "Class counts precede rolling-feature warmup, timestamp screening, and temporal splits.",
+    "Date-only news alignment is not verified information availability.",
+    "Flat rows are recommended for exclusion from supervised labels only; the master calendar remains intact."
+  ]
+}
