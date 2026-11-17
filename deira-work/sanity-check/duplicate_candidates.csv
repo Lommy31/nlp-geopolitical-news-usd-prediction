@@ -1,8 +1,0 @@
-article_id_a,article_id_b,title_jaccard,exact_normalized_text,date_a,date_b,title_a,title_b
-65,69,0.9166666666666666,False,2021-12-24,2021-12-25,China not likely to fulfil trade commitments to US as year ends,China not likely to fulfil its trade commitments to US as year ends
-104,105,0.8181818181818182,True,2022-03-27,2022-03-27,"Lebanon political stalemate, accounting rules distort Bank of Sharjah financials","Lebanon political stalemate, accounting rules hit Bank of Sharjah financials"
-106,132,0.7692307692307693,False,2022-03-30,2022-03-30,"US growth healthy in Q4, revised slightly lower to 6.9% - Business News",US growth in Q4 revised slightly lower to 6.9%
-115,132,0.75,False,2022-03-30,2022-03-30,"US growth in Q4 revised lower to 6.9%, slower growth to come",US growth in Q4 revised slightly lower to 6.9%
-123,125,0.9,False,2022-03-30,2022-03-30,Global markets in Q1: Invasion and inversion shake world order,Markets in Q1: Invasion and inversion shake world order
-143,145,0.9,False,2022-09-08,2022-09-08,Asia southern flank shines in fight vs surging dollar,Analysis - Asia southern flank shines in fight vs surging dollar
-303,304,0.8333333333333334,False,2025-02-12,2025-02-12,World News: South Africa G20 ambitions bump up against reality of Trump,South Africa G20 ambitions bump up against reality of Trump

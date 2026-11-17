@@ -1,0 +1,291 @@
+{
+  "schema_version": 2,
+  "format": "csv",
+  "nested_json_columns": [
+    "articles",
+    "fold_roles"
+  ],
+  "nested_column_usage": "Decode articles and fold_roles with json.loads after pandas.read_csv, or use load_split/load_fold from splitting.py.",
+  "corpus": "original_plus_cnbc",
+  "created_at": "2026-11-15T19:41:28.172013+07:00",
+  "unit": "one eligible JISDOR fixing decision per row",
+  "label": {
+    "column": "y",
+    "1": "USD_IDR_UP",
+    "0": "USD_IDR_DOWN",
+    "flat": "excluded after full-calendar feature/label calculation"
+  },
+  "features": {
+    "market": [
+      "log_return_t",
+      "return_lag1",
+      "return_lag2",
+      "return_lag3",
+      "return_lag5",
+      "volatility_5",
+      "volatility_20",
+      "ma_ratio_5",
+      "ma_ratio_20",
+      "momentum_5",
+      "momentum_10",
+      "rsi_14",
+      "input_gap_days",
+      "decision_weekday"
+    ],
+    "availability": [
+      "n_berita",
+      "has_news"
+    ],
+    "numeric_predictors": [
+      "log_return_t",
+      "return_lag1",
+      "return_lag2",
+      "return_lag3",
+      "return_lag5",
+      "volatility_5",
+      "volatility_20",
+      "ma_ratio_5",
+      "ma_ratio_20",
+      "momentum_5",
+      "momentum_10",
+      "rsi_14",
+      "input_gap_days",
+      "decision_weekday",
+      "n_berita",
+      "has_news"
+    ],
+    "exclude_from_numeric_predictors": [
+      "Date",
+      "target_date",
+      "calendar_index",
+      "USD_IDR",
+      "y",
+      "articles",
+      "fold_roles"
+    ],
+    "text_inputs": {
+      "tfidf": "articles[].text_tfidf",
+      "word2vec": "articles[].tokens_word2vec",
+      "transformer": "articles[].text_transformer"
+    }
+  },
+  "article_metadata_is_audit_only": [
+    "article_id",
+    "source_date",
+    "title",
+    "source",
+    "url",
+    "corpus"
+  ],
+  "preprocessing": {
+    "alignment": "first strictly later JISDOR date",
+    "geopolitical_policy": "audit_only",
+    "text_span": "headline plus first 180 cleaned body words",
+    "word2vec_lowercase": false,
+    "empty_news": "articles=[]; n_berita=0; has_news=0; no carry-forward",
+    "aggregation": "mean per article/window; preserve article vectors for attention",
+    "fit_rule": "Fit vocabulary, IDF, SVD, scalers and other learned transformations only on the selected training split/fold.",
+    "quarantine_source_sha256": "81ff1e273e49d678fc86f0377c78b08be91004a3a248e660d58d6ec73176c4b1",
+    "quarantined_article_ids": [
+      "0f9f0a7c4020acc88c57_0",
+      "12a3f1215a3512cc1501_0",
+      "2c753ace2e314dab13af_0",
+      "30eb28a4572d1328b51b_0",
+      "525c68238dd09c71cc0e_0",
+      "6771dcf4c59508bb70b1_0",
+      "6c85372d11541f236d86_0",
+      "96b49d2c7e13508b3d93_0",
+      "b5f636597d7a698dacfc_0",
+      "d807bbfe1b00e188dba0_0"
+    ]
+  },
+  "splitting": {
+    "method": "last development fold train/val plus existing final-20%-calendar test",
+    "split_by": "JISDOR fixing date, never articles",
+    "files": {
+      "train": {
+        "rows": 772,
+        "first_date": "2021-09-29",
+        "last_date": "2024-12-12",
+        "up": 437,
+        "down": 335,
+        "articles": 10865,
+        "news_days": 772
+      },
+      "val": {
+        "rows": 158,
+        "first_date": "2024-12-16",
+        "last_date": "2025-08-26",
+        "up": 79,
+        "down": 79,
+        "articles": 1945,
+        "news_days": 158
+      },
+      "test": {
+        "rows": 235,
+        "first_date": "2025-08-29",
+        "last_date": "2026-08-31",
+        "up": 137,
+        "down": 98,
+        "articles": 3535,
+        "news_days": 235
+      }
+    },
+    "folds": {
+      "1": {
+        "train": {
+          "rows": 453,
+          "first_date": "2021-09-29",
+          "last_date": "2023-08-15",
+          "up": 260,
+          "down": 193,
+          "articles": 6759,
+          "news_days": 453
+        },
+        "val": {
+          "rows": 158,
+          "first_date": "2023-08-21",
+          "last_date": "2024-04-19",
+          "up": 94,
+          "down": 64,
+          "articles": 2105,
+          "news_days": 158
+        }
+      },
+      "2": {
+        "train": {
+          "rows": 612,
+          "first_date": "2021-09-29",
+          "last_date": "2024-04-19",
+          "up": 355,
+          "down": 257,
+          "articles": 8886,
+          "news_days": 612
+        },
+        "val": {
+          "rows": 159,
+          "first_date": "2024-04-23",
+          "last_date": "2024-12-12",
+          "up": 81,
+          "down": 78,
+          "articles": 1960,
+          "news_days": 159
+        }
+      },
+      "3": {
+        "train": {
+          "rows": 772,
+          "first_date": "2021-09-29",
+          "last_date": "2024-12-12",
+          "up": 437,
+          "down": 335,
+          "articles": 10865,
+          "news_days": 772
+        },
+        "val": {
+          "rows": 158,
+          "first_date": "2024-12-16",
+          "last_date": "2025-08-26",
+          "up": 79,
+          "down": 79,
+          "articles": 1945,
+          "news_days": 158
+        }
+      }
+    },
+    "cv_usage": "Concatenate train and val, then select fold_roles[str(fold)] equal to train or val. Test rows are unused in every development fold.",
+    "omitted_eligible_boundary_dates": [
+      "2024-12-13",
+      "2025-08-27",
+      "2025-08-28"
+    ],
+    "refit_usage": "train+val contains 930 decisions; the previous final-fit rule retained 932, including additional development boundary decisions not exported here."
+  },
+  "input_sha256": {
+    "data/processed/news_clean.csv": "81ff1e273e49d678fc86f0377c78b08be91004a3a248e660d58d6ec73176c4b1",
+    "data/raw/news_cnbc.csv": "9f82463c1cb15cc3fec511fbc03a8204d8927ce8494b2ae58a7df588551f1824",
+    "data/processed/usd_idr_jisdor_clean.csv": "faf181306cdb65c1d74f913ef698fe45008e721969372bb17f79175d20fe87a0"
+  },
+  "corpus_counts": {
+    "original_processed": 435,
+    "original_aligned": 412,
+    "cnbc_raw": 20842,
+    "cnbc_new_unique_urls": 20690,
+    "cnbc_after_domain": 20690,
+    "cnbc_after_single_company": 20686,
+    "cnbc_after_wire_mirror": 20686,
+    "cnbc_after_placeholder": 20686,
+    "cnbc_after_anchor": 17436,
+    "cnbc_after_150_words": 17237,
+    "cnbc_after_title_dedup": 16360,
+    "cnbc_added_aligned": 16311,
+    "combined_aligned": 16723
+  },
+  "excluded_article_reasons": {
+    "cnbc_addition": {
+      "quality_review_required": 22,
+      "after_last_available_fixing": 13,
+      "insufficient_main_text": 7,
+      "exact_content_duplicate": 7
+    },
+    "original": {
+      "known_later_content_quarantine": 10,
+      "quality_review_required": 8,
+      "insufficient_main_text": 2,
+      "after_last_available_fixing": 2,
+      "exact_content_duplicate": 1
+    }
+  },
+  "code_sha256": {
+    "src/task_3/preprocessing/splitting.py": "2362127acd3ea217bde5965845e4cadc4a90adb15504df94a6e362167cb92e83",
+    "src/task_3/preprocessing/cleaning.py": "d86d4d379259b1fd3a1a098c9a5aaa45bf9c877a39422b1fbac8aac26960290a",
+    "src/task_3/preprocessing/merging.py": "abe04618c09dd8ecd9ce1abc1e28ae4a847373ebb23b97104be72b8e4461cb5d"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "build_command": "PYTHONNOUSERSITE=1 nlp_venv/bin/python src/task_3/preprocessing/splitting.py",
+  "final_test_status": "Original-corpus test was opened on 2026-11-11; this later corpus revision does not create an untouched holdout.",
+  "limitations": [
+    "Date-only alignment does not verify historical publication times or body versions.",
+    "Keyword/anchor screening is not human validation of geopolitical relevance.",
+    "Existing original-corpus model scores are not scores for this export."
+  ],
+  "verification": {
+    "passed": true,
+    "unique_decisions": 1165,
+    "unique_articles": 16345,
+    "shared_schema": true,
+    "chronological_boundaries": true,
+    "all_fold_members_preserved": true,
+    "article_assignments_counts_and_masks": true,
+    "finite_market_features": true,
+    "quarantine_preserved": true
+  },
+  "learned_transforms_fitted": false,
+  "models_trained": false,
+  "output_sha256": {
+    "train.csv": "8fb7897291af8590783214b29a405c07811f690f7d65893a06493a3b710adbf6",
+    "val.csv": "572fec98505f323c63411cfbacf839dd596418ba2da91440db01e4315a4e0038",
+    "test.csv": "e641206f73d214bf698c7eb5572ab4a8f6a7ae3bed55787ca6ef651a2ebe0502"
+  },
+  "code_formatting_update": {
+    "ast_unchanged": true,
+    "previous_code_sha256": {
+      "src/task_3/preprocessing/splitting.py": "a9d41fe1cb00d1e5b48d306d9fc39edd95f8f82be87140c9b7c71ff0461f8717",
+      "src/task_3/preprocessing/cleaning.py": "170c2c18fefcc19228073a48ec153c7b3510c3f9785dac18b71ddcad1adbaccc",
+      "src/task_3/preprocessing/merging.py": "9d76236b75f349a19c4dc3b35e2ff5977c3c207afcde15088988a46107f6c67f"
+    }
+  },
+  "code_header_update": {
+    "module_docstrings_removed": true,
+    "unused_future_import_removed": true,
+    "previous_code_sha256": {
+      "src/task_3/preprocessing/splitting.py": "c4426d101b5d54d0abc763f3d5698b91403f1dbca42655b5649d4afbefe996c0",
+      "src/task_3/preprocessing/cleaning.py": "1ece87a7e3411cc3591fa1fada431b2d045ff4b72892d6248056cd59cfaf49de",
+      "src/task_3/preprocessing/merging.py": "498c84c492c9603a80f48da67c2ce74c74fc82ee1f27bbc103c5e2f2ec41b198"
+    }
+  }
+}

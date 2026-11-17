@@ -1,0 +1,30 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+% Retain the assignment's A4 paper and one-inch margins on every side.
+% These margins override the IEEEtran class's default conference margins.
+\usepackage[a4paper,margin=1in]{geometry}
+\graphicspath{{figures/assets/}}
+
+% Compact the space below the authors across both columns.
+\makeatletter
+\def\@IEEEaftertitletext{\vspace{-16pt}}
+\makeatother
+
+% Reject a completed document longer than five pages, including references.
+% Content is never silently removed to meet the limit.
+\AddToHook{enddocument/afterlastpage}{%
+    \ifnum\ReadonlyShipoutCounter>5\relax
+        \PackageError{report}{Report exceeds the five-page limit}%
+        {Shorten the text, figures, tables, or references, then compile again.}%
+    \fi
+}
+
+% Visible marker for draft content that still needs verification.
+\newcommand{\todo}[1]{\textbf{[TODO: #1]}}
