@@ -1,0 +1,23 @@
+\section{Results and Discussion}
+\label{sec:results}
+Table~\ref{tab:ablation} reports validation and test scores. All validation scores are means over three folds and three seeds. Test scores are means over seeds from one refit on the 930 development decisions.
+
+\input{tables/ablation_results}
+
+\subsection{Validation}
+No model clearly beats the training prior. The prior has a validation log loss of 0.694. The best score, 0.689, comes from a tuned market-only model, and every text model falls between 0.691 and 0.705. Validation MCC stays between $-$0.009 and 0.077 for text models. R1 has the highest value, 0.077, but also the worst log loss, 0.705. The prespecified success gate was not met. FinBERT was selected for Level~3 because its mean log loss was lowest by less than 0.0002 over RoBERTa and the text-only model, so the choice carries little information.
+
+A label-permutation check gives a reference for how high validation MCC can go without signal. With training labels shuffled in blocks, FinBERT's validation MCC under the earlier MCC-based selection was 0.123 for the real labels and 0.113 on average for shuffled labels (2.5th to 97.5th percentile: 0.073 to 0.165). In 30\% of the 50 permutations the shuffled score matched or exceeded the real one. \todo{confirm that this permutation setting matches the final log-loss protocol.}
+
+\subsection{Test}
+Test scores stay near chance. MCC ranges from $-$0.087 (R1) to 0.080, and the 0.080 belongs to the tuned market-only model, which sees no text. Four models (the majority baseline, FinBERT concatenation, R4, and T1) have MCC 0.000 and accuracy 0.583, equal to the share of UP days. They predict UP on all 235 days in every seed. Accuracy therefore reflects class balance in this period, not skill.
+
+Paired intervals do not separate the conditions. The difference in MCC between FinBERT concatenation and market only is $-$0.086 to 0.081 (95\% interval), and against market plus availability it is $-$0.113 to 0.072. Both include zero. Among Level~3 variants, cross-attention against mean pooling gives an MCC difference of 0.000 to 0.046 and a log-loss difference of $-$0.005 to 0.003. The intervals are conditional on the fitted models, and the test period has been used by earlier experiments. We therefore read them as descriptive and do not claim a component effect. The last-direction rule reaches MCC 0.049, but its interval, $-$0.074 to 0.159, also includes zero.
+
+The gap between validation and test is largest for R1, from 0.077 to $-$0.087. Choosing checkpoints on 158-row folds likely adds optimism to validation scores, although our audit did not show it to be the only cause. Two other exploratory targets, next-fixing movement size and a five-fixing direction, also did not beat their baselines; FinBERT reached test MCC 0.007 and $-$0.051 respectively.
+
+\subsection{Exploratory fine-tuning}
+\todo{verify and attach artifacts; these runs were made in a Kaggle notebook outside the repository.} We trained the top two FinBERT layers jointly with a day-level head, using the same folds and test period. Plain FinBERT with market features reached a validation log loss of 0.690 and AUC 0.538. On test it predicted UP on every day, with MCC 0.000, AUC 0.498, and log loss 0.684, the same as the training prior (0.681) within noise. The A111 fusion on a fine-tuned encoder reached test MCC 0.023, AUC 0.486, and log loss 0.687, with UP predicted on 94\% of days. Neither run beats the baselines.
+
+\subsection{Limitations}
+The 930 development decisions are the effective sample, not the 16{,}723 articles, because all articles of a day share one label. The test period was opened for the original corpus on 2026-11-11 and for the combined corpus on 2026-11-15, and later exploratory checks reused it, so it is not an untouched holdout. News dates carry no time of day, article versions are unknown, and the encoders are frozen apart from the exploratory run. We test one corpus and one horizon, and we measure direction, not trading return. These limits restrict the conclusion to this setup. They do not show that news carries no information about USD/IDR.

@@ -1,6 +1,0 @@
-| Model | Condition | Validation folds | Runs/fold | Unique validation dates | MCC (mean ± fold SD) | Macro-F1 (mean ± fold SD) | Balanced accuracy (mean ± fold SD) | Accuracy (mean ± fold SD) | ROC-AUC (mean ± fold SD) | Brier (mean ± fold SD) | Log loss (mean ± fold SD) | ECE-10 (mean ± fold SD) |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| R1 | Market + TF-IDF/SVD + availability | 3 | 3 | 475 | 0.0926 ± 0.0598 | 0.5189 ± 0.0164 | 0.5404 ± 0.0239 | 0.5551 ± 0.0294 | 0.5439 ± 0.0106 | 0.2599 ± 0.0133 | 0.7306 ± 0.0456 | 0.0991 ± 0.0341 |
-| R2 | Market + pretrained Word2Vec + availability | 3 | 3 | 475 | 0.1130 ± 0.0834 | 0.5376 ± 0.0400 | 0.5521 ± 0.0379 | 0.5599 ± 0.0359 | 0.5562 ± 0.0439 | 0.2737 ± 0.0206 | 0.8565 ± 0.1625 | 0.1455 ± 0.0577 |
-| R3 | Market + FinBERT + availability (L1-d alias) | 3 | 3 | 475 | 0.1255 ± 0.0730 | 0.5418 ± 0.0341 | 0.5572 ± 0.0335 | 0.5662 ± 0.0320 | 0.5579 ± 0.0385 | 0.2698 ± 0.0226 | 0.9047 ± 0.2804 | 0.1372 ± 0.0755 |
-| R4 | Market + RoBERTa-base + availability | 3 | 3 | 475 | 0.0875 ± 0.0429 | 0.5150 ± 0.0127 | 0.5382 ± 0.0160 | 0.5502 ± 0.0197 | 0.5363 ± 0.0128 | 0.2771 ± 0.0165 | 0.8376 ± 0.0788 | 0.1393 ± 0.0385 |

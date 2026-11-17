@@ -1,0 +1,16 @@
+\section{Methodology}
+\label{sec:methodology}
+\subsection{Data, label, and timing}
+The market series contains the 1{,}202 JISDOR fixings from 2021-09-01 to 2026-09-01. The news corpus has 16{,}723 geopolitical articles, 412 from the original collection and 16{,}311 from CNBC. Each article is represented by its headline and the first 180 cleaned body words. An article enters the first fixing strictly later than its source date, because only dates, not publication times, are available. We therefore cannot verify historical publication times or article versions.
+
+The label is the sign of the next fixing against the current one. $y=1$ (UP) means USD/IDR rises, so the rupiah depreciates. Exact ties are unlabeled. The 14 market inputs are lagged returns, 5- and 20-day volatility, moving-average ratios, momentum, RSI, the gap since the last fixing, and the weekday. All use data up to the decision date. Two availability inputs record the log article count and whether any article is present. Empty windows get zero text vectors.
+
+\subsection{Splits and evaluation}
+The final 20\% of the calendar is the test period: 235 decisions from 2025-08-29 to 2026-08-31, of which 58.3\% are UP. The remaining 930 decisions form three expanding validation folds (train 453, 612, 772; validation 158, 159, 158). Rows at each boundary are purged so that no training label ends after the next period starts. Scalers, the TF-IDF vocabulary, and SVD are fitted on training rows only. After validation, each model is refit on all 930 decisions and scored once on the test period, with a fixed threshold of 0.5.
+
+MCC is the primary metric. We also report accuracy, ROC-AUC, and log loss, and we compare log loss with the training-class prior. Intervals come from paired circular block bootstrap with blocks of ten decisions and 1{,}000 resamples. They condition on the fitted models and omit selection uncertainty.
+
+\subsection{Models}
+Level~1 compares the training majority (L1-a), the last observed direction (L1-b), market features only (L1-c), market plus availability (L1-e), and market plus FinBERT content plus availability (L1-d). Level~2 swaps the text representation under simple concatenation: TF-IDF with SVD (R1), pretrained Word2Vec (R2)~\cite{mikolov2013}, FinBERT (R3)~\cite{araci2019}, and RoBERTa-base (R4)~\cite{liu2019}, plus a text-only model (T1). The transformers stay frozen, and each article vector is a mean over tokens, then over the day's articles. Level~3 fixes the validation-selected representation (R3) and adds a learned task query (A100), market-to-article cross-attention (A010), and a scalar gate on the text slots (A001). A111 combines all three.
+
+All trainable models use a 16-unit ReLU layer, float64 Adam, batch size 32, and seeds 42, 123, and 2026. The checkpoint is the epoch with the lowest five-epoch moving-average validation log loss, with at most 60 epochs and patience 10. The refit uses each seed's median selected epoch. The representation was chosen by mean validation log loss, not by test results. The study treats the validation gate as passed only if a model beats the prior in log loss in at least two folds and its paired upper 95\% bound is below zero.
