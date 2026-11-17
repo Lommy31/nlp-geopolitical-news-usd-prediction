@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "project": "usd_idr_task3",
+  "workspace_root": "hana-work",
+  "read_only_inputs": {
+    "fx_csv": "data/processed/usd_idr_jisdor_clean.csv",
+    "news_csv": "data/raw/news_cnbc.csv",
+    "task2_pipeline": "src/task2_pipeline.py",
+    "task2_notebook": "notebook/task2_pipeline_and_baseline_experimentation.ipynb",
+    "task2_paper": "task2_paper_full.md"
+  },
+  "output_directories": {
+    "configuration": "hana-work/config",
+    "source": "hana-work/src",
+    "intermediate_data": "hana-work/data/intermediate",
+    "processed_data": "hana-work/data/processed",
+    "manifests": "hana-work/data/manifests",
+    "embeddings": "hana-work/embeddings",
+    "models": "hana-work/models",
+    "notebooks": "hana-work/notebooks",
+    "results": "hana-work/results",
+    "reports": "hana-work/reports",
+    "logs": "hana-work/logs"
+  },
+  "data_contract": {
+    "primary_news_source": "task2_cnbc",
+    "fx_calendar": "jisdor_observed_dates",
+    "target": "next_observed_jisdor_direction",
+    "flat_label_policy": "retain_in_master_calendar_exclude_from_supervised_classification",
+    "warmup_policy": "retain_in_master_calendar_exclude_until_features_ready",
+    "empty_news_policy": "retain_date_zero_text_vector_and_explicit_availability_features",
+    "publication_timestamps_verified": false
+  },
+  "timing_modes": {
+    "primary": "strictly_later_fixing_date_only",
+    "sensitivity": "same_date_fixing_date_only",
+    "timestamp_claim": "date_only_alignment_does_not_prove_intraday_availability"
+  },
+  "validation": {
+    "test_fraction_by_calendar_index": 0.2,
+    "development_folds": 3,
+    "expanding_training_windows": true,
+    "boundary_purge_rows": 1,
+    "selection_metric": "mcc",
+    "selection_tiebreakers": ["macro_f1", "log_loss"],
+    "final_test_evaluations": 1
+  },
+  "representations": {
+    "word2vec": {
+      "frozen": true,
+      "aggregation": "article_mean_then_daily_mean",
+      "projection": "fold_local_pca_64_if_supported"
+    },
+    "finbert": {
+      "frozen": true,
+      "aggregation": "article_mean_then_daily_mean",
+      "projection": "fold_local_pca_64_if_supported"
+    },
+    "roberta": {
+      "frozen": true,
+      "aggregation": "article_mean_then_daily_mean",
+      "projection": "fold_local_pca_64_if_supported"
+    }
+  },
+  "fusion": {
+    "primary": "early_concatenation",
+    "late_fusion": "conditional_on_stable_development_improvement"
+  },
+  "classifier": {
+    "primary_controlled_comparison": "logistic_regression",
+    "legacy_task2_reproduction": ["logistic_regression", "random_forest", "xgboost"]
+  },
+  "reproducibility": {
+    "seeds": [42, 123, 2026],
+    "record_input_hashes": true,
+    "record_source_hashes": true,
+    "record_package_versions": true,
+    "record_encoder_revisions": true
+  },
+  "phase": {
+    "current": 5,
+    "module": 1,
+    "training_allowed": false,
+    "checkpoint_download_allowed": false
+  }
+}

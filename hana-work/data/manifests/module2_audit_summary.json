@@ -1,0 +1,58 @@
+{
+  "alignment": {
+    "same_date_intraday_availability_verified": false,
+    "same_date_rows_aligned": 20716,
+    "same_date_rows_failed": 0,
+    "strictly_later_rows_aligned": 20701,
+    "strictly_later_rows_failed": 15
+  },
+  "calendar": {
+    "date_max": "2026-09-01",
+    "date_min": "2021-09-01",
+    "empty_news_rows": 1,
+    "flat_rows": 13,
+    "rows": 1202,
+    "supervised_eligible_rows": 1168,
+    "warmup_rows": 20
+  },
+  "contamination": {
+    "confirmed": {
+      "confirmed_temporal_contamination": 0,
+      "invalid_news_dates": 0
+    },
+    "heuristic_or_uncertain": {
+      "publication_timestamp_missing": true,
+      "same_date_intraday_uncertainty": 20716,
+      "same_title_conflict_rows_retained": 359
+    },
+    "out_of_calendar_or_unalignable": {
+      "strict_alignment_failures": 15
+    }
+  },
+  "deduplication": {
+    "ambiguous_same_title_rows_retained": 359,
+    "deduplication_rule": "remove exact cleaned title+body duplicates only; retain conflicting versions",
+    "exact_duplicate_representatives_retained": 126,
+    "exact_duplicate_rows_removed": 126,
+    "invalid_date_rows": 0,
+    "publication_timestamps_present": false,
+    "raw_rows": 20842,
+    "valid_date_rows": 20842
+  },
+  "inputs": {
+    "fx_path": "/Users/lommy/nlp-geopolitical-news-usd-prediction/data/processed/usd_idr_jisdor_clean.csv",
+    "fx_rows": 1202,
+    "fx_sha256": "faf181306cdb65c1d74f913ef698fe45008e721969372bb17f79175d20fe87a0",
+    "news_path": "/Users/lommy/nlp-geopolitical-news-usd-prediction/data/raw/news_cnbc.csv",
+    "news_rows_raw": 20842,
+    "news_sha256": "9f82463c1cb15cc3fec511fbc03a8204d8927ce8494b2ae58a7df588551f1824"
+  },
+  "module": "phase5_module2",
+  "policies": {
+    "empty_news_days_retained": true,
+    "flat_rows_retained_in_master_calendar": true,
+    "model_ready_datasets_built": false,
+    "no_publication_timestamps_fabricated": true,
+    "warmup_rows_retained": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "fx_path": "/Users/lommy/nlp-geopolitical-news-usd-prediction/data/processed/usd_idr_jisdor_clean.csv",
+    "fx_rows": 1202,
+    "fx_sha256": "faf181306cdb65c1d74f913ef698fe45008e721969372bb17f79175d20fe87a0",
+    "news_path": "/Users/lommy/nlp-geopolitical-news-usd-prediction/data/raw/news_cnbc.csv",
+    "news_rows_raw": 20842,
+    "news_sha256": "9f82463c1cb15cc3fec511fbc03a8204d8927ce8494b2ae58a7df588551f1824"
+  },
+  "source_columns": {
+    "fx": [
+      "Date",
+      "USD_IDR",
+      "source_row_number"
+    ],
+    "news": [
+      "Date",
+      "Title",
+      "Source",
+      "URL",
+      "Event",
+      "Keyword",
+      "Category",
+      "Text",
+      "source_row_number",
+      "publication_timestamp_present",
+      "publication_timestamp_verified",
+      "Date_raw",
+      "date_parse_failed"
+    ]
+  },
+  "source_timestamp_finding": "CNBC input exposes Date but no verified publication timestamp column"
+}

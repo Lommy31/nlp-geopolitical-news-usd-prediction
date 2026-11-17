@@ -1,0 +1,59 @@
+experiment_id,timing_mode,model,best_params,mean_validation_mcc
+A0,strict,majority_baseline,{'strategy': 'training-fold majority'},
+A0,same_date,majority_baseline,{'strategy': 'training-fold majority'},
+A1,strict,logistic_regression,"{'C': 0.01, 'class_weight': 'balanced'}",0.022040860784643058
+A1,strict,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.011203007518796992
+A1,same_date,logistic_regression,"{'C': 0.01, 'class_weight': 'balanced'}",0.022040860784643058
+A1,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.011203007518796992
+A2,strict,logistic_regression,"{'C': 1.0, 'class_weight': None}",0.08344030897106226
+A2,strict,mlp,"{'hidden_layer_sizes': [64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.07755965290761653
+A2,same_date,logistic_regression,"{'C': 1.0, 'class_weight': None}",0.08344030897106226
+A2,same_date,mlp,"{'hidden_layer_sizes': [64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.07755965290761653
+B0,strict,logistic_regression,"{'C': 0.1, 'class_weight': None}",0.09129832420927887
+B0,strict,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.08996451672573631
+B0,same_date,logistic_regression,"{'C': 1.0, 'class_weight': None}",0.09055503505412361
+B0,same_date,mlp,"{'hidden_layer_sizes': [64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.08675361326306034
+B1,strict,logistic_regression,"{'C': 0.01, 'class_weight': 'balanced'}",0.041932253479958326
+B1,strict,mlp,"{'hidden_layer_sizes': [64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.08318397819029127
+B1,same_date,logistic_regression,"{'C': 10.0, 'class_weight': None}",0.10965836453224538
+B1,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.08181410257963434
+B2,strict,logistic_regression,"{'C': 0.01, 'class_weight': 'balanced'}",0.06678995903752796
+B2,strict,mlp,"{'hidden_layer_sizes': [64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.07250947433624844
+B2,same_date,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.07869525934200344
+B2,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.04876727877760112
+C1,strict,logistic_regression,"{'C': 0.01, 'class_weight': None}",0.06565556701102777
+C1,strict,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.059251523032664795
+C1,same_date,logistic_regression,"{'C': 10.0, 'class_weight': None}",0.05158954008893019
+C1,same_date,mlp,"{'hidden_layer_sizes': [64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.033860585764160143
+C2,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.033815134192923
+C2,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.018547122257945987
+C2,same_date,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.03252332157840109
+C2,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.07746031688618639
+C3,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.01985795484562575
+C3,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.01959416043028655
+C3,same_date,logistic_regression,"{'C': 0.01, 'class_weight': None}",0.06056337451947053
+C3,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.01, 'learning_rate_init': 0.001}",0.02820286655157896
+C4_hl1d,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.033815134192923
+C4_hl1d,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.018547122257945987
+C4_hl1d,same_date,logistic_regression,"{'C': 0.01, 'class_weight': 'balanced'}",0.06767503183761552
+C4_hl1d,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.012766876284330944
+C4_hl3d,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.033815134192923
+C4_hl3d,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.018547122257945987
+C4_hl3d,same_date,logistic_regression,"{'C': 1.0, 'class_weight': None}",0.03439461753212506
+C4_hl3d,same_date,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.020125874148080813
+C4_hl5d,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.033815134192923
+C4_hl5d,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.018547122257945987
+C4_hl5d,same_date,logistic_regression,"{'C': 1.0, 'class_weight': None}",0.019741517137675607
+C4_hl5d,same_date,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.012892844081752711
+C5_hl1d,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.01985795484562575
+C5_hl1d,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.01959416043028655
+C5_hl1d,same_date,logistic_regression,"{'C': 0.01, 'class_weight': None}",0.053617644284158834
+C5_hl1d,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.01, 'learning_rate_init': 0.001}",0.015931980817742605
+C5_hl3d,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.01985795484562575
+C5_hl3d,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.01959416043028655
+C5_hl3d,same_date,logistic_regression,"{'C': 0.01, 'class_weight': None}",0.06954452158657652
+C5_hl3d,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.027163583120824956
+C5_hl5d,strict,logistic_regression,"{'C': 0.1, 'class_weight': 'balanced'}",0.01985795484562575
+C5_hl5d,strict,mlp,"{'hidden_layer_sizes': [128, 64], 'alpha': 0.0001, 'learning_rate_init': 0.0005}",0.01959416043028655
+C5_hl5d,same_date,logistic_regression,"{'C': 0.01, 'class_weight': None}",0.054965588771913404
+C5_hl5d,same_date,mlp,"{'hidden_layer_sizes': [128], 'alpha': 0.0001, 'learning_rate_init': 0.001}",0.049737977858130146

@@ -1,0 +1,1042 @@
+{
+  "age_definition": "number of master-calendar observations strictly after article Date and through prediction Aligned_Date",
+  "aggregation": "normalized exp(-lambda * trading_age) weighted mean",
+  "calendar_rows_preserved": 1202,
+  "half_lives_trading_days": [
+    1,
+    3,
+    5
+  ],
+  "locked_test_articles_used": false,
+  "locked_test_calendar_used": false,
+  "models": [
+    "finbert",
+    "roberta"
+  ],
+  "module": "phase5_module5e",
+  "outputs": [
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 1,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold1_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 3,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold1_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 5,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold1_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 1,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold1_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 3,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold1_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 5,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold1_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 1,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold2_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 3,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold2_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 5,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold2_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 1,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold2_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 3,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold2_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 5,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold2_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 1,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold3_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 3,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold3_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 5,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_strict_fold3_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 1,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold3_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 3,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold3_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 5,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_strict_fold3_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "strict"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 1,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold1_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 3,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold1_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 5,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold1_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 1,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold1_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 3,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold1_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 1,
+      "half_life_trading_days": 5,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold1_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 1,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold2_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 3,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold2_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 5,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold2_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 1,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold2_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 3,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold2_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 2,
+      "half_life_trading_days": 5,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold2_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 1,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold3_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 3,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold3_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 5,
+      "model": "finbert",
+      "path": "embeddings/decay/finbert_decay_same_date_fold3_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 1,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold3_hl1d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 3,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold3_hl3d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    },
+    {
+      "fold_id": 3,
+      "half_life_trading_days": 5,
+      "model": "roberta",
+      "path": "embeddings/decay/roberta_decay_same_date_fold3_hl5d_daily.csv",
+      "rows": 1202,
+      "timing_mode": "same_date"
+    }
+  ],
+  "source_hashes": {
+    "calendar": "777475aab23b4bf755fb61544b8e8442b5634ca8ee70082cf9e9ee7acc866d5a",
+    "finbert_same_date_fold1_metadata": "37df97c165fd08433c1f4e469009354f5b592fb258f0467146a4b325dc6f2c53",
+    "finbert_same_date_fold1_vectors": "1d67ba11f607cbf11ad4542c9ce23f51a13be263f38f4e90ceeccbc2ed38c69a",
+    "finbert_same_date_fold2_metadata": "2df7ea2860de5808a7afb0dc237aa5edc94e905475d64b603e1e76038582e792",
+    "finbert_same_date_fold2_vectors": "54b990025888100032b9eb9d73398a1aab0e245ad65ab1f1d0d96b4ec56fd926",
+    "finbert_same_date_fold3_metadata": "9cf7b1b529ee38fde275eca61e4c38ac9920f031a37408728efbd94b16f4b70b",
+    "finbert_same_date_fold3_vectors": "afca9452fb8c22bab94cf45c156dfe25682e990d6a5af063daff3f9bb314ad58",
+    "finbert_strict_fold1_metadata": "dac35d8d7aa8d96572082c4ca503969c06136667536d351882fa613c3f024215",
+    "finbert_strict_fold1_vectors": "eecb2ab9c5839d6fb4c682be5b3cfd12fb42564251b4199635a4a9e2786ddbd0",
+    "finbert_strict_fold2_metadata": "fa882978843fcba88df97f2061e17d6f72cafa0fef72fee1e4653d365beeec5b",
+    "finbert_strict_fold2_vectors": "572b6bf732617ddc35aa8db9d4a427db66e070ae64b52ba8a6a17fc95b56f733",
+    "finbert_strict_fold3_metadata": "ad634f4436499f30e3b74e8031c50b4e70836d7d9cbe33efdf743d549bbcf20d",
+    "finbert_strict_fold3_vectors": "94042f869727c4bbb10284df0ebe97515f6f5f5f29cff59686dcc81339db0b85",
+    "fold_manifest": "6e5b261855662d378c53e3063ecfa2d3acb4115279e8e2eac5b8f2aafff2e319",
+    "module4_manifest": "babb6d6a3d56627989deca2df7f04461384a9a56cc756875f58ea6c24df51a9a",
+    "roberta_same_date_fold1_metadata": "406b607ebe1be5f490a949cc00b97426d90c927fb18b7791a2f1338e6c10497b",
+    "roberta_same_date_fold1_vectors": "9f3a13f32354ae4d95ec3fa273a45367d82d483a95c089d6bd88926d0a91286b",
+    "roberta_same_date_fold2_metadata": "6a7a1b6517a8a2e88a580b864d0e9d0e619d73e74936e22763019acb0bae3a66",
+    "roberta_same_date_fold2_vectors": "27a0a81e7e80802206b5b80fb7141e56777a60f4f2c305a31c833b1ae32bb550",
+    "roberta_same_date_fold3_metadata": "2127799340c711402f0cb4c548be4825589e57164d6e55595f3408b507f3a2fe",
+    "roberta_same_date_fold3_vectors": "788bf9de3261adad003a44a4b81d60863c4e816839931309a2caff3210ac338c",
+    "roberta_strict_fold1_metadata": "d5243f833d734e38ce1fae140212c1f0dfeab65d4d0e57fab7b0031c36fb9e72",
+    "roberta_strict_fold1_vectors": "2d924c982b59f1af8b719799835d311361d3316dfce18c7f0ecbd5e2f0f582d0",
+    "roberta_strict_fold2_metadata": "1a7b0e661660ed0ce34bc52fb42d58d10d4f88f02a23650cc8a6f7a45c4c8b9a",
+    "roberta_strict_fold2_vectors": "e5b54c6a62b47494556bb89d15ec57a9a30bf025662651c4f5389ff61311fd6d",
+    "roberta_strict_fold3_metadata": "2e38974eaf2d4acd2ac660a282e4e12ba7200294fcd4882bf694e41c15288cb1",
+    "roberta_strict_fold3_vectors": "070ee4d8f72381d8f42859a27f417afed9321cadbc912aca666f7d07202c8a8d"
+  },
+  "summaries": {
+    "same_date": {
+      "1": {
+        "finbert_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8074,
+          "embedding_unavailable_nonempty_days": 737,
+          "empty_news_days": 0,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold1_hl1d_daily.csv",
+          "output_sha256": "267239c0ff6938959fca366a7ef568ce549fac506d22d07489a6d83139d83261",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 737,
+          "validation_article_count": 3604
+        },
+        "finbert_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8074,
+          "embedding_unavailable_nonempty_days": 737,
+          "empty_news_days": 0,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold1_hl3d_daily.csv",
+          "output_sha256": "ff278bc9fce6789c6626679be9a554c039b5f76e305614bd8eba1d64954dd0e4",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 737,
+          "validation_article_count": 3604
+        },
+        "finbert_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8074,
+          "embedding_unavailable_nonempty_days": 737,
+          "empty_news_days": 0,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold1_hl5d_daily.csv",
+          "output_sha256": "26bdd893ff9359c1d475de5844e222751dc99ba10070f8cb57692ec5f6cb234b",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 737,
+          "validation_article_count": 3604
+        },
+        "roberta_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8074,
+          "embedding_unavailable_nonempty_days": 737,
+          "empty_news_days": 0,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold1_hl1d_daily.csv",
+          "output_sha256": "d0f5dd6ca33498697ba79d42fae68f1f70bc5363dc12fe47f892065e57407fd1",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 737,
+          "validation_article_count": 3604
+        },
+        "roberta_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8074,
+          "embedding_unavailable_nonempty_days": 737,
+          "empty_news_days": 0,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold1_hl3d_daily.csv",
+          "output_sha256": "b9da9d0db90e5f7c6fdeaf0c4c04ebd3d71cd2320674a8a0fd9a62458743e4a5",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 737,
+          "validation_article_count": 3604
+        },
+        "roberta_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8074,
+          "embedding_unavailable_nonempty_days": 737,
+          "empty_news_days": 0,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold1_hl5d_daily.csv",
+          "output_sha256": "3d5eb8c8467c59f7ac30db1d3d4db0bf76a68ed07ec5dcba7203dfb7ecf44896",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 737,
+          "validation_article_count": 3604
+        }
+      },
+      "2": {
+        "finbert_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11753,
+          "embedding_unavailable_nonempty_days": 504,
+          "empty_news_days": 0,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold2_hl1d_daily.csv",
+          "output_sha256": "dcccb47dac1ae88312d6549dd34ceb6ce9bd3f787a388b847b527fbf2b15a097",
+          "training_article_count": 8068,
+          "unavailable_nonempty_days": 504,
+          "validation_article_count": 3685
+        },
+        "finbert_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11753,
+          "embedding_unavailable_nonempty_days": 504,
+          "empty_news_days": 0,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold2_hl3d_daily.csv",
+          "output_sha256": "432803c4b3b9cd476d81cf34cb99dc55afb6a1cecab4e82c6c2afe01236718a7",
+          "training_article_count": 8068,
+          "unavailable_nonempty_days": 504,
+          "validation_article_count": 3685
+        },
+        "finbert_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11753,
+          "embedding_unavailable_nonempty_days": 504,
+          "empty_news_days": 0,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold2_hl5d_daily.csv",
+          "output_sha256": "4fad80aadd6705fe5244a9a8a9da2ce402458068a327054fea779af2e5b69228",
+          "training_article_count": 8068,
+          "unavailable_nonempty_days": 504,
+          "validation_article_count": 3685
+        },
+        "roberta_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11753,
+          "embedding_unavailable_nonempty_days": 504,
+          "empty_news_days": 0,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold2_hl1d_daily.csv",
+          "output_sha256": "21329d3588a3e944ff3e36f52541d9ff9f8ad5b0e13085319eb856277d222fb7",
+          "training_article_count": 8068,
+          "unavailable_nonempty_days": 504,
+          "validation_article_count": 3685
+        },
+        "roberta_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11753,
+          "embedding_unavailable_nonempty_days": 504,
+          "empty_news_days": 0,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold2_hl3d_daily.csv",
+          "output_sha256": "0be5b6ec1ff43c6df062eafee9bef660054138ba5353001d8470291d706eef16",
+          "training_article_count": 8068,
+          "unavailable_nonempty_days": 504,
+          "validation_article_count": 3685
+        },
+        "roberta_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11753,
+          "embedding_unavailable_nonempty_days": 504,
+          "empty_news_days": 0,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold2_hl5d_daily.csv",
+          "output_sha256": "9d67f88d239af5cdfe1593734934f770e237fbb4d0eff24a1fa1a4e2c941cb8b",
+          "training_article_count": 8068,
+          "unavailable_nonempty_days": 504,
+          "validation_article_count": 3685
+        }
+      },
+      "3": {
+        "finbert_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16004,
+          "embedding_unavailable_nonempty_days": 271,
+          "empty_news_days": 0,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold3_hl1d_daily.csv",
+          "output_sha256": "d3539c3cf4bb93285881e643e65632078191e6168cf4796052384780392a1817",
+          "training_article_count": 11756,
+          "unavailable_nonempty_days": 271,
+          "validation_article_count": 4248
+        },
+        "finbert_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16004,
+          "embedding_unavailable_nonempty_days": 271,
+          "empty_news_days": 0,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold3_hl3d_daily.csv",
+          "output_sha256": "4f433acf4a5d3fec099566c96004f49836e01a5e83132a81e7beb2b0dcc412da",
+          "training_article_count": 11756,
+          "unavailable_nonempty_days": 271,
+          "validation_article_count": 4248
+        },
+        "finbert_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16004,
+          "embedding_unavailable_nonempty_days": 271,
+          "empty_news_days": 0,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_same_date_fold3_hl5d_daily.csv",
+          "output_sha256": "446a967a007431345f335e0baa882a5e61f1083279b0a2f43503f0a55c0b6291",
+          "training_article_count": 11756,
+          "unavailable_nonempty_days": 271,
+          "validation_article_count": 4248
+        },
+        "roberta_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16004,
+          "embedding_unavailable_nonempty_days": 271,
+          "empty_news_days": 0,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold3_hl1d_daily.csv",
+          "output_sha256": "8a08242bd5ec9e14bdb4b3828820c974350447d0c6e8eb2793ae79274d4bc51e",
+          "training_article_count": 11756,
+          "unavailable_nonempty_days": 271,
+          "validation_article_count": 4248
+        },
+        "roberta_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16004,
+          "embedding_unavailable_nonempty_days": 271,
+          "empty_news_days": 0,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold3_hl3d_daily.csv",
+          "output_sha256": "98fd3b6c67265d545b613e8632184af2f8323f9846822ea588121348bfce8f8f",
+          "training_article_count": 11756,
+          "unavailable_nonempty_days": 271,
+          "validation_article_count": 4248
+        },
+        "roberta_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16004,
+          "embedding_unavailable_nonempty_days": 271,
+          "empty_news_days": 0,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_same_date_fold3_hl5d_daily.csv",
+          "output_sha256": "2ca20d4e9cd1cbbb882b2de4f6dd3353c42a65a48af1acb070b2a2bab6d008f6",
+          "training_article_count": 11756,
+          "unavailable_nonempty_days": 271,
+          "validation_article_count": 4248
+        }
+      }
+    },
+    "strict": {
+      "1": {
+        "finbert_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8070,
+          "embedding_unavailable_nonempty_days": 736,
+          "empty_news_days": 1,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold1_hl1d_daily.csv",
+          "output_sha256": "485de6e7f751bc423b78282c16a50e687d1e2de6a7548c1652fe764fe64529eb",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 736,
+          "validation_article_count": 3600
+        },
+        "finbert_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8070,
+          "embedding_unavailable_nonempty_days": 736,
+          "empty_news_days": 1,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold1_hl3d_daily.csv",
+          "output_sha256": "ddeb68bcd070f75d35e4b6949ad025a8c8aaf2d48c25079f22b1a4628f441f18",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 736,
+          "validation_article_count": 3600
+        },
+        "finbert_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8070,
+          "embedding_unavailable_nonempty_days": 736,
+          "empty_news_days": 1,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold1_hl5d_daily.csv",
+          "output_sha256": "5d14e5f975251c12350fe163cedb709e85f16fd551124069cb4c04fcd502e1a2",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 736,
+          "validation_article_count": 3600
+        },
+        "roberta_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8070,
+          "embedding_unavailable_nonempty_days": 736,
+          "empty_news_days": 1,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold1_hl1d_daily.csv",
+          "output_sha256": "6574d4819899c2eeb946f01fe63643e549e31504cedc409dc45ae99fdb4550ef",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 736,
+          "validation_article_count": 3600
+        },
+        "roberta_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8070,
+          "embedding_unavailable_nonempty_days": 736,
+          "empty_news_days": 1,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold1_hl3d_daily.csv",
+          "output_sha256": "7950c172446172ded0a3e26b1e74e7f4b7a91346c7b76b6e2ed5a306a93a7142",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 736,
+          "validation_article_count": 3600
+        },
+        "roberta_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 8070,
+          "embedding_unavailable_nonempty_days": 736,
+          "empty_news_days": 1,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold1_hl5d_daily.csv",
+          "output_sha256": "3b52cd20bb0b119133860d9e7585f0f91b558ba3bc146487b34699e5f3b1df65",
+          "training_article_count": 4470,
+          "unavailable_nonempty_days": 736,
+          "validation_article_count": 3600
+        }
+      },
+      "2": {
+        "finbert_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11764,
+          "embedding_unavailable_nonempty_days": 503,
+          "empty_news_days": 1,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold2_hl1d_daily.csv",
+          "output_sha256": "00bbdfc296941e661d829b13e83d21a7da6fa752b570b4158da90a67f7c9cdb0",
+          "training_article_count": 8074,
+          "unavailable_nonempty_days": 503,
+          "validation_article_count": 3690
+        },
+        "finbert_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11764,
+          "embedding_unavailable_nonempty_days": 503,
+          "empty_news_days": 1,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold2_hl3d_daily.csv",
+          "output_sha256": "ab9bafe3254717be98c913af561ae40f2780523b3ed8c2d521a884691e379c2f",
+          "training_article_count": 8074,
+          "unavailable_nonempty_days": 503,
+          "validation_article_count": 3690
+        },
+        "finbert_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11764,
+          "embedding_unavailable_nonempty_days": 503,
+          "empty_news_days": 1,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold2_hl5d_daily.csv",
+          "output_sha256": "76431781afb4f7bdd6b6d6f6ca6a6daaad4d1910b13296436c2bd745027bf6b6",
+          "training_article_count": 8074,
+          "unavailable_nonempty_days": 503,
+          "validation_article_count": 3690
+        },
+        "roberta_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11764,
+          "embedding_unavailable_nonempty_days": 503,
+          "empty_news_days": 1,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold2_hl1d_daily.csv",
+          "output_sha256": "187d0334fcce4b5165e12ae088f85682278c55ced5efef5ebdbf2a3946d27152",
+          "training_article_count": 8074,
+          "unavailable_nonempty_days": 503,
+          "validation_article_count": 3690
+        },
+        "roberta_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11764,
+          "embedding_unavailable_nonempty_days": 503,
+          "empty_news_days": 1,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold2_hl3d_daily.csv",
+          "output_sha256": "788fdbd70e4162742a6f2da477e7460d7a9d3eea879dceba8df0783225a86c3c",
+          "training_article_count": 8074,
+          "unavailable_nonempty_days": 503,
+          "validation_article_count": 3690
+        },
+        "roberta_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 11764,
+          "embedding_unavailable_nonempty_days": 503,
+          "empty_news_days": 1,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold2_hl5d_daily.csv",
+          "output_sha256": "126600b1f569eb2b6d30a987577c79d797ccd3a5749c31895dc2224ce21fb656",
+          "training_article_count": 8074,
+          "unavailable_nonempty_days": 503,
+          "validation_article_count": 3690
+        }
+      },
+      "3": {
+        "finbert_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16003,
+          "embedding_unavailable_nonempty_days": 270,
+          "empty_news_days": 1,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold3_hl1d_daily.csv",
+          "output_sha256": "f47c6f032232d4e6bcfa1a6045ac97d21c6889a0197a73618a2a3b901cc30686",
+          "training_article_count": 11763,
+          "unavailable_nonempty_days": 270,
+          "validation_article_count": 4240
+        },
+        "finbert_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16003,
+          "embedding_unavailable_nonempty_days": 270,
+          "empty_news_days": 1,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold3_hl3d_daily.csv",
+          "output_sha256": "06a5fa59680c54321e212a10ffb55a575339897cbfeeb901d76ad54c024935ef",
+          "training_article_count": 11763,
+          "unavailable_nonempty_days": 270,
+          "validation_article_count": 4240
+        },
+        "finbert_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16003,
+          "embedding_unavailable_nonempty_days": 270,
+          "empty_news_days": 1,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "finbert",
+          "output_path": "embeddings/decay/finbert_decay_strict_fold3_hl5d_daily.csv",
+          "output_sha256": "fc22b56bc7e9837ef3267dee9b9cf1c54374752d0e295515f4caf754c0fc6adf",
+          "training_article_count": 11763,
+          "unavailable_nonempty_days": 270,
+          "validation_article_count": 4240
+        },
+        "roberta_hl1": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16003,
+          "embedding_unavailable_nonempty_days": 270,
+          "empty_news_days": 1,
+          "half_life_trading_days": 1,
+          "lambda": 0.6931471805599453,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold3_hl1d_daily.csv",
+          "output_sha256": "8d7b5afac40ce29e63be61e27b643d0c2ff8b8b4ce3139729b150a78075a0f69",
+          "training_article_count": 11763,
+          "unavailable_nonempty_days": 270,
+          "validation_article_count": 4240
+        },
+        "roberta_hl3": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16003,
+          "embedding_unavailable_nonempty_days": 270,
+          "empty_news_days": 1,
+          "half_life_trading_days": 3,
+          "lambda": 0.23104906018664842,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold3_hl3d_daily.csv",
+          "output_sha256": "319c3d10c3ad24d30043845c22441a3f9cef196f1c986edd206ae90124cde9a1",
+          "training_article_count": 11763,
+          "unavailable_nonempty_days": 270,
+          "validation_article_count": 4240
+        },
+        "roberta_hl5": {
+          "daily_output_shape": [
+            1202,
+            780
+          ],
+          "embedded_article_count": 16003,
+          "embedding_unavailable_nonempty_days": 270,
+          "empty_news_days": 1,
+          "half_life_trading_days": 5,
+          "lambda": 0.13862943611198905,
+          "locked_test_articles_used": false,
+          "locked_test_calendar_used": false,
+          "model": "roberta",
+          "output_path": "embeddings/decay/roberta_decay_strict_fold3_hl5d_daily.csv",
+          "output_sha256": "b678d04df6d31df140cb0310ebf8e3c3586653490d9c47a90d54fc932808db89",
+          "training_article_count": 11763,
+          "unavailable_nonempty_days": 270,
+          "validation_article_count": 4240
+        }
+      }
+    }
+  },
+  "timing_modes": [
+    "strict",
+    "same_date"
+  ]
+}
