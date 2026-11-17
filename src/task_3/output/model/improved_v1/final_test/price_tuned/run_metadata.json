@@ -1,0 +1,57 @@
+{
+  "model_id": "price_tuned",
+  "level": 1,
+  "phase": "test",
+  "config": {
+    "family": "small_mlp",
+    "view": "price",
+    "centered": false,
+    "alpha": 1.0,
+    "dropout": 0.2
+  },
+  "representation": "R3",
+  "flags": null,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "ee1d7926c014d7d874aa18ff8c900d35b9a43379e43b81b32ef0ae8c97da478f",
+  "encoder_sources": {
+    "development": {},
+    "test": {}
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "written_at_wib": "2026-11-16T02:50:51.852042+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "274fc60628aa5f5590d735681b02469b45702292138069191114e478fb970298",
+    "seed_123.joblib": "cb43b0dc011fc07aaa7dd217168bcd5152eb7488f6662fd3dc4dd98f710e2c9b",
+    "fold_metrics.csv": "5ae8b5519fda1ab9d160e392c94dbc5c86717a7c76e8f9e42eb6547c763f8acc",
+    "per_class.csv": "7376502b42229a1330154ea421700f1c3011e666f0dc8ba239a2a3a6aed62378",
+    "summary.csv": "435e4a71506b283a68e902e597669297ac53f1bbf16d2d517f400614cf6d00be",
+    "seed_2026.joblib": "f2ff6834f6b0fcba639d3cd71cd939e6ddb69d44e4af3406e40e8a599a7e2c83",
+    "history.csv": "29aa250f1058103a5db6c748f09a6b913b7a2129411d15425c7c2857987577d3",
+    "test_access.json": "40a56c34092befd88e17e60e5b7d6f48842ce5cc5f78c06c53384344f79715c7",
+    "bootstrap.npz": "15a443ceeb5af1d1ad7317bbb4b37a9b0860f3f18dcf34cf7cca77503760ebf0",
+    "fits.csv": "9a62fb0812c4f9ea4bc79a8f6def9ef2e9a1f63bbf0b598dc28deb7aaa5e9ec2",
+    "refit_records.csv": "9a62fb0812c4f9ea4bc79a8f6def9ef2e9a1f63bbf0b598dc28deb7aaa5e9ec2",
+    "predictions.csv": "10047ba13054df39a8fe6660136ef03a2067e20aa9030e75a8f67d117d341546",
+    "seed_42.joblib": "22ea20e70a2d17f2734b7dbb7696f23cf34bdbb6393f01c62171672b6d7fc993",
+    "seed_metrics.csv": "a24205c081d323b848347d1650219673c372be8ba57a3cecb4d0f63dbffbf97f"
+  }
+}

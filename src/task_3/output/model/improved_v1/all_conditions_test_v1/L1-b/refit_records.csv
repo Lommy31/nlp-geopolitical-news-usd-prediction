@@ -1,0 +1,2 @@
+seed,fold,train_n,epochs,epochs_run,best_epoch,evaluation_role,evaluation_is_none,fixed_epochs,reused,source_model
+-1,0,930,0,0,0,none,True,0,True,src/task_3/output/model/improved_v1/final_test/L1-b/seed_-1.joblib

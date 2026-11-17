@@ -1,0 +1,7 @@
+{
+  "scope": "All fifteen primary ablations plus three existing controls",
+  "directory": "src/task_3/output/model/improved_v1/all_conditions_test_v1",
+  "metadata_sha256": "f566cfdbd2a201e927cb3eb8a65254d9b04b73def6ba336ceda05a2bb45b5158",
+  "verification_sha256": "197bc3a9ad6aed7589005d1befa6e0dd5e87d1dacb5b7f92293a89b6b1b4f46a",
+  "test_used_for_selection": false
+}

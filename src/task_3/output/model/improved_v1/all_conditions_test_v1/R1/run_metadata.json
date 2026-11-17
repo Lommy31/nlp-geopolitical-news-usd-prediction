@@ -1,0 +1,76 @@
+{
+  "model_id": "R1",
+  "level": 2,
+  "phase": "test",
+  "config": {
+    "family": "small_mlp",
+    "view": "text",
+    "centered": false,
+    "alpha": 1.0,
+    "dropout": 0.5
+  },
+  "representation": "R1",
+  "flags": null,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "38b12b6f6e92b75ad9d657fa7815d58046cdb3080e776cc5d8c366b8e4d7d690",
+  "encoder_sources": {
+    "development": {
+      "path": "src/task_3/output/model/improved_v1/encoders/tfidf_final.joblib",
+      "sha256": "5a05e0f01a9a1698146036b98a8c4636d15f428eef9c646791a4f0556d47f955",
+      "fingerprint": {
+        "vocabulary_sha256": "36357951d3fd66218a28677ae3ef2426bfcfbd0d23e2b35d9f0edbe3a64cbf48",
+        "idf_sha256": "22b2339fd1429e2004970af2f26220ee9118594880f4e8b76d02e30d53901717",
+        "svd_components_sha256": "4c3105809cc431b1594a70d94f6a490aa9031c61f870fcf858a7a92b24e51eef"
+      }
+    },
+    "test": {
+      "path": "src/task_3/output/model/improved_v1/encoders/tfidf_final.joblib",
+      "sha256": "5a05e0f01a9a1698146036b98a8c4636d15f428eef9c646791a4f0556d47f955",
+      "fingerprint": {
+        "vocabulary_sha256": "36357951d3fd66218a28677ae3ef2426bfcfbd0d23e2b35d9f0edbe3a64cbf48",
+        "idf_sha256": "22b2339fd1429e2004970af2f26220ee9118594880f4e8b76d02e30d53901717",
+        "svd_components_sha256": "4c3105809cc431b1594a70d94f6a490aa9031c61f870fcf858a7a92b24e51eef"
+      }
+    }
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "new_fits": 3,
+  "reuse_source": null,
+  "alias": null,
+  "written_at_wib": "2026-11-16T09:11:56.181352+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "54f4e811a84b1bc69fd48c85e32693445efbf4b7c799ff30b74de5a40b73d4e2",
+    "seed_123.joblib": "32e9feceab28ea4ba8a8f9f3d10b102d03f481d8739dc43a5847f78a4c16f21d",
+    "fold_metrics.csv": "41d6523dd5b449f988eeb8387c691e50775ebd6614d5eaf24ac8337f1bb210c3",
+    "per_class.csv": "9efad3aafe2bfdb29410fa5851355bcdfad40c391f3a71f72a15bb3215d09b8f",
+    "summary.csv": "8fb0579b4daf2d0aa4888445d2988ada81ce70c3afa6a37b02096b59ea4e2895",
+    "seed_2026.joblib": "24be179122a07dc183ed0ca2bd5351957bfebbda7451b3f3f602bc66b37dccf2",
+    "history.csv": "fe9709635192cb10b9e2fd18848e2cec06bd8f554a084c21ac9949793998c995",
+    "test_access.json": "ee856f8106779270d1e9f478d61b5cb543f1cde7dcb81e4293b86cf15622552a",
+    "bootstrap.npz": "4339da522e880efc7cb9cf86a9854808c93349af4043037dc255a449f51bf594",
+    "fits.csv": "f16a398d802eb5d301544f29768701fd9eace78b07ebd5411805efe05e9c9ed5",
+    "refit_records.csv": "f16a398d802eb5d301544f29768701fd9eace78b07ebd5411805efe05e9c9ed5",
+    "predictions.csv": "f2495722b4f7b5a97ee9abf959dd41ec10d2a4aec316973a9dbe6477fcf9f783",
+    "seed_42.joblib": "0d6db99c299f723f027de97ac43489272f7089d0c3908701665c5fb816e3f901",
+    "seed_metrics.csv": "70dc1042368d5f03ae620fbca44cf0dc40252316a4be885a8b239d4e5c32cbf6"
+  }
+}

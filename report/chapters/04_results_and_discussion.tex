@@ -17,24 +17,27 @@ News content does not add information. FinBERT concatenation has MCC 0.000 and l
 The gap between validation and test is largest for TF-IDF with SVD, from 0.077 to $-$0.086. Checkpoint selection on small 158-row folds may inflate validation scores. We did not test this.
 
 \subsection{Error analysis}
-The models score at chance. Five checks, each with one figure or table, look for the reason.
-
 \emph{Do the models make real predictions?} Fig.~\ref{fig:err-share} shows the share of test days each seed predicts UP. A bar at 1.0 means UP on every day, which equals the majority rule. The concatenation model does this in every seed. Full fusion differs by seed: seeds 42 and 123 predict UP almost always and seed 2026 predicts DOWN on every day, which averages to the 0.528 accuracy in Table~\ref{tab:level3}. A collapsed model scores at chance whatever the text contains.
+
+\input{figures/err_up_share}
 
 \emph{Is the signal missing, or can the model not read it?} A linear probe predicts a target from the day-average embedding. In Table~\ref{tab:probe}, the first four rows are an easy control: whether a day's titles have an above-median share of conflict, energy, rates, or China keywords. The probe reaches AUC 0.76--0.90, so the embeddings do carry topical content. The same probe predicts next-fixing direction at 0.46--0.50, inside the range of shuffled labels, although RoBERTa at 0.46 sits at its lower edge. The control labels come from the same titles, so they check the pipeline, not understanding. Fig.~\ref{fig:err-pca} shows the same vectors in two dimensions, coloured by direction. UP and DOWN days overlap almost completely, so direction is not visible even along the main variation of the text.
 
+\input{tables/probe_results}
+\input{figures/err_pca}
+
 \emph{Does attention find the informative articles?} Fig.~\ref{fig:err-attn} shows the weights on the largest false-UP day, the day where a useful signal would matter most. A value of 1 means an article gets the same weight as under plain averaging. Task-query weights are nearly uniform, and cross-attention is only mildly peaked, with no article standing out. The fusion behaves like mean pooling. The weights are descriptive, not causal, and they come from the test period.
+
+\input{figures/err_attention_example}
 
 \emph{Does news relate to returns at other times?} Fig.~\ref{fig:leadlag} correlates each daily news feature with the return $k$ days later, on development days only. If news led the market, bars at $k>0$ would leave the grey band, which marks what shifted copies of the news series produce by chance. Three of 66 correlations leave it, no more than chance allows. The one plausible case is that more articles appear on volatile days, which explains about 1.6\% of the variance and says nothing about direction.
 
+\input{figures/lead_lag}
+
 \emph{Would more data help?} Fig.~\ref{fig:learning} trains the probe on a growing number of days and scores it on validation days. The keyword control, an easy target, rises to AUC 0.84 by 400 days. Direction stays between 0.43 and 0.55 at every training size and PCA dimension we tried (2 to 200), inside the grey chance band. In these features and this sample, more data does not reveal a direction signal.
 
-\input{figures/err_up_share}
-\input{tables/probe_results}
-\input{figures/err_pca}
-\input{figures/err_attention_example}
-\input{figures/lead_lag}
 \input{figures/learning_curve}
+
 
 \subsection{Limitations}
 The 930 development decisions are the effective sample, not the 16{,}723 articles, because all articles of a day share one label. The test period was opened for the original corpus on 2026-11-11 and for the combined corpus on 2026-11-15. The improved\_v1 conditions were scored on it on 2026-11-16, after the log-loss selection rule replaced an earlier MCC-based Word2Vec choice, and later checks reused it. It is not an untouched holdout. News dates carry no time of day, article versions are unknown, and the encoders are frozen. We test one corpus and one horizon, and we measure direction, not trading return. These limits restrict the conclusion to this setup. They do not show that news carries no information about USD/IDR.

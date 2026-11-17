@@ -1,0 +1,4 @@
+fold,seed,train_n,evaluation_n,best_epoch,epochs_run,evaluation_role,evaluation_is_none,fixed_epochs,parameters,prior_log_loss,fit_seconds
+1,-1,453,158,0,0,validation,False,,0,0.6759158887401715,0.029727806999289896
+2,-1,612,159,0,0,validation,False,,0,0.7030877820762518,0.01318645300125354
+3,-1,772,158,0,0,validation,False,,0,0.7019526865644479,0.013734766998823034

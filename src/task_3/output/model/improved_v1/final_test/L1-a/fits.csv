@@ -1,0 +1,2 @@
+seed,fold,train_n,epochs,epochs_run,best_epoch,evaluation_role,evaluation_is_none,fixed_epochs
+-1,0,930,0,0,0,none,True,0

@@ -1,0 +1,6 @@
+model_id,representation,article_width,classifier_width,parameters,prediction_effective_parameters,inactive_slot_parameters
+A000,R3,768,2320,37153,12577,24576
+A100,R3,768,2320,37921,25633,12288
+A010,R3,768,2320,48673,36385,12288
+A001,R3,768,2320,37169,12593,24576
+A111,R3,768,2320,49457,49457,0

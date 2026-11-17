@@ -1,0 +1,4 @@
+seed,fold,train_n,epochs,epochs_run,best_epoch,evaluation_role,evaluation_is_none,fixed_epochs,reused,source_model
+42,0,930,23,23,23,none,True,23,True,src/task_3/output/model/improved_v1/final_test/price_tuned/seed_42.joblib
+123,0,930,34,34,34,none,True,34,True,src/task_3/output/model/improved_v1/final_test/price_tuned/seed_123.joblib
+2026,0,930,36,36,36,none,True,36,True,src/task_3/output/model/improved_v1/final_test/price_tuned/seed_2026.joblib

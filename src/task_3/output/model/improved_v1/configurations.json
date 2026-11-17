@@ -1,0 +1,68 @@
+{
+  "configs": {
+    "L1-c": {
+      "family": "small_mlp",
+      "view": "price",
+      "centered": false,
+      "alpha": 0.01,
+      "dropout": 0.2
+    },
+    "L1-d": {
+      "family": "small_mlp",
+      "view": "text",
+      "centered": false,
+      "alpha": 0.01,
+      "dropout": 0.2
+    },
+    "L1-e": {
+      "family": "small_mlp",
+      "view": "availability",
+      "centered": false,
+      "alpha": 0.01,
+      "dropout": 0.2
+    },
+    "price_tuned": {
+      "family": "small_mlp",
+      "view": "price",
+      "centered": false,
+      "alpha": 1.0,
+      "dropout": 0.2
+    },
+    "R1": {
+      "family": "small_mlp",
+      "view": "text",
+      "centered": false,
+      "alpha": 1.0,
+      "dropout": 0.5
+    },
+    "R2": {
+      "family": "small_mlp",
+      "view": "text",
+      "centered": false,
+      "alpha": 1.0,
+      "dropout": 0.5
+    },
+    "R3": {
+      "family": "small_mlp",
+      "view": "text",
+      "centered": false,
+      "alpha": 0.01,
+      "dropout": 0.2
+    },
+    "R4": {
+      "family": "small_mlp",
+      "view": "text",
+      "centered": false,
+      "alpha": 0.01,
+      "dropout": 0.5
+    }
+  },
+  "source_validation_selections": [
+    "src/task_3/output/model/sanity_check/level1_improvement_v1/frozen_selection.json",
+    "src/task_3/output/model/sanity_check/level2_improvement_v1/frozen_selection.json"
+  ],
+  "selection_basis": "Previously verified three-fold log-loss search; no new hyperparameter expansion and no test-driven choices",
+  "level1_control": "One shared alpha/dropout configuration for L1-c/d/e; independently validation-tuned price is an additional reference",
+  "level2_control": "Same 16-unit concat head and prior equal search budgets; each representation retains its validation-selected regularization",
+  "conditional_branches": "No prior success gate passed. Do not expand to PCA, scalar sentiment or rolling-delta features."
+}

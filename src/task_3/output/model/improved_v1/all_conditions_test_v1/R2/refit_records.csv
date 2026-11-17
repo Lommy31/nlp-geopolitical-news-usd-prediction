@@ -1,0 +1,4 @@
+seed,fold,train_n,epochs,epochs_run,best_epoch,evaluation_role,evaluation_is_none,fixed_epochs,reused,source_model
+42,0,930,11,11,11,none,True,11,False,
+123,0,930,6,6,6,none,True,6,False,
+2026,0,930,11,11,11,none,True,11,False,

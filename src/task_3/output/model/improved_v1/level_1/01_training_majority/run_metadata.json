@@ -1,0 +1,52 @@
+{
+  "model_id": "L1-a",
+  "level": 1,
+  "phase": "validation",
+  "config": null,
+  "representation": "R3",
+  "flags": null,
+  "text_only": false,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "encoder_sources": {
+    "1": {},
+    "2": {},
+    "3": {}
+  },
+  "alias": false,
+  "new_fits": 3,
+  "written_at_wib": "2026-11-16T02:31:34.369615+07:00",
+  "training_row_counts": [
+    453,
+    612,
+    772
+  ],
+  "evaluation_row_counts": [
+    475
+  ],
+  "fit_rows": null,
+  "evaluation_rows": 475,
+  "test_rows": 0,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    -1
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "73883b45c5e1bc958966b345f3e4f635af1656588fdfb7459295302cb15c3d93",
+    "fold_1_seed_-1.joblib": "dcc6684ceeaf27ef89fbe827ecce12790c079c87de952473c9c1d4984ca2defb",
+    "fold_metrics.csv": "ef8b0640686994fb6af63571e638ea519e7a44c408b5dde1aa77e9167d323949",
+    "per_class.csv": "81cb0da45ec13fd7144c3b66c6dc8494a4ee6d3b57eac3f7a2daf7652d56e518",
+    "summary.csv": "c92e37727c91cd473f75c7967d1003e636fa79453755c0fc21c0b8f341c61642",
+    "history.csv": "f7ee36ded30ece2ec356ee54f61b6bc917d6b079052b09b720ff431ea0afae4b",
+    "diagnostics.csv": "1b4814cf35916fd120ec25cb08e4b4c9ccdd0406d16f18af882802d75ac0eacb",
+    "fold_2_seed_-1.joblib": "40147f2f3b79e34f6f1508f6961f983e5f1775133e134379559239627a5da03b",
+    "bootstrap.npz": "8f14f286a4b330ed94683a95694365357dab4ef9dbb44458e5489feb734b1424",
+    "fits.csv": "e935a9d48a245d7cc95fbda154b2bfc10e86606686cf41fab3fa1fd67742bcf3",
+    "fold_3_seed_-1.joblib": "6631e8b50fbaf21f40e34344448cfb91043e4eb1bfc09b5e2eb4473adca7b953",
+    "predictions.csv": "e8c6b57dbfe6cb59aecfc41a6d1ceb8e98f015b633aa81733b2ee2e4eda4450a",
+    "seed_metrics.csv": "0d939f60f201f913c90c6b777a07b0429c66e7d9ef0038797231d8fa3ac5c3aa",
+    "splits.csv": "04a30a822a4f2a0f34ab453a80514bb906dac766fe042f25813102b3c0133aab"
+  }
+}

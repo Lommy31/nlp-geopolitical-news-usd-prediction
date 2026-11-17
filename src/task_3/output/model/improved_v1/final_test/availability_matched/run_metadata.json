@@ -1,0 +1,57 @@
+{
+  "model_id": "availability_matched",
+  "level": 1,
+  "phase": "test",
+  "config": {
+    "family": "small_mlp",
+    "view": "availability",
+    "centered": false,
+    "alpha": 0.01,
+    "dropout": 0.2
+  },
+  "representation": "R3",
+  "flags": null,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "ee1d7926c014d7d874aa18ff8c900d35b9a43379e43b81b32ef0ae8c97da478f",
+  "encoder_sources": {
+    "development": {},
+    "test": {}
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "written_at_wib": "2026-11-16T02:50:59.746616+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "a46b67f0a88c722c11f23855a762e36984b3bc1b6ed8e08461cce9747398fd94",
+    "seed_123.joblib": "974a77841a09829e8da36a7368f5c0d3b1b8dd065757ac8cc648dde4ee85b655",
+    "fold_metrics.csv": "d07f4d4e00e8c75fa7ce0e6b586af73a43b997d5966540712ab4cd3b0aa0426c",
+    "per_class.csv": "47f1cfce991b6413a2af51b32d5e5f5bb9503e6d31848a77d123422030a75e17",
+    "summary.csv": "b2ae1ad32a4cb93da4a9a4b4593b672df087a9f89ae96158f08fdeb767f1e84c",
+    "seed_2026.joblib": "b9270f08df094a346a57b2dbd2ed2e66a42ddfff4d5f3ef86b2cb1f6e2a79427",
+    "history.csv": "50d7f7572ce04273272eb63e89b3e56ab2fbd32d532ebf6cd72d8bc8c4ad753f",
+    "test_access.json": "0bf634f027e78e1f326c01890268a63d6f19e05cd8d06fc38f0a2fdb13b042be",
+    "bootstrap.npz": "6596632fe6ac8348f7b4cf5de47512074153f8a343055411abc88e250ed00d2b",
+    "fits.csv": "be7a4ef5d69b1ee0414431741dd293abbe6026290cdebcda25bf7b35ce4d32fd",
+    "refit_records.csv": "be7a4ef5d69b1ee0414431741dd293abbe6026290cdebcda25bf7b35ce4d32fd",
+    "predictions.csv": "b74ba9f3c0a30c71f5f112a3c3a90e56b0a107522cc79bae64d7c42e0f8ec7f0",
+    "seed_42.joblib": "32e01fceaf8060218ecaf6f2a9b0a57500eddc6617500008b01d86d3e8a6829c",
+    "seed_metrics.csv": "5f5b6aff161a30cf17228f806c2d3994db1f6bb8d4744a38d91161b6750b6d1a"
+  }
+}

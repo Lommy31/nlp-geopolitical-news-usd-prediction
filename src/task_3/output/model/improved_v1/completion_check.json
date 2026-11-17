@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "all_conditions_tested": true,
+  "primary_notebooks": 15,
+  "reported_conditions": 18,
+  "verification_process_exit_code": 0,
+  "previous_scope_preserved": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope"
+}

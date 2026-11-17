@@ -1,0 +1,110 @@
+{
+  "model_id": "A000",
+  "level": 3,
+  "phase": "test",
+  "config": {
+    "family": "small_mlp",
+    "view": "text",
+    "centered": false,
+    "alpha": 0.01,
+    "dropout": 0.2
+  },
+  "representation": "R3",
+  "flags": [
+    0,
+    0,
+    0
+  ],
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "ee1d7926c014d7d874aa18ff8c900d35b9a43379e43b81b32ef0ae8c97da478f",
+  "encoder_sources": {
+    "development": {
+      "path": "src/task_3/output/model/encoders/finbert/articles_6699096ab3da0b36a140.npz",
+      "sha256": "f476f7cea110bcd066bbcb9ed4ac4ba90bb954a70113a593578cc97e2f3f0a47",
+      "spec": {
+        "encoder": "ProsusAI/finbert",
+        "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "frozen_parameters": 109482240,
+        "checkpoint_sha256": "e5897858ff819aad7629b96ce521ae5477952d03634ef5dd30ed2d76357a9f00",
+        "max_tokens": 512,
+        "threads": 1,
+        "batch_size": 4,
+        "source": "verified_existing_article_cache",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "imported_source_sha256": {
+          "deira-work/sanity-check/cnbc_expansion/article_vectors.npy": "dddc99f5d5c408b3b2e1c327b6e60059f4de5dda9f4c378ee20f83e270bc6617",
+          "deira-work/sanity-check/cnbc_expansion/article_vectors_done.npy": "1b7376c3462268a2136f6955f8aa9e9f7bba7d7557f46142292e6828f0575eb6",
+          "deira-work/sanity-check/cnbc_expansion/development_articles.jsonl": "952e20bc78afc100d362b1ac500c7dc17b4b1c2874a3d252cc11b29404d14b90",
+          "deira-work/sanity-check/cnbc_expansion/embedding_spec.json": "27aa869f8e3f4e02f93e1fbbd244f6bf6e2a382a461ca2f51aad2811e1183606",
+          "deira-work/sanity-check/cnbc_expansion/encoder_info.json": "62e58d61f17fe68484024467aafea5befcc97b9559e24706ac649318fe0f96a6"
+        }
+      }
+    },
+    "test": {
+      "path": "src/task_3/output/model/encoders/finbert/articles_564eb8c5d3693dc6fd55.npz",
+      "sha256": "cd22389fc85940fc24231e09488ed297220331fdb643ffc29c94a9f97b57f738",
+      "spec": {
+        "encoder": "ProsusAI/finbert",
+        "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "article_text_sha256": "220f6e0b91b8f736ca25fee6f199c690331909974c20cb7c390bac4125e4974d"
+      },
+      "encoder_info": {
+        "source": "encoded_locally",
+        "frozen_parameters": 109482240,
+        "checkpoint_sha256": "e5897858ff819aad7629b96ce521ae5477952d03634ef5dd30ed2d76357a9f00",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "batch_size": 4,
+        "threads": 1,
+        "truncated_articles": 0
+      }
+    }
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "written_at_wib": "2026-11-16T02:51:32.392347+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "f4731cca0aa1f5beea2b365d8614dfdf07c067b31bc143cdc4a46391cb61cc15",
+    "seed_123.joblib": "10fdb0f21f06b20ff1cc1b34590c2ab8c1d3a50276db24de660105c2a5e2f4a8",
+    "fold_metrics.csv": "18149f546487232b0668228a949d108bf08b008a42633edb32309a708546a3c4",
+    "per_class.csv": "9fde5b1404b49a18bd72bebfcdb3da120ff179796541b4e5b3a6c350b57e427b",
+    "summary.csv": "61b012c4150ccd9b8340dc4edb7d0099c0f068fd44cdb2df671f9894fbf25c3e",
+    "seed_2026.joblib": "160f25e3157a8552eb32c74fe9d859f0446d5180bf33f2969ed8b4aca5d5127e",
+    "history.csv": "d12d9fce348c8c8017fc78cbb6b36661b5df1736e038c9a57133b96aa97a916a",
+    "test_access.json": "a097a726a6ca8c6b1781419d7fc1aa0735727a35e981703c356501546aeb84de",
+    "bootstrap.npz": "a4ed293919c2a0d35da14bc2fb39ffd4450bf82a0a78f895702accf20f42d4a1",
+    "fits.csv": "5bc0fbe7577c485ca4b836c70cea8239c22e0f3de2e1af13ffb564f98230d6d2",
+    "refit_records.csv": "5bc0fbe7577c485ca4b836c70cea8239c22e0f3de2e1af13ffb564f98230d6d2",
+    "predictions.csv": "17a43aeec8ef4744df2ca23a0561131f462b53c80dbfcf8cad31eca1c6819292",
+    "seed_42.joblib": "bd90cc5e6d14ecf476febb2610051e7d38723d2d93480277c6957850de2ac019",
+    "seed_metrics.csv": "36fd3ffb892c09e0d3fbb8595681f0f9cf91acbbe7a8a3151f7418c7e6692665"
+  }
+}

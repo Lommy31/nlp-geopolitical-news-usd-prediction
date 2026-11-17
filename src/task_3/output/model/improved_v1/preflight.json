@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "a000_concat_probability_max_error": 0.0,
+  "best_epoch": 15,
+  "checks": [
+    "same concat/A000 selected epoch",
+    "padding invariance",
+    "empty-window zero slots",
+    "nonzero task/cross/gate gradients with nonzero market inputs"
+  ]
+}

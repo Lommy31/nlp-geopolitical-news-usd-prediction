@@ -1,0 +1,47 @@
+{
+  "model_id": "L1-b",
+  "level": 1,
+  "phase": "test",
+  "config": null,
+  "representation": "R3",
+  "flags": null,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "ee1d7926c014d7d874aa18ff8c900d35b9a43379e43b81b32ef0ae8c97da478f",
+  "encoder_sources": {
+    "development": {},
+    "test": {}
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "written_at_wib": "2026-11-16T02:50:42.194823+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    -1
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "a0832223912a76a99e23b56f5ab3b7c7778e03eb747406616e97e0e5c102a906",
+    "fold_metrics.csv": "34a53c562883d95b2138e70601754f7b053d1514d4f44c257de1638d075efbaf",
+    "per_class.csv": "8d59432e37e29e847117f3f8e75d40ef8c6fe25c3144d038877e0f92a54619dc",
+    "summary.csv": "f786050c57c26f25b16c31f275f8617183a24cff2dd00a9972ca0602481cb0a3",
+    "history.csv": "f7ee36ded30ece2ec356ee54f61b6bc917d6b079052b09b720ff431ea0afae4b",
+    "test_access.json": "21f7e4de090e9563a38f3a50dd3044d71ac6aad4d5998407fa2a4b20ca061238",
+    "bootstrap.npz": "8c330481d03fd801b49cd55ebf91160a0857a5226d2e708d53fae336b863a9b0",
+    "fits.csv": "cea9484b0977eb57ba1afd81e28b221545b21bded2df03cf5e1d64378f387870",
+    "refit_records.csv": "cea9484b0977eb57ba1afd81e28b221545b21bded2df03cf5e1d64378f387870",
+    "predictions.csv": "8b8b4960c36e4fbffb1e8c244dcccc5c6eb2c3c79b00e82f0a3dab361150a9b2",
+    "seed_metrics.csv": "1dc872515340b592b35f9897d0c9d8b70d397d99360819195d2dccec4a5280ee",
+    "seed_-1.joblib": "7ff54c32f413eef47979993b9f3e64d2230b43fba1f2c778e660f9a94f2eecb2"
+  }
+}

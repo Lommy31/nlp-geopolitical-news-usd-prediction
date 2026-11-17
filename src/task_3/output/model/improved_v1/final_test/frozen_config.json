@@ -1,0 +1,167 @@
+{
+  "frozen_at_wib": "2026-11-16T02:50:31.407707+07:00",
+  "selected_level3_model": "A000",
+  "representation": "R3",
+  "criterion": "Minimum equal-fold validation log loss among all five Level 3 variants",
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "representation_selection_sha256": "02eafca3c79197d2b05a3a3e67d20fa6eb005352ecbfc48afface8ad12995202",
+  "conditions": [
+    {
+      "level": 3,
+      "model_id": "A000",
+      "directory": "src/task_3/output/model/improved_v1/level_3/01_a000_mean_concat",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "representation": "R3",
+      "flags": [
+        0,
+        0,
+        0
+      ],
+      "epochs": {
+        "42": 44,
+        "123": 6,
+        "2026": 9
+      },
+      "fits_sha256": "645e2dd47d6b432588877b1bd03335939e7f7dca8d168c38c4d18a32c13d6845",
+      "metadata_sha256": "6cba91613780a81abc1bf0d42ac0f4573f40fdfa7c45d18487d1368aefebf89f"
+    },
+    {
+      "level": 1,
+      "model_id": "L1-a",
+      "directory": "src/task_3/output/model/improved_v1/level_1/01_training_majority",
+      "config": null,
+      "representation": "R3",
+      "flags": null,
+      "epochs": {
+        "-1": 0
+      },
+      "fits_sha256": "e935a9d48a245d7cc95fbda154b2bfc10e86606686cf41fab3fa1fd67742bcf3",
+      "metadata_sha256": "a5c349ce64e0fa3117b08c4cf1bb4e385de2b74cc789c000809f37791954ee2a"
+    },
+    {
+      "level": 1,
+      "model_id": "L1-b",
+      "directory": "src/task_3/output/model/improved_v1/level_1/02_last_direction",
+      "config": null,
+      "representation": "R3",
+      "flags": null,
+      "epochs": {
+        "-1": 0
+      },
+      "fits_sha256": "403e085e5d1890f34a8ee62e41ad3ff8205c0247b0fa1e59c42300cb41bc1fd2",
+      "metadata_sha256": "53c7d9d8d75d3b5f26fa69a271e9dee5350e054d26bde6b96723a4b54763a13c"
+    },
+    {
+      "level": 1,
+      "model_id": "price_matched",
+      "directory": "src/task_3/output/model/improved_v1/level_1/price_matched",
+      "config": {
+        "family": "small_mlp",
+        "view": "price",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "representation": "R3",
+      "flags": null,
+      "epochs": {
+        "42": 19,
+        "123": 29,
+        "2026": 36
+      },
+      "fits_sha256": "df03c07fe80510ca7aedc3661623e522584f0bba8223ec7a81894951eefb2516",
+      "metadata_sha256": "250057c65d6ee534fa2470766ecbdf8cb1c6dbbe1073b1424d2d8d65f40578e7"
+    },
+    {
+      "level": 1,
+      "model_id": "price_tuned",
+      "directory": "src/task_3/output/model/improved_v1/level_1/price_tuned",
+      "config": {
+        "family": "small_mlp",
+        "view": "price",
+        "centered": false,
+        "alpha": 1.0,
+        "dropout": 0.2
+      },
+      "representation": "R3",
+      "flags": null,
+      "epochs": {
+        "42": 23,
+        "123": 34,
+        "2026": 36
+      },
+      "fits_sha256": "a97aee31c4e0d0129daf6dff27c110e221f7007591db21b80f9fb2c0ebd17df6",
+      "metadata_sha256": "f510a5e569f384420c36578089a3030ba6f16750eb9c79d6e8665eb93afedbd5"
+    },
+    {
+      "level": 1,
+      "model_id": "availability_matched",
+      "directory": "src/task_3/output/model/improved_v1/level_1/availability_matched",
+      "config": {
+        "family": "small_mlp",
+        "view": "availability",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "representation": "R3",
+      "flags": null,
+      "epochs": {
+        "42": 28,
+        "123": 40,
+        "2026": 32
+      },
+      "fits_sha256": "f0894c738ee391082d6a18b51d9552628c632956b4748850f6e9af73a2c90cd3",
+      "metadata_sha256": "fb564d57ff0c7ea08a891eb5ffdc071398fecd002dab01601c3b94ae90a34895"
+    }
+  ],
+  "fit_rows": 930,
+  "validation_gates": {
+    "L1-a": {
+      "folds_better": 2,
+      "mean_log_loss_delta": -0.002786594367060672,
+      "low_95": -0.007848593283691965,
+      "high_95": 0.0020207390242669818,
+      "passes": false
+    },
+    "L1-b": {
+      "folds_better": 3,
+      "mean_log_loss_delta": -15.237045169423316,
+      "low_95": -16.836325980427077,
+      "high_95": -13.79068259148922,
+      "passes": true
+    },
+    "price_matched": {
+      "folds_better": 3,
+      "mean_log_loss_delta": -0.00806527131932718,
+      "low_95": -0.02818279936986327,
+      "high_95": 0.010409803643928493,
+      "passes": false
+    },
+    "price_tuned": {
+      "folds_better": 0,
+      "mean_log_loss_delta": 0.0014890234419767296,
+      "low_95": -0.010327111484555231,
+      "high_95": 0.012357400627241421,
+      "passes": false
+    },
+    "availability_matched": {
+      "folds_better": 3,
+      "mean_log_loss_delta": -0.01089883287162082,
+      "low_95": -0.02908514357419043,
+      "high_95": 0.00577748486823912,
+      "passes": false
+    }
+  },
+  "success_gate_passed": false,
+  "evaluation_reason": "Complete requested exploratory final pipeline; failed validation gates remain failures rather than cancelling planned levels",
+  "threshold": 0.5,
+  "test_used_for_selection": false,
+  "test_history": "Repeated previous test access; exploratory only. Previous comparisons are not independent new holdouts."
+}

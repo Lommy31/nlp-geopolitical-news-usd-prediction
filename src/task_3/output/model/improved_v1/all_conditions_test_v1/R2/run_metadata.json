@@ -1,0 +1,132 @@
+{
+  "model_id": "R2",
+  "level": 2,
+  "phase": "test",
+  "config": {
+    "family": "small_mlp",
+    "view": "text",
+    "centered": false,
+    "alpha": 1.0,
+    "dropout": 0.5
+  },
+  "representation": "R2",
+  "flags": null,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "38b12b6f6e92b75ad9d657fa7815d58046cdb3080e776cc5d8c366b8e4d7d690",
+  "encoder_sources": {
+    "development": {
+      "path": "src/task_3/output/model/encoders/word2vec/articles_00691734005703a07298.npz",
+      "sha256": "02ac163d62384c62dda5194efa6e46febb6578b5b6c63cc6f9b41ff4ad89a69d",
+      "spec": {
+        "recipe": {
+          "model": "word2vec-google-news-300",
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "native_dimension": 300,
+          "padded_width": 768,
+          "token_view": "tokens_word2vec",
+          "case_sensitive": true,
+          "lowercase_fallback": false,
+          "automatic_phrase_joining": false,
+          "word_pooling": "Mean of in-vocabulary token occurrences; all-OOV articles remain zero",
+          "window_pooling": "Uniform article mean including zero vectors",
+          "project_text_training": false
+        },
+        "pooling_dtype": "float64",
+        "native_dimension": 300,
+        "ordered_articles_sha256": "5535216275431910e9c45b50cf28c9dd0ac9d89decf343d3e56c17098ca0c213"
+      },
+      "encoder_info": {
+        "pretrained": {
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "source_md5": "a5e5354d40acb95f9ec66d5977d140ef",
+          "source_vocabulary": 3000000,
+          "requested_tokens": 50972,
+          "matched_tokens": 36086,
+          "subset_vectors_sha256": "d2064d094eb4e9ae1d7019a4b330ad1f779bfb4c2357c705e26589744b5a9c04",
+          "extraction_seconds": 27.34743872800027
+        },
+        "subset_cache": "/home/lenovo/UGM/assignment/semester_5/nlp/nlp-geopolitical-news-usd-prediction/src/task_3/output/model/encoders/word2vec/subset_641f1f9f18ddd787b97d.npz",
+        "subset_sha256": "e12c499a7c839107be9ef3101ab40069bcb97e92204a848ef0c5b592a147081d",
+        "vectors_sha256": "992a83ef7c96b2cf19aeb767c9c73ba504f69ba2f4b25b643cee320efe5adb89",
+        "trainable_encoder_parameters": 0
+      }
+    },
+    "test": {
+      "path": "src/task_3/output/model/encoders/word2vec/articles_272c845e33c3ca418d5c.npz",
+      "sha256": "cbefe5c33f75ac90dda4db6e3e8743b881466901aae540691146f20a876cccd9",
+      "spec": {
+        "recipe": {
+          "model": "word2vec-google-news-300",
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "native_dimension": 300,
+          "padded_width": 768,
+          "token_view": "tokens_word2vec",
+          "case_sensitive": true,
+          "lowercase_fallback": false,
+          "automatic_phrase_joining": false,
+          "word_pooling": "Mean of in-vocabulary token occurrences; all-OOV articles remain zero",
+          "window_pooling": "Uniform article mean including zero vectors",
+          "project_text_training": false
+        },
+        "pooling_dtype": "float64",
+        "native_dimension": 300,
+        "ordered_articles_sha256": "e56ca910e43a21e4c91b954199ebc5b9f426da8dfcd0936ca4ed52b17509ef6e"
+      },
+      "encoder_info": {
+        "pretrained": {
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "source_md5": "a5e5354d40acb95f9ec66d5977d140ef",
+          "source_vocabulary": 3000000,
+          "requested_tokens": 25321,
+          "matched_tokens": 19995,
+          "subset_vectors_sha256": "60c1e2acc7cc30bee95ee428f328988f854fbd31352948cca930958e09777b29",
+          "extraction_seconds": 23.930384298999343
+        },
+        "subset_cache": "/home/lenovo/UGM/assignment/semester_5/nlp/nlp-geopolitical-news-usd-prediction/src/task_3/output/model/encoders/word2vec/subset_7333d97c3838229ef2b2.npz",
+        "subset_sha256": "02d6e8c77cb065d0c8e8d6c942a06a9be4a77b5c9c7924610c89182f9f9a9149",
+        "vectors_sha256": "7c8bb4f8183676b0f53775614daab53fd5d8e124e7e4cc75729b993f4eb99c2c",
+        "trainable_encoder_parameters": 0
+      }
+    }
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "new_fits": 3,
+  "reuse_source": null,
+  "alias": null,
+  "written_at_wib": "2026-11-16T09:12:05.402469+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "bb38c406d83d9334461e064aab8e8ed67d6fb89d1f19e929ab969964ed379346",
+    "seed_123.joblib": "19424d79abeb408811e9b08196d4f405d599fb200207d5d08cb7896d1c5db7b5",
+    "fold_metrics.csv": "9ddb45f1564c609683c52723f0ed93ddee1396637bfd4d71a6f652c22e353fa3",
+    "per_class.csv": "26d0f038a14abced274de7f296ff338699ec9910f38525b1e58e08dd2878723b",
+    "summary.csv": "b51fa1a4b56af8aec86f48ee0a5e8c9620bb914d059f6bd673c630d70b01222b",
+    "seed_2026.joblib": "261cdad09f1149aa84fb7a6cf6f0c5c5fd5be0a6a1be0b762362305d7502aa8d",
+    "history.csv": "5feee288e8fa511eb26f037e02c8cf0a7226c7822d5837598aefabcd7109700b",
+    "test_access.json": "6b0cee9e6b2418cafdb05f4bf0b6fd79e4500b7f6c7c3d13ea050a0be5dddaa8",
+    "bootstrap.npz": "9f47ec59b7d1d54837a6d133d3e0a6fe52219790b3fbd3792536b4e780bf4d0f",
+    "fits.csv": "59777f1ba0a3770fecfa13a16ecdca6e33c440466f0aab44e4cca1961b9e30b3",
+    "refit_records.csv": "59777f1ba0a3770fecfa13a16ecdca6e33c440466f0aab44e4cca1961b9e30b3",
+    "predictions.csv": "568cd54e7f9456aba6010745e5a58b7b63b0e56bc1cfd66fb25ac15b918893be",
+    "seed_42.joblib": "30f28317bdcb80fa1c037411154937e7cf0afea2481e25a666abc60b423edf5b",
+    "seed_metrics.csv": "99de5164d266d54caf1191a806305a5364fc971e2ea16c14e37c57e04f3c44b0"
+  }
+}

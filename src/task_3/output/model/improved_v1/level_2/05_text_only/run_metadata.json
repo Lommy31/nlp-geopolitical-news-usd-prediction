@@ -1,0 +1,156 @@
+{
+  "model_id": "T1",
+  "level": 2,
+  "phase": "validation",
+  "config": {
+    "family": "small_mlp",
+    "view": "text",
+    "centered": false,
+    "alpha": 0.01,
+    "dropout": 0.2
+  },
+  "representation": "R3",
+  "flags": null,
+  "text_only": true,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "encoder_sources": {
+    "1": {
+      "path": "src/task_3/output/model/encoders/finbert/articles_6699096ab3da0b36a140.npz",
+      "sha256": "f476f7cea110bcd066bbcb9ed4ac4ba90bb954a70113a593578cc97e2f3f0a47",
+      "spec": {
+        "encoder": "ProsusAI/finbert",
+        "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "frozen_parameters": 109482240,
+        "checkpoint_sha256": "e5897858ff819aad7629b96ce521ae5477952d03634ef5dd30ed2d76357a9f00",
+        "max_tokens": 512,
+        "threads": 1,
+        "batch_size": 4,
+        "source": "verified_existing_article_cache",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "imported_source_sha256": {
+          "deira-work/sanity-check/cnbc_expansion/article_vectors.npy": "dddc99f5d5c408b3b2e1c327b6e60059f4de5dda9f4c378ee20f83e270bc6617",
+          "deira-work/sanity-check/cnbc_expansion/article_vectors_done.npy": "1b7376c3462268a2136f6955f8aa9e9f7bba7d7557f46142292e6828f0575eb6",
+          "deira-work/sanity-check/cnbc_expansion/development_articles.jsonl": "952e20bc78afc100d362b1ac500c7dc17b4b1c2874a3d252cc11b29404d14b90",
+          "deira-work/sanity-check/cnbc_expansion/embedding_spec.json": "27aa869f8e3f4e02f93e1fbbd244f6bf6e2a382a461ca2f51aad2811e1183606",
+          "deira-work/sanity-check/cnbc_expansion/encoder_info.json": "62e58d61f17fe68484024467aafea5befcc97b9559e24706ac649318fe0f96a6"
+        }
+      }
+    },
+    "2": {
+      "path": "src/task_3/output/model/encoders/finbert/articles_6699096ab3da0b36a140.npz",
+      "sha256": "f476f7cea110bcd066bbcb9ed4ac4ba90bb954a70113a593578cc97e2f3f0a47",
+      "spec": {
+        "encoder": "ProsusAI/finbert",
+        "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "frozen_parameters": 109482240,
+        "checkpoint_sha256": "e5897858ff819aad7629b96ce521ae5477952d03634ef5dd30ed2d76357a9f00",
+        "max_tokens": 512,
+        "threads": 1,
+        "batch_size": 4,
+        "source": "verified_existing_article_cache",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "imported_source_sha256": {
+          "deira-work/sanity-check/cnbc_expansion/article_vectors.npy": "dddc99f5d5c408b3b2e1c327b6e60059f4de5dda9f4c378ee20f83e270bc6617",
+          "deira-work/sanity-check/cnbc_expansion/article_vectors_done.npy": "1b7376c3462268a2136f6955f8aa9e9f7bba7d7557f46142292e6828f0575eb6",
+          "deira-work/sanity-check/cnbc_expansion/development_articles.jsonl": "952e20bc78afc100d362b1ac500c7dc17b4b1c2874a3d252cc11b29404d14b90",
+          "deira-work/sanity-check/cnbc_expansion/embedding_spec.json": "27aa869f8e3f4e02f93e1fbbd244f6bf6e2a382a461ca2f51aad2811e1183606",
+          "deira-work/sanity-check/cnbc_expansion/encoder_info.json": "62e58d61f17fe68484024467aafea5befcc97b9559e24706ac649318fe0f96a6"
+        }
+      }
+    },
+    "3": {
+      "path": "src/task_3/output/model/encoders/finbert/articles_6699096ab3da0b36a140.npz",
+      "sha256": "f476f7cea110bcd066bbcb9ed4ac4ba90bb954a70113a593578cc97e2f3f0a47",
+      "spec": {
+        "encoder": "ProsusAI/finbert",
+        "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "frozen_parameters": 109482240,
+        "checkpoint_sha256": "e5897858ff819aad7629b96ce521ae5477952d03634ef5dd30ed2d76357a9f00",
+        "max_tokens": 512,
+        "threads": 1,
+        "batch_size": 4,
+        "source": "verified_existing_article_cache",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "imported_source_sha256": {
+          "deira-work/sanity-check/cnbc_expansion/article_vectors.npy": "dddc99f5d5c408b3b2e1c327b6e60059f4de5dda9f4c378ee20f83e270bc6617",
+          "deira-work/sanity-check/cnbc_expansion/article_vectors_done.npy": "1b7376c3462268a2136f6955f8aa9e9f7bba7d7557f46142292e6828f0575eb6",
+          "deira-work/sanity-check/cnbc_expansion/development_articles.jsonl": "952e20bc78afc100d362b1ac500c7dc17b4b1c2874a3d252cc11b29404d14b90",
+          "deira-work/sanity-check/cnbc_expansion/embedding_spec.json": "27aa869f8e3f4e02f93e1fbbd244f6bf6e2a382a461ca2f51aad2811e1183606",
+          "deira-work/sanity-check/cnbc_expansion/encoder_info.json": "62e58d61f17fe68484024467aafea5befcc97b9559e24706ac649318fe0f96a6"
+        }
+      }
+    }
+  },
+  "alias": false,
+  "new_fits": 9,
+  "written_at_wib": "2026-11-16T02:35:17.891623+07:00",
+  "training_row_counts": [
+    453,
+    612,
+    772
+  ],
+  "evaluation_row_counts": [
+    475
+  ],
+  "fit_rows": null,
+  "evaluation_rows": 475,
+  "test_rows": 0,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "fold_2_seed_2026.joblib": "484ef328b2b548cd989e546a906a41b9d1a67bffcf505ed7f7e177fe86724ce2",
+    "intervals.csv": "1422115d084e6836e03b3bdf8df7fbe2d48617bacf959278f1448bd5ef455808",
+    "logistic_C0.01_fold_3.joblib": "c3a0c9181d8b8631f89c8aef9660ccf3a4b5f3bbadd1099b177d44a921d352ec",
+    "fold_1_seed_2026.joblib": "bafb6d7c3724ce861854171f896f52891e4a30265a86bc92ae4d9e4fce8e0003",
+    "fold_3_seed_123.joblib": "755a7941fd306d09e0188fdabf47918ee828858cb99e3d8e5a705bc5a3e65d8b",
+    "fold_2_seed_42.joblib": "d4c02ac49376198d9f87d5b551353de02ae7801d41a50f0452838018db3a578d",
+    "fold_metrics.csv": "06fca4d935ea4c7af7f468babfbb72ffd3dc32def9067a2d731260169d75387c",
+    "per_class.csv": "57592f864ab571102fff3e1fde9bf23567b0071f6b8f7569aa8761e5616fbe2d",
+    "summary.csv": "85f2f3f05b37603540bafad817ade1d3caa34b0becfceb0ece09f894f833f77a",
+    "history.csv": "f13d5ada31366417f7722829fce962a3262052bd080804cc7812d3dd629040f6",
+    "diagnostics.csv": "8e8bc00b85069ac9e37c247e7e4f5eb77dee478f92e77813f1c040ed6e9241b8",
+    "logistic_comparison.csv": "b240e0d8a6689b5c6bb17eaa7c53f3220bdfc5363a42ae0fb2d030eff077a6d7",
+    "bootstrap.npz": "4ad28d65dffdf66ffa511f03a12ac518d5b6c6e7a393168cffbf066d4adec9fb",
+    "fold_3_seed_2026.joblib": "999bf525ca6b07d25ec67c4344a22387818e7f4f7b7a5e27872f9bde61e59ae5",
+    "fits.csv": "ce25d0e32125f16a44731330e31837e25f5c67769d8f1f1792549be9e28dc0a1",
+    "fold_1_seed_123.joblib": "5bc9e4279ed3aa86660502d4e2cab495598fb8cbee17d90ae0a7c141b6f89127",
+    "logistic_failures.json": "821b706cf20c8bae73a20c5c03966ac26223b4a2e67392bbc0b00b28881beff9",
+    "logistic_C0.01_fold_2.joblib": "e5c1e6f1d45845cfce2ad1254e1fc993255cf21cee306f1bf027a39141229e4e",
+    "fold_3_seed_42.joblib": "e40e4cdc9d16eb9ec391662ea15d3f6ad6aa0db1747f7b331e635a211cab7ee2",
+    "fold_2_seed_123.joblib": "0346f4ab18fd4f7fd150905952406601a7d4a4ca9d0bdaa1a8a6ee3e7fbb39c1",
+    "predictions.csv": "2f11050f2c7558e8cb2acf9c84c55463bab5c13bb1082b2c7f3a83b4ca9aa98f",
+    "seed_metrics.csv": "24042cfaa82512f50580b76caefbc08b45afa3361b73577327c2c0f9ec7cf1e6",
+    "logistic_C0.01_fold_1.joblib": "86ed1b3bf6b1b772381c2e610d3b1226130db7640eb932a5f38a7dc3e990f62b",
+    "fold_1_seed_42.joblib": "600152e10fb8b250d122baa09e942d9c6e13f5aacda945ad547ee8cdcef4fe6d",
+    "splits.csv": "04a30a822a4f2a0f34ab453a80514bb906dac766fe042f25813102b3c0133aab",
+    "logistic_metrics.csv": "7b0ea9b45f711ec8fa2d61170cdf8b89244195b49e9ea8c62f35d0f692ff3c12"
+  }
+}

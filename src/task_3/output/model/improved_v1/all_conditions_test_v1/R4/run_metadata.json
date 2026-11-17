@@ -1,0 +1,112 @@
+{
+  "model_id": "R4",
+  "level": 2,
+  "phase": "test",
+  "config": {
+    "family": "small_mlp",
+    "view": "text",
+    "centered": false,
+    "alpha": 0.01,
+    "dropout": 0.5
+  },
+  "representation": "R4",
+  "flags": null,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "38b12b6f6e92b75ad9d657fa7815d58046cdb3080e776cc5d8c366b8e4d7d690",
+  "encoder_sources": {
+    "development": {
+      "path": "src/task_3/output/model/encoders/roberta/articles_cc72f9f2e8a98c985856.npz",
+      "sha256": "3a0244e744beb4de6d60a7123b8420ece5b5937734fd4e857b6f078554605be3",
+      "spec": {
+        "encoder": "FacebookAI/roberta-base",
+        "revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "add_prefix_space": false,
+        "pooler_used": false,
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "source": "encoded_locally",
+        "checkpoint_sha256": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+        "frozen_parameters": 124055040,
+        "pooler_used": false,
+        "vectors_sha256": "7f5e66049265064110e76458d7061dce5a37588f3ba2543fef70c0e44f5b2fd3",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "threads": 4,
+        "batch_size": 16,
+        "truncated_articles": 0,
+        "extraction_seconds": 2630.883607492
+      }
+    },
+    "test": {
+      "path": "src/task_3/output/model/encoders/roberta/articles_196bb35303362678ddc6.npz",
+      "sha256": "490d988ba18033581e86001b7ca5041afed817bcf0d45a4108560d670dc2559e",
+      "spec": {
+        "encoder": "FacebookAI/roberta-base",
+        "revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "add_prefix_space": false,
+        "pooler_used": false,
+        "article_text_sha256": "220f6e0b91b8f736ca25fee6f199c690331909974c20cb7c390bac4125e4974d"
+      },
+      "encoder_info": {
+        "source": "encoded_locally",
+        "checkpoint_sha256": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+        "frozen_parameters": 124055040,
+        "pooler_used": false,
+        "vectors_sha256": "3f696e34e8e6aa6226c26ab82b70098caedca7d6b651617db83fb3618520e8b2",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "threads": 4,
+        "batch_size": 16,
+        "truncated_articles": 0,
+        "extraction_seconds": 676.3942003550001
+      }
+    }
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "new_fits": 3,
+  "reuse_source": null,
+  "alias": null,
+  "written_at_wib": "2026-11-16T09:12:23.117764+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "7e0f23f1ac0ced7e2b683061fdfe7bab9cba76557fc160daf0525394fef018c3",
+    "seed_123.joblib": "e4fab92f6b5de6c1327e5cb558ae777ac3d8d3c8361fb4ed3109a5c47d7a7f75",
+    "fold_metrics.csv": "28950e779e8518edc91574464ff638e939df0693f087286a0c42207a8bf6526d",
+    "per_class.csv": "7394bf578e135dfa5a673be232a6c400002084dd93abb45decc38a6219fd01d9",
+    "summary.csv": "2ce1f883aab0f45c6fbb851f73422f46bf82dfacb1e86a274cb86b3539d7461b",
+    "seed_2026.joblib": "6c77a9e9d379bb1e4b07a47daa8a07e7ff3fd13716475322f846c0aa3507b508",
+    "history.csv": "fccde3c550dbc3d381d9a28b4f1d0fcd781d792a26a5762af2505a9de611a5a4",
+    "test_access.json": "89915a8f89fa5d1d4b70c9f56cce7a7e5414cab14eecb5fad88e3baa929dd26c",
+    "bootstrap.npz": "341fbc417cd02f92c422901d6d42ff848ae4935e39f70b265e2980129f754b58",
+    "fits.csv": "b1fcacbf4d4964eb42e7dbc19aed6553928e4d4a129e0c677684cbb27a3f3201",
+    "refit_records.csv": "b1fcacbf4d4964eb42e7dbc19aed6553928e4d4a129e0c677684cbb27a3f3201",
+    "predictions.csv": "c9a50e0ebee4041f80f601b70a3a48580a85e27f3c9662bdc7a9364c7b414154",
+    "seed_42.joblib": "4db3a43ac4c4a882d44dbe0dea90bd4f78db363cd8863c85c50141519280219a",
+    "seed_metrics.csv": "1cf708a0b52c77214699077d7c6ff552e3383e499b9e8c4aadd187bb50b1a0a5"
+  }
+}

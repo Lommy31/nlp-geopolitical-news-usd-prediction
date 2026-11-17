@@ -1,0 +1,34 @@
+{
+  "verified": true,
+  "validation_models": 141,
+  "logistic_models": 70,
+  "validation_verification_snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/output/model/improved_v1/verification.json",
+  "validation_verification_sha256": "83b19ae5c883c1355207615bc84061730fb79bffc54edd1c38870d66583e5e7e",
+  "primary_notebooks": 15,
+  "all_conditions_test": {
+    "verified": true,
+    "primary_notebooks": 15,
+    "reported_conditions": 18,
+    "new_refit_models": 27,
+    "reused_model_entries": 23,
+    "reported_model_seed_entries": 50,
+    "development_rows": 930,
+    "test_rows": 235,
+    "manual_probability_max_error": 2.220446049250313e-16,
+    "test_used_for_selection": false,
+    "checks": [
+      "frozen per-condition validation configurations and median epochs",
+      "unchanged validation training code and artifacts",
+      "all fifteen executed notebook test sections and figures",
+      "all saved-model predictions and eight metrics on identical dates",
+      "independent NumPy MLP/attention/gate/text-only inference",
+      "train-only scalers and development-only final TF-IDF/SVD",
+      "refit records exclude test fitting/stopping",
+      "reused model hashes and explicit aliases",
+      "all summaries, temporal intervals and paired differences",
+      "validation winner preserved despite test comparisons"
+    ]
+  },
+  "active_test_verification": "src/task_3/output/model/improved_v1/all_conditions_test_v1/verification.json",
+  "active_test_verification_sha256": "197bc3a9ad6aed7589005d1befa6e0dd5e87d1dacb5b7f92293a89b6b1b4f46a"
+}

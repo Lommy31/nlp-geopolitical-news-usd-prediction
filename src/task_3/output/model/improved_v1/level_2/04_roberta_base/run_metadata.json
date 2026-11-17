@@ -1,0 +1,150 @@
+{
+  "model_id": "R4",
+  "level": 2,
+  "phase": "validation",
+  "config": {
+    "family": "small_mlp",
+    "view": "text",
+    "centered": false,
+    "alpha": 0.01,
+    "dropout": 0.5
+  },
+  "representation": "R4",
+  "flags": null,
+  "text_only": false,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "encoder_sources": {
+    "1": {
+      "path": "src/task_3/output/model/encoders/roberta/articles_cc72f9f2e8a98c985856.npz",
+      "sha256": "3a0244e744beb4de6d60a7123b8420ece5b5937734fd4e857b6f078554605be3",
+      "spec": {
+        "encoder": "FacebookAI/roberta-base",
+        "revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "add_prefix_space": false,
+        "pooler_used": false,
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "source": "encoded_locally",
+        "checkpoint_sha256": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+        "frozen_parameters": 124055040,
+        "pooler_used": false,
+        "vectors_sha256": "7f5e66049265064110e76458d7061dce5a37588f3ba2543fef70c0e44f5b2fd3",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "threads": 4,
+        "batch_size": 16,
+        "truncated_articles": 0,
+        "extraction_seconds": 2630.883607492
+      }
+    },
+    "2": {
+      "path": "src/task_3/output/model/encoders/roberta/articles_cc72f9f2e8a98c985856.npz",
+      "sha256": "3a0244e744beb4de6d60a7123b8420ece5b5937734fd4e857b6f078554605be3",
+      "spec": {
+        "encoder": "FacebookAI/roberta-base",
+        "revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "add_prefix_space": false,
+        "pooler_used": false,
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "source": "encoded_locally",
+        "checkpoint_sha256": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+        "frozen_parameters": 124055040,
+        "pooler_used": false,
+        "vectors_sha256": "7f5e66049265064110e76458d7061dce5a37588f3ba2543fef70c0e44f5b2fd3",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "threads": 4,
+        "batch_size": 16,
+        "truncated_articles": 0,
+        "extraction_seconds": 2630.883607492
+      }
+    },
+    "3": {
+      "path": "src/task_3/output/model/encoders/roberta/articles_cc72f9f2e8a98c985856.npz",
+      "sha256": "3a0244e744beb4de6d60a7123b8420ece5b5937734fd4e857b6f078554605be3",
+      "spec": {
+        "encoder": "FacebookAI/roberta-base",
+        "revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+        "dimension": 768,
+        "max_tokens": 512,
+        "pooling": "last_hidden_state_mean_without_special_or_padding_tokens",
+        "add_prefix_space": false,
+        "pooler_used": false,
+        "article_text_sha256": "e061b3ab4a1955bd1abcaebaa837f50ec87ae5fdb805d913ceff95c7eccc7220"
+      },
+      "encoder_info": {
+        "source": "encoded_locally",
+        "checkpoint_sha256": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+        "frozen_parameters": 124055040,
+        "pooler_used": false,
+        "vectors_sha256": "7f5e66049265064110e76458d7061dce5a37588f3ba2543fef70c0e44f5b2fd3",
+        "torch": "2.9.0+cpu",
+        "transformers": "4.57.6",
+        "threads": 4,
+        "batch_size": 16,
+        "truncated_articles": 0,
+        "extraction_seconds": 2630.883607492
+      }
+    }
+  },
+  "alias": false,
+  "new_fits": 9,
+  "written_at_wib": "2026-11-16T02:35:01.506941+07:00",
+  "training_row_counts": [
+    453,
+    612,
+    772
+  ],
+  "evaluation_row_counts": [
+    475
+  ],
+  "fit_rows": null,
+  "evaluation_rows": 475,
+  "test_rows": 0,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "fold_2_seed_2026.joblib": "f5f17b41d5f79502d31151e64f23ea4bd2fa1176e33759c9341e5608010f1a09",
+    "intervals.csv": "61e112dd0206388f94465db2707e41e090bb8d92398fb8653f8af7f9dfc178f7",
+    "logistic_C0.01_fold_3.joblib": "8d953f50f4af5f48e686ff4626a0e409ad818a8de9c1a690600e5252864cc88b",
+    "fold_1_seed_2026.joblib": "d12853480f10e0236f1a05cdfedc9f731fd7ab5fbf7ddc11eff94cbd8478a859",
+    "fold_3_seed_123.joblib": "fca76912267cafce9892624bc59158527af8b0e1924d138e5a5eb1e06a4146da",
+    "fold_2_seed_42.joblib": "0687609b37794a930421ee41f9c13016b272134029bf13574b35ca71fa2870ba",
+    "fold_metrics.csv": "987937cbc74adc6b7918ed8f5e69ec11ed82ea2151b77bdf33ed31f5915df3ad",
+    "per_class.csv": "123a9b23fdc5bb142a4a0f86f0314f4b2080412ff630c277265cda355a2a7c78",
+    "summary.csv": "400704f2fb22e0c6c294136fcc04578f931c64ba67675e6749bf6521099568a4",
+    "history.csv": "bc0d6044799175272f9e5e745b8a02743cb26cd92cb8d0333d362969cd75e8a8",
+    "diagnostics.csv": "a83643753d9edf78aff2b88d463d71e0b5a263919336484268fe9d4830794074",
+    "logistic_comparison.csv": "a734a201e854ee65bbf28d336a9d409e84ed9806e51c0723353c804b5eda11b2",
+    "bootstrap.npz": "3a2cf9061608f081863206e50e411d1e4a39bf0289e5fab4bd0259424652db70",
+    "fold_3_seed_2026.joblib": "09eaf014636549c5f7f5ce9952fdf48ac1eb1993832d14cf59a4f70c38a966ba",
+    "fits.csv": "d538d65259a6ae22a1b433c03f34033f575107e1a25eaeee5e52c24bdaf62593",
+    "fold_1_seed_123.joblib": "192cde15ca0978365919c5abc599c3e47e1f313dd5b59a6073a9275d38b7e54a",
+    "logistic_failures.json": "821b706cf20c8bae73a20c5c03966ac26223b4a2e67392bbc0b00b28881beff9",
+    "logistic_C0.01_fold_2.joblib": "044542177c39874a43458d4d6a60510f8fc9e373e54b6310cc4dbeac336c846a",
+    "fold_3_seed_42.joblib": "b7d4e46f50efff7a4873c60b956a5563d3b437b549cfad71eea3c784552640c2",
+    "fold_2_seed_123.joblib": "21058d7fce016b83419af029b5ba5fbed36d63265b7c944f2e381b8edac29096",
+    "predictions.csv": "7837152c94c9bcf5aa4e66e2dfd4c611d4e358e76fdd32603f4f9708010b017f",
+    "seed_metrics.csv": "4ef7e56c207eb2bbac2afb87087f01ec4524c6a5ec0bb7515bb7450b2d481f71",
+    "logistic_C0.01_fold_1.joblib": "5a40d68fd59b222eb1b8ecf773ca282c1e64f363b7356e43a3f55400e9d1c107",
+    "fold_1_seed_42.joblib": "f85dacc99fa8b3c9b7e9983cbedd0b301da4700aaaefcc41d0432d738f36b81b",
+    "splits.csv": "04a30a822a4f2a0f34ab453a80514bb906dac766fe042f25813102b3c0133aab",
+    "logistic_metrics.csv": "314f094f583776f9fec7230926f267fd4e1fcdf302a27048b5e8684fb7159704"
+  }
+}

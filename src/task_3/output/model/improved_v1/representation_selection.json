@@ -1,0 +1,54 @@
+{
+  "selected_at_wib": "2026-11-16T02:35:02.382566+07:00",
+  "criterion": "Minimum equal-fold validation log loss",
+  "overall": "R3",
+  "eligible": "R3",
+  "test_used_for_selection": false,
+  "scores": [
+    {
+      "model_id": "R1",
+      "mcc": 0.076804808406257,
+      "macro_f1": 0.4935764878859571,
+      "balanced_accuracy": 0.5299644735552793,
+      "accuracy": 0.550234853912905,
+      "roc_auc": 0.5357603674233028,
+      "brier": 0.254725481341697,
+      "log_loss": 0.7054036392631402,
+      "ece_10": 0.103401391084896
+    },
+    {
+      "model_id": "R2",
+      "mcc": -0.0087708421540384,
+      "macro_f1": 0.3636395657165039,
+      "balanced_accuracy": 0.4987057485710865,
+      "accuracy": 0.5312873178887031,
+      "roc_auc": 0.5129711557675112,
+      "brier": 0.2491802029010104,
+      "log_loss": 0.6916818871612059,
+      "ece_10": 0.0407978343036298
+    },
+    {
+      "model_id": "R3",
+      "mcc": 0.0088676320496402,
+      "macro_f1": 0.3494955609362389,
+      "balanced_accuracy": 0.50070323488045,
+      "accuracy": 0.5354934585887535,
+      "roc_auc": 0.5007121365877976,
+      "brier": 0.2488525183786221,
+      "log_loss": 0.6908655247598964,
+      "ece_10": 0.0376320333755598
+    },
+    {
+      "model_id": "R4",
+      "mcc": 0.0120516921010364,
+      "macro_f1": 0.3526282393261878,
+      "balanced_accuracy": 0.5021097046413502,
+      "accuracy": 0.5348034922909535,
+      "roc_auc": 0.5002345559517568,
+      "brier": 0.2488640065069829,
+      "log_loss": 0.6908858441866149,
+      "ece_10": 0.03894754909838
+    }
+  ],
+  "interpretation": "Validation selects and scores checkpoints and representations; exploratory estimates"
+}

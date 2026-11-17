@@ -1,0 +1,60 @@
+{
+  "model_id": "L1-c",
+  "level": 1,
+  "phase": "test",
+  "config": {
+    "family": "small_mlp",
+    "view": "price",
+    "centered": false,
+    "alpha": 0.01,
+    "dropout": 0.2
+  },
+  "representation": "R3",
+  "flags": null,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "frozen_config_sha256": "38b12b6f6e92b75ad9d657fa7815d58046cdb3080e776cc5d8c366b8e4d7d690",
+  "encoder_sources": {
+    "development": {},
+    "test": {}
+  },
+  "exploratory": true,
+  "test_used_for_selection": false,
+  "new_fits": 0,
+  "reuse_source": "src/task_3/output/model/improved_v1/final_test/price_matched",
+  "alias": null,
+  "written_at_wib": "2026-11-16T09:11:19.573559+07:00",
+  "training_row_counts": [
+    930
+  ],
+  "evaluation_row_counts": [
+    235
+  ],
+  "fit_rows": 930,
+  "evaluation_rows": 235,
+  "test_rows": 235,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "intervals.csv": "6e216fe15fbdc3e2605a45390281f39edff1a268094151dbe434f80a23cd0d41",
+    "seed_123.joblib": "07499281a5b0a765a79817975471dd51d2d53d159981f568f1d48142a0778267",
+    "fold_metrics.csv": "2b7419be071ef545b60b1f8b1e70c59684db57f37d01c355fac69ee57c4fca4b",
+    "per_class.csv": "dcd99a0c10a26a3746b6aa85fb48ed07514ac658604913cf0e044d183a1bcd4e",
+    "summary.csv": "b8012d725c85b3cb9d3b16ff2fca3f46481793bc5d6d276668a6548ac0f14dfb",
+    "seed_2026.joblib": "6fa263d3270efa4012c628ab8e5b9232d5c638d53744c2ae13ad5965d17159dd",
+    "history.csv": "dd9c20ec8d84dbfd8f12a3de0f47fee9a7027fef6df751cea26c4cb59ca67073",
+    "test_access.json": "de457188e220478ab3248c9d6304bd6de68e55ad1f35f183c165439589670242",
+    "bootstrap.npz": "49c220cc3b799b2ba23c1a16ec0fc2794786cefe37ba6b40bccdceec5a496ac8",
+    "fits.csv": "1e4a6c2070854530a3049b9a8a4dbcf3568771ea4b2630fe7fbee7a93226332d",
+    "refit_records.csv": "1e4a6c2070854530a3049b9a8a4dbcf3568771ea4b2630fe7fbee7a93226332d",
+    "predictions.csv": "4da7b7fce3c9e692513965d78c3bb5f0eaa658204533f330e24a6d52e6c5a2a8",
+    "seed_42.joblib": "bfe27406d7ee9efcee53ab8927ea7e8cb3ca32760e2ca8c1881718efada913af",
+    "seed_metrics.csv": "2320af09e22eed56687b574c6a5a2c0b0b332be43411eb4473ce7c1252187fc1"
+  }
+}

@@ -1,0 +1,725 @@
+{
+  "frozen_at_wib": "2026-11-16T09:10:42.746742+07:00",
+  "authorization": "User explicitly requested final test for every ablation condition after the previous selected-only evaluation",
+  "base_protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "base_test_config_sha256": "ee1d7926c014d7d874aa18ff8c900d35b9a43379e43b81b32ef0ae8c97da478f",
+  "scope": "All fifteen primary notebook conditions plus the three existing extra controls; no VADER",
+  "conditions": [
+    {
+      "level": 1,
+      "model_id": "L1-a",
+      "representation": "R3",
+      "config": null,
+      "flags": null,
+      "epochs": {
+        "-1": 0
+      },
+      "seeds": [
+        -1
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/L1-a",
+      "alias_of": null
+    },
+    {
+      "level": 1,
+      "model_id": "L1-b",
+      "representation": "R3",
+      "config": null,
+      "flags": null,
+      "epochs": {
+        "-1": 0
+      },
+      "seeds": [
+        -1
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/L1-b",
+      "alias_of": null
+    },
+    {
+      "level": 1,
+      "model_id": "L1-c",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "price",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 19,
+        "123": 29,
+        "2026": 36
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/price_matched",
+      "alias_of": null
+    },
+    {
+      "level": 1,
+      "model_id": "L1-d",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 44,
+        "123": 6,
+        "2026": 9
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 1,
+      "model_id": "L1-e",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "availability",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 28,
+        "123": 40,
+        "2026": 32
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/availability_matched",
+      "alias_of": null
+    },
+    {
+      "level": 2,
+      "model_id": "R1",
+      "representation": "R1",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 1.0,
+        "dropout": 0.5
+      },
+      "flags": null,
+      "epochs": {
+        "42": 50,
+        "123": 17,
+        "2026": 36
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 2,
+      "model_id": "R2",
+      "representation": "R2",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 1.0,
+        "dropout": 0.5
+      },
+      "flags": null,
+      "epochs": {
+        "42": 11,
+        "123": 6,
+        "2026": 11
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 2,
+      "model_id": "R3",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 44,
+        "123": 6,
+        "2026": 9
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": "L1-d"
+    },
+    {
+      "level": 2,
+      "model_id": "R4",
+      "representation": "R4",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.5
+      },
+      "flags": null,
+      "epochs": {
+        "42": 50,
+        "123": 5,
+        "2026": 7
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 2,
+      "model_id": "T1",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 44,
+        "123": 6,
+        "2026": 11
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 3,
+      "model_id": "A000",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": [
+        0,
+        0,
+        0
+      ],
+      "epochs": {
+        "42": 44,
+        "123": 6,
+        "2026": 9
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/A000",
+      "alias_of": null
+    },
+    {
+      "level": 3,
+      "model_id": "A100",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": [
+        1,
+        0,
+        0
+      ],
+      "epochs": {
+        "42": 49,
+        "123": 5,
+        "2026": 7
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 3,
+      "model_id": "A010",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": [
+        0,
+        1,
+        0
+      ],
+      "epochs": {
+        "42": 9,
+        "123": 5,
+        "2026": 13
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 3,
+      "model_id": "A001",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": [
+        0,
+        0,
+        1
+      ],
+      "epochs": {
+        "42": 13,
+        "123": 6,
+        "2026": 9
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 3,
+      "model_id": "A111",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "text",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": [
+        1,
+        1,
+        1
+      ],
+      "epochs": {
+        "42": 18,
+        "123": 6,
+        "2026": 13
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": null,
+      "alias_of": null
+    },
+    {
+      "level": 1,
+      "model_id": "price_matched",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "price",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 19,
+        "123": 29,
+        "2026": 36
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/price_matched",
+      "alias_of": null
+    },
+    {
+      "level": 1,
+      "model_id": "price_tuned",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "price",
+        "centered": false,
+        "alpha": 1.0,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 23,
+        "123": 34,
+        "2026": 36
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/price_tuned",
+      "alias_of": null
+    },
+    {
+      "level": 1,
+      "model_id": "availability_matched",
+      "representation": "R3",
+      "config": {
+        "family": "small_mlp",
+        "view": "availability",
+        "centered": false,
+        "alpha": 0.01,
+        "dropout": 0.2
+      },
+      "flags": null,
+      "epochs": {
+        "42": 28,
+        "123": 40,
+        "2026": 32
+      },
+      "seeds": [
+        42,
+        123,
+        2026
+      ],
+      "reuse_source": "src/task_3/output/model/improved_v1/final_test/availability_matched",
+      "alias_of": null
+    }
+  ],
+  "selection": "Preserve every validation-selected configuration and each seed's median validation epoch; no test-driven changes or new grid",
+  "threshold": 0.5,
+  "refit_rows": 930,
+  "test_used_for_selection": false,
+  "reference_policy": "Reuse already verified identical refits; R3 aliases the identical L1-d model and predictions",
+  "test_history": "Repeated earlier test access; all comparisons exploratory; validation winner remains unchanged",
+  "input_amendments": {
+    "src/task_3/training/experiment.py": {
+      "before_sha256": "b228670d82eede25dd20065c082ab07234c0d4b5af31a7221c58cc96e8b833da",
+      "after_sha256": "67f0ca6a2623a4de7c4e95ba48372fbd23c4c47390967033dc8d14881beb59f4",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/experiment.py"
+    },
+    "src/task_3/training/run_all.py": {
+      "before_sha256": "045050dc5eda338c80df4a0ddb01518a6887c05f0d5a08be2631630d959abec4",
+      "after_sha256": "6a43836404e9255bd897d6f085a47ed75213bffcd3e70bb626b8e25de27f6688",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/run_all.py"
+    },
+    "src/task_3/training/PROTOCOL.md": {
+      "before_sha256": "09b52561a379ea5c0fd488a1923f3bdd27e9e7d44ba7a9579004f085b7b399ef",
+      "after_sha256": "b7d8991d13ab76bb78ea258e14c51c8ff7775c181ec20f0b787dcd17c6846424",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/PROTOCOL.md"
+    }
+  },
+  "notebook_amendments": {
+    "src/task_3/training/level_1/01_training_majority.ipynb": {
+      "before_sha256": "c9ba6de81814cae0e2b93bdec7f94576ff1b117f8934bf15639fd99ad9fcebf6",
+      "after_sha256": "a987ba5753ff9e0333205d9ee41ef86f25158deb1a5ba72755a2684516ad9d7a",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_1/01_training_majority.ipynb"
+    },
+    "src/task_3/training/level_1/05_market_news_availability.ipynb": {
+      "before_sha256": "57c0c9e1b1aca95517c5b1fbbccfc5e4af76805e4c588ac7392367ccc2f5521b",
+      "after_sha256": "dc937c7a864643c2fcafb351a3d32e313adaa51a4a59c7283e7e7b591e793b31",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_1/05_market_news_availability.ipynb"
+    },
+    "src/task_3/training/level_1/04_market_news_concat.ipynb": {
+      "before_sha256": "f7fb9184ec1cb62196562079429b48093bc72018e8fed5626f5087514064eff1",
+      "after_sha256": "57a7f80618418fb302e3467eee258a1a9739ad4da651d81cac8134b708ad0757",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_1/04_market_news_concat.ipynb"
+    },
+    "src/task_3/training/level_1/02_last_direction.ipynb": {
+      "before_sha256": "6aba3711a1b1311a795d787ccb335ca2fb40f7813f6352eda67085369c1a5ddf",
+      "after_sha256": "d7f942d5ca393655c1b177b21d021e86c8710177d03b5ce87335e8ae716b9e42",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_1/02_last_direction.ipynb"
+    },
+    "src/task_3/training/level_1/03_market_only.ipynb": {
+      "before_sha256": "187ad53e47021a5bbf8c047f1512a97859d791c4bff85ea3da7a8baed78e83c3",
+      "after_sha256": "60ccc4c7ddf6a589f7453ec8b5255a42c0bfb3dce38602c1ecc848e5e384f994",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_1/03_market_only.ipynb"
+    },
+    "src/task_3/training/level_2/01_tfidf_svd.ipynb": {
+      "before_sha256": "377577df11db05f38162cb4fb8a60f780f1cb9f8030d5868e49d1008d80a5340",
+      "after_sha256": "70fcf3cef933acd0a586d721643d922b6535e56f2b52a2232ea682b42e9b39f8",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_2/01_tfidf_svd.ipynb"
+    },
+    "src/task_3/training/level_2/02_pretrained_word2vec.ipynb": {
+      "before_sha256": "321237e50aadec285131f6493657daaf0fd9bdd91550bc3b3b3028c6ceb549b0",
+      "after_sha256": "17bed62b095082e4584cc9dd6d190607613d78eaa5a2393b4cbf8dda04e49770",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_2/02_pretrained_word2vec.ipynb"
+    },
+    "src/task_3/training/level_2/04_roberta_base.ipynb": {
+      "before_sha256": "2dd38cacece2e5b226e0ac69396cb25bc05343a5d4bdc1566b48c9a1c8028d21",
+      "after_sha256": "e5723bc8d92b36a3a729a36079c5f4801ef034809ef72f53e610b2f1226a7f76",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_2/04_roberta_base.ipynb"
+    },
+    "src/task_3/training/level_2/05_text_only.ipynb": {
+      "before_sha256": "560a35d9a22f386db9cd8e640f64468e903f2134afb5b6b0bf4edb00679724a4",
+      "after_sha256": "d5d442ce33596a9b8dd68b21118f70ff5cd9c84aa865f73e0068e69ec1d2d582",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_2/05_text_only.ipynb"
+    },
+    "src/task_3/training/level_2/03_finbert.ipynb": {
+      "before_sha256": "aac3c151e6796fc02ddf15727d06bef17f39b270dd15fd70752bf1b5ab66e69a",
+      "after_sha256": "93ccd52d18cafbf45b7a7104ea7913e42fab8349f9fddbdd561c1c80458fa225",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_2/03_finbert.ipynb"
+    },
+    "src/task_3/training/level_3/01_a000_mean_concat.ipynb": {
+      "before_sha256": "a72615277931a94f3dc0807c5a7b18c4759d5701e619095ab2e4f26b24b72588",
+      "after_sha256": "5132f50fb15f5d19f7d224f163e79f71832cdb7cfe698ee12992d668fa25e728",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_3/01_a000_mean_concat.ipynb"
+    },
+    "src/task_3/training/level_3/03_a010_cross_attention.ipynb": {
+      "before_sha256": "c9b9628c32455f808b2dce171d6b7c6fb993b1ff872bc3520ecabbf8526a62cf",
+      "after_sha256": "41c3ceeaf40a54b026ae5552a0f94ff8d53f35c7735d79c8eae06c1f25bb0876",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_3/03_a010_cross_attention.ipynb"
+    },
+    "src/task_3/training/level_3/04_a001_learned_gate.ipynb": {
+      "before_sha256": "7dde5f9ed943016341b7942ed3a95b515ede515d63a35a3975c7a1d3b7a19924",
+      "after_sha256": "dbca6df23d18c4f542a1b734898a8f5fdf10a5aab5eb698562fa6bc8ec18730d",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_3/04_a001_learned_gate.ipynb"
+    },
+    "src/task_3/training/level_3/05_a111_all_components.ipynb": {
+      "before_sha256": "5673aaf7a6f7804aa8005129ce715beb5c9df0a200521aefbc1b02a4063ccd2e",
+      "after_sha256": "5a827acb8e41ee629cab10e5a71c3b9abe9662a0e8cc2dd0382d742482f54f0b",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_3/05_a111_all_components.ipynb"
+    },
+    "src/task_3/training/level_3/02_a100_task_query_pooling.ipynb": {
+      "before_sha256": "0cefb6eb1f2e36635fc9e52d8ff08e40ecd1aa4d5ce1e6e4b304be3f6931fbee",
+      "after_sha256": "fb90ece66da3ba9726b9e1c459d398f4b95e8b2596e8bbf51ebb7c6f8eef9fac",
+      "snapshot": "src/task_3/output/model/improved_v1/all_conditions_test_v1/previous_scope/src/task_3/training/level_3/02_a100_task_query_pooling.ipynb"
+    }
+  },
+  "implementation_sha256": {
+    "src/task_3/training/all_tests.py": "8b201725272adfaf9c8b0bfd8a3b5f84f546eb22c81700bd5b8f523d4f30900d",
+    "src/task_3/training/experiment.py": "67f0ca6a2623a4de7c4e95ba48372fbd23c4c47390967033dc8d14881beb59f4",
+    "src/task_3/training/run_all.py": "6a43836404e9255bd897d6f085a47ed75213bffcd3e70bb626b8e25de27f6688",
+    "src/task_3/training/PROTOCOL.md": "b7d8991d13ab76bb78ea258e14c51c8ff7775c181ec20f0b787dcd17c6846424"
+  },
+  "input_sha256": {
+    "src/task_3/output/model/improved_v1/level_1/01_training_majority/run_metadata.json": "a5c349ce64e0fa3117b08c4cf1bb4e385de2b74cc789c000809f37791954ee2a",
+    "src/task_3/output/model/improved_v1/level_1/01_training_majority/fits.csv": "e935a9d48a245d7cc95fbda154b2bfc10e86606686cf41fab3fa1fd67742bcf3",
+    "src/task_3/output/model/improved_v1/level_1/01_training_majority/summary.csv": "c92e37727c91cd473f75c7967d1003e636fa79453755c0fc21c0b8f341c61642",
+    "src/task_3/output/model/improved_v1/level_1/01_training_majority/predictions.csv": "e8c6b57dbfe6cb59aecfc41a6d1ceb8e98f015b633aa81733b2ee2e4eda4450a",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/intervals.csv": "b3b8688d7c8e61f5a266c5b301c30e0cbcdf2f5585d20f2acc59ca8cf8298a27",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/fold_metrics.csv": "e2294d0dbfe0559a00f873ce769eee4790c3955c66e22ee4c741197e1a6753b2",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/per_class.csv": "a64d799af80ed8787e38db47b3f6e885b03cd09c479c9ddf3c212db3f68b629d",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/summary.csv": "eb2290a109de81f37ccc9c5f64830d92a7b1f6dbbd589b21fea4814cf7372f7c",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/history.csv": "f7ee36ded30ece2ec356ee54f61b6bc917d6b079052b09b720ff431ea0afae4b",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/test_access.json": "085736596ec650ced7409bbafb44b431064248de4e88325192e563e619b245e7",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/bootstrap.npz": "f2e04e2036765a8e998bcd9e2cefb24e6d42a34ed285e4312946337f188ac4a4",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/run_metadata.json": "9c1513d97adf08148423a4ff39d8c2464b3152e96192f8d3205fc06a78fa7cdb",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/fits.csv": "cea9484b0977eb57ba1afd81e28b221545b21bded2df03cf5e1d64378f387870",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/refit_records.csv": "cea9484b0977eb57ba1afd81e28b221545b21bded2df03cf5e1d64378f387870",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/predictions.csv": "f7c60a876a7db0084ab7bde6ab9db58941f62f1f765292fbc1a04ad447c0a38b",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/seed_metrics.csv": "568ec6d6726d5c81252f8f27365b954f678ddacbddd5da0fe11ff685d292103b",
+    "src/task_3/output/model/improved_v1/final_test/L1-a/seed_-1.joblib": "ed5476d5dffaa0bc2721c06bf2f07059dc57a01e40c8636a73984310f1d33188",
+    "src/task_3/output/model/improved_v1/level_1/02_last_direction/run_metadata.json": "53c7d9d8d75d3b5f26fa69a271e9dee5350e054d26bde6b96723a4b54763a13c",
+    "src/task_3/output/model/improved_v1/level_1/02_last_direction/fits.csv": "403e085e5d1890f34a8ee62e41ad3ff8205c0247b0fa1e59c42300cb41bc1fd2",
+    "src/task_3/output/model/improved_v1/level_1/02_last_direction/summary.csv": "cb8e7a5c50761a2fb7f53a5c0b26993d2f916742b88358cbdf88bf17868cb3ed",
+    "src/task_3/output/model/improved_v1/level_1/02_last_direction/predictions.csv": "2b9248e832e0072181169f6223fed149955d562f212d6a747b9eef197b0b6f88",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/intervals.csv": "a0832223912a76a99e23b56f5ab3b7c7778e03eb747406616e97e0e5c102a906",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/fold_metrics.csv": "34a53c562883d95b2138e70601754f7b053d1514d4f44c257de1638d075efbaf",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/per_class.csv": "8d59432e37e29e847117f3f8e75d40ef8c6fe25c3144d038877e0f92a54619dc",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/summary.csv": "f786050c57c26f25b16c31f275f8617183a24cff2dd00a9972ca0602481cb0a3",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/history.csv": "f7ee36ded30ece2ec356ee54f61b6bc917d6b079052b09b720ff431ea0afae4b",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/test_access.json": "21f7e4de090e9563a38f3a50dd3044d71ac6aad4d5998407fa2a4b20ca061238",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/bootstrap.npz": "8c330481d03fd801b49cd55ebf91160a0857a5226d2e708d53fae336b863a9b0",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/run_metadata.json": "6c8ef7fdc581c8dcf02acbddf84300e482ad63260237e73b5c9b7b820de8edd4",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/fits.csv": "cea9484b0977eb57ba1afd81e28b221545b21bded2df03cf5e1d64378f387870",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/refit_records.csv": "cea9484b0977eb57ba1afd81e28b221545b21bded2df03cf5e1d64378f387870",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/predictions.csv": "8b8b4960c36e4fbffb1e8c244dcccc5c6eb2c3c79b00e82f0a3dab361150a9b2",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/seed_metrics.csv": "1dc872515340b592b35f9897d0c9d8b70d397d99360819195d2dccec4a5280ee",
+    "src/task_3/output/model/improved_v1/final_test/L1-b/seed_-1.joblib": "7ff54c32f413eef47979993b9f3e64d2230b43fba1f2c778e660f9a94f2eecb2",
+    "src/task_3/output/model/improved_v1/level_1/03_market_only/run_metadata.json": "13a985a467875483e2bb21f28865149719c9a378e21f15155280534c494a777b",
+    "src/task_3/output/model/improved_v1/level_1/03_market_only/fits.csv": "ad1f53d2e3ced396e319a856514cde98d1a79c3f442d090deceed1ee4c3952f3",
+    "src/task_3/output/model/improved_v1/level_1/03_market_only/summary.csv": "b3588f0ffa71709ec69fa245592aface999f74b9ef5eb1d488d3e618c073e8f0",
+    "src/task_3/output/model/improved_v1/level_1/03_market_only/predictions.csv": "bdf05f86da1ad96609000ff94318cd85f7ae076d297852df423b55de58586a9d",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/intervals.csv": "6e216fe15fbdc3e2605a45390281f39edff1a268094151dbe434f80a23cd0d41",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/seed_123.joblib": "07499281a5b0a765a79817975471dd51d2d53d159981f568f1d48142a0778267",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/fold_metrics.csv": "2b7419be071ef545b60b1f8b1e70c59684db57f37d01c355fac69ee57c4fca4b",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/per_class.csv": "79418911f32399e4c7eed5d51d62bfaaefa28d63cb4c761890cbb35de48e4ba9",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/summary.csv": "b8012d725c85b3cb9d3b16ff2fca3f46481793bc5d6d276668a6548ac0f14dfb",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/seed_2026.joblib": "6fa263d3270efa4012c628ab8e5b9232d5c638d53744c2ae13ad5965d17159dd",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/history.csv": "dd9c20ec8d84dbfd8f12a3de0f47fee9a7027fef6df751cea26c4cb59ca67073",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/test_access.json": "633e1455a99a1524c88aeaf203322192f37c6999d77d35509c4471017f4b262b",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/bootstrap.npz": "49c220cc3b799b2ba23c1a16ec0fc2794786cefe37ba6b40bccdceec5a496ac8",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/run_metadata.json": "349083f6ba78f03eec6f1c945e5db9b4014067194979b57d6b4dc7cb96892277",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/fits.csv": "f039c82b9306e8bf14435f1349e3398602136fc8e82e93a03e68b77c875dc672",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/refit_records.csv": "f039c82b9306e8bf14435f1349e3398602136fc8e82e93a03e68b77c875dc672",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/predictions.csv": "13cdbde515bbdbee5ae1d36ce17dac856eeeb884ac3f1a3337b4d5206047dc65",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/seed_42.joblib": "bfe27406d7ee9efcee53ab8927ea7e8cb3ca32760e2ca8c1881718efada913af",
+    "src/task_3/output/model/improved_v1/final_test/price_matched/seed_metrics.csv": "48a73629c4b0b7650e06fae60dd0d6dc463ad44f2cb79a47053a5a0b4be940d4",
+    "src/task_3/output/model/improved_v1/level_1/04_market_news_concat/run_metadata.json": "5af010df101f359a67378358a8ebaa519c56a0aec60a0433f3a63ed13adfaf2b",
+    "src/task_3/output/model/improved_v1/level_1/04_market_news_concat/fits.csv": "5cc4a4c6bd38781ced3926e29313e4e535ab6d076e2aa23a636ba1e01e989aff",
+    "src/task_3/output/model/improved_v1/level_1/04_market_news_concat/summary.csv": "8b144617d70b3f27ee5e463bee61b8129ded633768763d965da2d153ff3a97e8",
+    "src/task_3/output/model/improved_v1/level_1/04_market_news_concat/predictions.csv": "58f6cb3c07ad7cf3f97ad53f9b974778ccaba267635e41b71d288634f755bf10",
+    "src/task_3/output/model/improved_v1/level_1/05_market_news_availability/run_metadata.json": "c41593a671776a9929ffd5c4b276313b2d756509a7a7e0db2b1e292d5d17864c",
+    "src/task_3/output/model/improved_v1/level_1/05_market_news_availability/fits.csv": "89b6f377fad5ff0eb38c217d866106a54cd738218cae1fd4a6f73a573744249c",
+    "src/task_3/output/model/improved_v1/level_1/05_market_news_availability/summary.csv": "383af8e02ef83b331bf3c5e241b0a132771c1cfe1f3601309e5809fb1551258c",
+    "src/task_3/output/model/improved_v1/level_1/05_market_news_availability/predictions.csv": "1c0c8609491543416f4ef384a667db0893907dd5a146688b48b772c5aacd5a36",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/intervals.csv": "a46b67f0a88c722c11f23855a762e36984b3bc1b6ed8e08461cce9747398fd94",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/seed_123.joblib": "974a77841a09829e8da36a7368f5c0d3b1b8dd065757ac8cc648dde4ee85b655",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/fold_metrics.csv": "d07f4d4e00e8c75fa7ce0e6b586af73a43b997d5966540712ab4cd3b0aa0426c",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/per_class.csv": "47f1cfce991b6413a2af51b32d5e5f5bb9503e6d31848a77d123422030a75e17",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/summary.csv": "b2ae1ad32a4cb93da4a9a4b4593b672df087a9f89ae96158f08fdeb767f1e84c",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/seed_2026.joblib": "b9270f08df094a346a57b2dbd2ed2e66a42ddfff4d5f3ef86b2cb1f6e2a79427",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/history.csv": "50d7f7572ce04273272eb63e89b3e56ab2fbd32d532ebf6cd72d8bc8c4ad753f",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/test_access.json": "0bf634f027e78e1f326c01890268a63d6f19e05cd8d06fc38f0a2fdb13b042be",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/bootstrap.npz": "6596632fe6ac8348f7b4cf5de47512074153f8a343055411abc88e250ed00d2b",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/run_metadata.json": "ba366fca5456440f1045efb72461d4f505ced442840d149116726e8403a1f887",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/fits.csv": "be7a4ef5d69b1ee0414431741dd293abbe6026290cdebcda25bf7b35ce4d32fd",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/refit_records.csv": "be7a4ef5d69b1ee0414431741dd293abbe6026290cdebcda25bf7b35ce4d32fd",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/predictions.csv": "b74ba9f3c0a30c71f5f112a3c3a90e56b0a107522cc79bae64d7c42e0f8ec7f0",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/seed_42.joblib": "32e01fceaf8060218ecaf6f2a9b0a57500eddc6617500008b01d86d3e8a6829c",
+    "src/task_3/output/model/improved_v1/final_test/availability_matched/seed_metrics.csv": "5f5b6aff161a30cf17228f806c2d3994db1f6bb8d4744a38d91161b6750b6d1a",
+    "src/task_3/output/model/improved_v1/level_2/01_tfidf_svd/run_metadata.json": "77d3f03485948ad963044a3e2ad65b00be6de31bb86ba6766cdb114327c59208",
+    "src/task_3/output/model/improved_v1/level_2/01_tfidf_svd/fits.csv": "42f7573da16644802829cbe48ed02f74962999e9ca4ba6be26d4a650515188c3",
+    "src/task_3/output/model/improved_v1/level_2/01_tfidf_svd/summary.csv": "16436c3f6f0c4dfb23087706fb3823e4160278ae1bcd4aee2436e6a7b4379681",
+    "src/task_3/output/model/improved_v1/level_2/01_tfidf_svd/predictions.csv": "e73e3d9ee93df0dae737c8fd9fbda8f52b8271f148710936ea2fef0254657b73",
+    "src/task_3/output/model/improved_v1/level_2/02_pretrained_word2vec/run_metadata.json": "08fc52a4beae05819912e4d6a6b31d7b1b367bfa36626c8f04e64c65539e59aa",
+    "src/task_3/output/model/improved_v1/level_2/02_pretrained_word2vec/fits.csv": "61cef3c9212454413a0180eaabad0478d7c28aebcde79a5253cccf6ce175ace9",
+    "src/task_3/output/model/improved_v1/level_2/02_pretrained_word2vec/summary.csv": "4199a7f65b5eeafc24f1d95505046b9898a6f1a30ed25c2309bfa5fad1e95788",
+    "src/task_3/output/model/improved_v1/level_2/02_pretrained_word2vec/predictions.csv": "36d1bbec64e275a1303a3b25ba3e5f46836e436904ffa140f4f234f267ebbd0d",
+    "src/task_3/output/model/improved_v1/level_2/03_finbert/run_metadata.json": "941e5c2ecbeb7e79adfb0ade490f79ce66d041fb551c0b1e9416cab9eefc6c03",
+    "src/task_3/output/model/improved_v1/level_2/03_finbert/fits.csv": "5cc4a4c6bd38781ced3926e29313e4e535ab6d076e2aa23a636ba1e01e989aff",
+    "src/task_3/output/model/improved_v1/level_2/03_finbert/summary.csv": "8b144617d70b3f27ee5e463bee61b8129ded633768763d965da2d153ff3a97e8",
+    "src/task_3/output/model/improved_v1/level_2/03_finbert/predictions.csv": "58f6cb3c07ad7cf3f97ad53f9b974778ccaba267635e41b71d288634f755bf10",
+    "src/task_3/output/model/improved_v1/level_2/04_roberta_base/run_metadata.json": "7cf53a66490aae6d7c5da28a7096da74f1284b523e29dbc5c0419ff66dc212dd",
+    "src/task_3/output/model/improved_v1/level_2/04_roberta_base/fits.csv": "d538d65259a6ae22a1b433c03f34033f575107e1a25eaeee5e52c24bdaf62593",
+    "src/task_3/output/model/improved_v1/level_2/04_roberta_base/summary.csv": "400704f2fb22e0c6c294136fcc04578f931c64ba67675e6749bf6521099568a4",
+    "src/task_3/output/model/improved_v1/level_2/04_roberta_base/predictions.csv": "7837152c94c9bcf5aa4e66e2dfd4c611d4e358e76fdd32603f4f9708010b017f",
+    "src/task_3/output/model/improved_v1/level_2/05_text_only/run_metadata.json": "b6e474af5138b38c51a043a12331208badebb35636bee7c1e09586bf0d883018",
+    "src/task_3/output/model/improved_v1/level_2/05_text_only/fits.csv": "ce25d0e32125f16a44731330e31837e25f5c67769d8f1f1792549be9e28dc0a1",
+    "src/task_3/output/model/improved_v1/level_2/05_text_only/summary.csv": "85f2f3f05b37603540bafad817ade1d3caa34b0becfceb0ece09f894f833f77a",
+    "src/task_3/output/model/improved_v1/level_2/05_text_only/predictions.csv": "2f11050f2c7558e8cb2acf9c84c55463bab5c13bb1082b2c7f3a83b4ca9aa98f",
+    "src/task_3/output/model/improved_v1/level_3/01_a000_mean_concat/run_metadata.json": "6cba91613780a81abc1bf0d42ac0f4573f40fdfa7c45d18487d1368aefebf89f",
+    "src/task_3/output/model/improved_v1/level_3/01_a000_mean_concat/fits.csv": "645e2dd47d6b432588877b1bd03335939e7f7dca8d168c38c4d18a32c13d6845",
+    "src/task_3/output/model/improved_v1/level_3/01_a000_mean_concat/summary.csv": "8b144617d70b3f27ee5e463bee61b8129ded633768763d965da2d153ff3a97e8",
+    "src/task_3/output/model/improved_v1/level_3/01_a000_mean_concat/predictions.csv": "f9239336f8b05b948b73aa2974613ff000340dcccdb6d9d3bfdc73d808c8ada7",
+    "src/task_3/output/model/improved_v1/final_test/A000/intervals.csv": "f4731cca0aa1f5beea2b365d8614dfdf07c067b31bc143cdc4a46391cb61cc15",
+    "src/task_3/output/model/improved_v1/final_test/A000/seed_123.joblib": "10fdb0f21f06b20ff1cc1b34590c2ab8c1d3a50276db24de660105c2a5e2f4a8",
+    "src/task_3/output/model/improved_v1/final_test/A000/fold_metrics.csv": "18149f546487232b0668228a949d108bf08b008a42633edb32309a708546a3c4",
+    "src/task_3/output/model/improved_v1/final_test/A000/per_class.csv": "9fde5b1404b49a18bd72bebfcdb3da120ff179796541b4e5b3a6c350b57e427b",
+    "src/task_3/output/model/improved_v1/final_test/A000/summary.csv": "61b012c4150ccd9b8340dc4edb7d0099c0f068fd44cdb2df671f9894fbf25c3e",
+    "src/task_3/output/model/improved_v1/final_test/A000/seed_2026.joblib": "160f25e3157a8552eb32c74fe9d859f0446d5180bf33f2969ed8b4aca5d5127e",
+    "src/task_3/output/model/improved_v1/final_test/A000/history.csv": "d12d9fce348c8c8017fc78cbb6b36661b5df1736e038c9a57133b96aa97a916a",
+    "src/task_3/output/model/improved_v1/final_test/A000/test_access.json": "a097a726a6ca8c6b1781419d7fc1aa0735727a35e981703c356501546aeb84de",
+    "src/task_3/output/model/improved_v1/final_test/A000/bootstrap.npz": "a4ed293919c2a0d35da14bc2fb39ffd4450bf82a0a78f895702accf20f42d4a1",
+    "src/task_3/output/model/improved_v1/final_test/A000/run_metadata.json": "48e81f83455b55d549c6fd05b38bcb8f508d248ea30cf3721545f6a494af607b",
+    "src/task_3/output/model/improved_v1/final_test/A000/fits.csv": "5bc0fbe7577c485ca4b836c70cea8239c22e0f3de2e1af13ffb564f98230d6d2",
+    "src/task_3/output/model/improved_v1/final_test/A000/refit_records.csv": "5bc0fbe7577c485ca4b836c70cea8239c22e0f3de2e1af13ffb564f98230d6d2",
+    "src/task_3/output/model/improved_v1/final_test/A000/predictions.csv": "17a43aeec8ef4744df2ca23a0561131f462b53c80dbfcf8cad31eca1c6819292",
+    "src/task_3/output/model/improved_v1/final_test/A000/seed_42.joblib": "bd90cc5e6d14ecf476febb2610051e7d38723d2d93480277c6957850de2ac019",
+    "src/task_3/output/model/improved_v1/final_test/A000/seed_metrics.csv": "36fd3ffb892c09e0d3fbb8595681f0f9cf91acbbe7a8a3151f7418c7e6692665",
+    "src/task_3/output/model/improved_v1/level_3/02_a100_task_query_pooling/run_metadata.json": "ee8ee12cfd94caf79fd8a3cda5bc393427b47a0a124d5a79700eefd356091b74",
+    "src/task_3/output/model/improved_v1/level_3/02_a100_task_query_pooling/fits.csv": "2daa1ce8eda95b6bb419d612b217c19620dff0a9810f9cb2eb20778698da077e",
+    "src/task_3/output/model/improved_v1/level_3/02_a100_task_query_pooling/summary.csv": "1b3df92a5de160f6015b48bbf6df43654d098eba38f2c8faf5b27c4c24dc774f",
+    "src/task_3/output/model/improved_v1/level_3/02_a100_task_query_pooling/predictions.csv": "d340d22372878f5a194eecb2471dfc59bad87722af3a6828ad13e1596a293620",
+    "src/task_3/output/model/improved_v1/level_3/03_a010_cross_attention/run_metadata.json": "032d6423cb6feffdb58d52f62ed6238f768c0d496233d50b7aa342321690860c",
+    "src/task_3/output/model/improved_v1/level_3/03_a010_cross_attention/fits.csv": "a466a6e52d91856cb8ddbd9d0acf72dd41c4f41a8c44f2f399148bb9bebc0435",
+    "src/task_3/output/model/improved_v1/level_3/03_a010_cross_attention/summary.csv": "d0a4647696600dba6223fcd1b849f213d77605dfb6d048734a374d90e975d34a",
+    "src/task_3/output/model/improved_v1/level_3/03_a010_cross_attention/predictions.csv": "1ff804d6acf833e0d436032f56195dca72933779a1e090df625e15803f55bf13",
+    "src/task_3/output/model/improved_v1/level_3/04_a001_learned_gate/run_metadata.json": "6896d50a1eb888509450ab91826a6d0b1a5965c6f54b871b4e32a7d4f28db21c",
+    "src/task_3/output/model/improved_v1/level_3/04_a001_learned_gate/fits.csv": "202cceba6eea20b53e1bb4afdcd2f34b0ad27392a59b4412bda3e9763050aea0",
+    "src/task_3/output/model/improved_v1/level_3/04_a001_learned_gate/summary.csv": "4055dbb34b0b77784b8fa00c2f9f1a1c013bcb35e99292772788c7980468449c",
+    "src/task_3/output/model/improved_v1/level_3/04_a001_learned_gate/predictions.csv": "7584b71fc9a7503bce5b6e1638a9701a98832e56b3d20b7436ae9756bd21a1da",
+    "src/task_3/output/model/improved_v1/level_3/05_a111_all_components/run_metadata.json": "eb8f8fc6a4b4fed0c63655058f5e546ba0a94a58c5fbcfc0fe49974736ffbba7",
+    "src/task_3/output/model/improved_v1/level_3/05_a111_all_components/fits.csv": "c60ab92c4748e1c70da23164ca926f813115622f75c8a2665741104dc9575d60",
+    "src/task_3/output/model/improved_v1/level_3/05_a111_all_components/summary.csv": "3e084806ca74f231a440716140ccf3c4106126c170215e76398872c6bdd017e1",
+    "src/task_3/output/model/improved_v1/level_3/05_a111_all_components/predictions.csv": "5f010337f8b9cdf2bffbcd1e57d39e09781f387c96b985952617d3b872a47d26",
+    "src/task_3/output/model/improved_v1/level_1/price_matched/run_metadata.json": "250057c65d6ee534fa2470766ecbdf8cb1c6dbbe1073b1424d2d8d65f40578e7",
+    "src/task_3/output/model/improved_v1/level_1/price_matched/fits.csv": "df03c07fe80510ca7aedc3661623e522584f0bba8223ec7a81894951eefb2516",
+    "src/task_3/output/model/improved_v1/level_1/price_matched/summary.csv": "b3588f0ffa71709ec69fa245592aface999f74b9ef5eb1d488d3e618c073e8f0",
+    "src/task_3/output/model/improved_v1/level_1/price_matched/predictions.csv": "4ecac7a9f991c61f078a9cc156922d3e988ac836e33edf5a6a005384ff5264ec",
+    "src/task_3/output/model/improved_v1/level_1/price_tuned/run_metadata.json": "f510a5e569f384420c36578089a3030ba6f16750eb9c79d6e8665eb93afedbd5",
+    "src/task_3/output/model/improved_v1/level_1/price_tuned/fits.csv": "a97aee31c4e0d0129daf6dff27c110e221f7007591db21b80f9fb2c0ebd17df6",
+    "src/task_3/output/model/improved_v1/level_1/price_tuned/summary.csv": "4b32f300c8ea15f1c6743907214fd8ea834c8ce860c49b7acc6e8066440c5d85",
+    "src/task_3/output/model/improved_v1/level_1/price_tuned/predictions.csv": "a1210c8870392369964153990345e88cdc0a81724a84b1835366ee4ae05e8c5c",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/intervals.csv": "274fc60628aa5f5590d735681b02469b45702292138069191114e478fb970298",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/seed_123.joblib": "cb43b0dc011fc07aaa7dd217168bcd5152eb7488f6662fd3dc4dd98f710e2c9b",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/fold_metrics.csv": "5ae8b5519fda1ab9d160e392c94dbc5c86717a7c76e8f9e42eb6547c763f8acc",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/per_class.csv": "7376502b42229a1330154ea421700f1c3011e666f0dc8ba239a2a3a6aed62378",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/summary.csv": "435e4a71506b283a68e902e597669297ac53f1bbf16d2d517f400614cf6d00be",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/seed_2026.joblib": "f2ff6834f6b0fcba639d3cd71cd939e6ddb69d44e4af3406e40e8a599a7e2c83",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/history.csv": "29aa250f1058103a5db6c748f09a6b913b7a2129411d15425c7c2857987577d3",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/test_access.json": "40a56c34092befd88e17e60e5b7d6f48842ce5cc5f78c06c53384344f79715c7",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/bootstrap.npz": "15a443ceeb5af1d1ad7317bbb4b37a9b0860f3f18dcf34cf7cca77503760ebf0",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/run_metadata.json": "824047ae91e5f68eb3b8fa7163a426e29fb1967cd19ba95938aa2ec59ee0998b",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/fits.csv": "9a62fb0812c4f9ea4bc79a8f6def9ef2e9a1f63bbf0b598dc28deb7aaa5e9ec2",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/refit_records.csv": "9a62fb0812c4f9ea4bc79a8f6def9ef2e9a1f63bbf0b598dc28deb7aaa5e9ec2",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/predictions.csv": "10047ba13054df39a8fe6660136ef03a2067e20aa9030e75a8f67d117d341546",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/seed_42.joblib": "22ea20e70a2d17f2734b7dbb7696f23cf34bdbb6393f01c62171672b6d7fc993",
+    "src/task_3/output/model/improved_v1/final_test/price_tuned/seed_metrics.csv": "a24205c081d323b848347d1650219673c372be8ba57a3cecb4d0f63dbffbf97f",
+    "src/task_3/output/model/improved_v1/level_1/availability_matched/run_metadata.json": "fb564d57ff0c7ea08a891eb5ffdc071398fecd002dab01601c3b94ae90a34895",
+    "src/task_3/output/model/improved_v1/level_1/availability_matched/fits.csv": "f0894c738ee391082d6a18b51d9552628c632956b4748850f6e9af73a2c90cd3",
+    "src/task_3/output/model/improved_v1/level_1/availability_matched/summary.csv": "383af8e02ef83b331bf3c5e241b0a132771c1cfe1f3601309e5809fb1551258c",
+    "src/task_3/output/model/improved_v1/level_1/availability_matched/predictions.csv": "0a614d57696c56b37112943d9c37991d56b7c5d5b72dc989c1caf9d50e56d5a1"
+  }
+}

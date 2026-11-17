@@ -1,0 +1,7 @@
+{
+  "accessed_at_wib": "2026-11-16T09:11:34.776775+07:00",
+  "frozen_config_sha256": "38b12b6f6e92b75ad9d657fa7815d58046cdb3080e776cc5d8c366b8e4d7d690",
+  "refit_records_sha256": "a0b794d39204f85a7cf6c9dd227163df35dd514b68580012489aee3f77aeb360",
+  "models_reused": true,
+  "source": "src/task_3/output/model/improved_v1/final_test/availability_matched"
+}

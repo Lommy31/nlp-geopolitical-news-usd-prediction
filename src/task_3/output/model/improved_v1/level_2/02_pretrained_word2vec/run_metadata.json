@@ -1,0 +1,183 @@
+{
+  "model_id": "R2",
+  "level": 2,
+  "phase": "validation",
+  "config": {
+    "family": "small_mlp",
+    "view": "text",
+    "centered": false,
+    "alpha": 1.0,
+    "dropout": 0.5
+  },
+  "representation": "R2",
+  "flags": null,
+  "text_only": false,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "encoder_sources": {
+    "1": {
+      "path": "src/task_3/output/model/encoders/word2vec/articles_00691734005703a07298.npz",
+      "sha256": "02ac163d62384c62dda5194efa6e46febb6578b5b6c63cc6f9b41ff4ad89a69d",
+      "spec": {
+        "recipe": {
+          "model": "word2vec-google-news-300",
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "native_dimension": 300,
+          "padded_width": 768,
+          "token_view": "tokens_word2vec",
+          "case_sensitive": true,
+          "lowercase_fallback": false,
+          "automatic_phrase_joining": false,
+          "word_pooling": "Mean of in-vocabulary token occurrences; all-OOV articles remain zero",
+          "window_pooling": "Uniform article mean including zero vectors",
+          "project_text_training": false
+        },
+        "pooling_dtype": "float64",
+        "native_dimension": 300,
+        "ordered_articles_sha256": "5535216275431910e9c45b50cf28c9dd0ac9d89decf343d3e56c17098ca0c213"
+      },
+      "encoder_info": {
+        "pretrained": {
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "source_md5": "a5e5354d40acb95f9ec66d5977d140ef",
+          "source_vocabulary": 3000000,
+          "requested_tokens": 50972,
+          "matched_tokens": 36086,
+          "subset_vectors_sha256": "d2064d094eb4e9ae1d7019a4b330ad1f779bfb4c2357c705e26589744b5a9c04",
+          "extraction_seconds": 27.34743872800027
+        },
+        "subset_cache": "/home/lenovo/UGM/assignment/semester_5/nlp/nlp-geopolitical-news-usd-prediction/src/task_3/output/model/encoders/word2vec/subset_641f1f9f18ddd787b97d.npz",
+        "subset_sha256": "e12c499a7c839107be9ef3101ab40069bcb97e92204a848ef0c5b592a147081d",
+        "vectors_sha256": "992a83ef7c96b2cf19aeb767c9c73ba504f69ba2f4b25b643cee320efe5adb89",
+        "trainable_encoder_parameters": 0
+      }
+    },
+    "2": {
+      "path": "src/task_3/output/model/encoders/word2vec/articles_00691734005703a07298.npz",
+      "sha256": "02ac163d62384c62dda5194efa6e46febb6578b5b6c63cc6f9b41ff4ad89a69d",
+      "spec": {
+        "recipe": {
+          "model": "word2vec-google-news-300",
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "native_dimension": 300,
+          "padded_width": 768,
+          "token_view": "tokens_word2vec",
+          "case_sensitive": true,
+          "lowercase_fallback": false,
+          "automatic_phrase_joining": false,
+          "word_pooling": "Mean of in-vocabulary token occurrences; all-OOV articles remain zero",
+          "window_pooling": "Uniform article mean including zero vectors",
+          "project_text_training": false
+        },
+        "pooling_dtype": "float64",
+        "native_dimension": 300,
+        "ordered_articles_sha256": "5535216275431910e9c45b50cf28c9dd0ac9d89decf343d3e56c17098ca0c213"
+      },
+      "encoder_info": {
+        "pretrained": {
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "source_md5": "a5e5354d40acb95f9ec66d5977d140ef",
+          "source_vocabulary": 3000000,
+          "requested_tokens": 50972,
+          "matched_tokens": 36086,
+          "subset_vectors_sha256": "d2064d094eb4e9ae1d7019a4b330ad1f779bfb4c2357c705e26589744b5a9c04",
+          "extraction_seconds": 27.34743872800027
+        },
+        "subset_cache": "/home/lenovo/UGM/assignment/semester_5/nlp/nlp-geopolitical-news-usd-prediction/src/task_3/output/model/encoders/word2vec/subset_641f1f9f18ddd787b97d.npz",
+        "subset_sha256": "e12c499a7c839107be9ef3101ab40069bcb97e92204a848ef0c5b592a147081d",
+        "vectors_sha256": "992a83ef7c96b2cf19aeb767c9c73ba504f69ba2f4b25b643cee320efe5adb89",
+        "trainable_encoder_parameters": 0
+      }
+    },
+    "3": {
+      "path": "src/task_3/output/model/encoders/word2vec/articles_00691734005703a07298.npz",
+      "sha256": "02ac163d62384c62dda5194efa6e46febb6578b5b6c63cc6f9b41ff4ad89a69d",
+      "spec": {
+        "recipe": {
+          "model": "word2vec-google-news-300",
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "native_dimension": 300,
+          "padded_width": 768,
+          "token_view": "tokens_word2vec",
+          "case_sensitive": true,
+          "lowercase_fallback": false,
+          "automatic_phrase_joining": false,
+          "word_pooling": "Mean of in-vocabulary token occurrences; all-OOV articles remain zero",
+          "window_pooling": "Uniform article mean including zero vectors",
+          "project_text_training": false
+        },
+        "pooling_dtype": "float64",
+        "native_dimension": 300,
+        "ordered_articles_sha256": "5535216275431910e9c45b50cf28c9dd0ac9d89decf343d3e56c17098ca0c213"
+      },
+      "encoder_info": {
+        "pretrained": {
+          "source_sha256": "cdd97c3b73abcd8e1437ad3837b8faf98fc21258f61f031721fe3e2096ed89d9",
+          "source_md5": "a5e5354d40acb95f9ec66d5977d140ef",
+          "source_vocabulary": 3000000,
+          "requested_tokens": 50972,
+          "matched_tokens": 36086,
+          "subset_vectors_sha256": "d2064d094eb4e9ae1d7019a4b330ad1f779bfb4c2357c705e26589744b5a9c04",
+          "extraction_seconds": 27.34743872800027
+        },
+        "subset_cache": "/home/lenovo/UGM/assignment/semester_5/nlp/nlp-geopolitical-news-usd-prediction/src/task_3/output/model/encoders/word2vec/subset_641f1f9f18ddd787b97d.npz",
+        "subset_sha256": "e12c499a7c839107be9ef3101ab40069bcb97e92204a848ef0c5b592a147081d",
+        "vectors_sha256": "992a83ef7c96b2cf19aeb767c9c73ba504f69ba2f4b25b643cee320efe5adb89",
+        "trainable_encoder_parameters": 0
+      }
+    }
+  },
+  "alias": false,
+  "new_fits": 9,
+  "written_at_wib": "2026-11-16T02:34:28.155774+07:00",
+  "training_row_counts": [
+    453,
+    612,
+    772
+  ],
+  "evaluation_row_counts": [
+    475
+  ],
+  "fit_rows": null,
+  "evaluation_rows": 475,
+  "test_rows": 0,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "fold_2_seed_2026.joblib": "fb6e767d470132606eeb2419a7077a77a0322f9b40eb1e7750a6daed2bf98b27",
+    "intervals.csv": "bf6f7384043a667bd453aef6b67d838d5dfdc74ac22a4fa90fc3af7ea533b289",
+    "logistic_C0.01_fold_3.joblib": "08b883c635e1b90d89cf3fcc9a7bb36cc2c04af3ed122555d40418067551cb94",
+    "logistic_C0.1_fold_3.joblib": "dab7d723530a60d31352880be247bfe0ca737f25a98d365fe3577cf4590dadd6",
+    "fold_1_seed_2026.joblib": "061da47680c01a70eead4ab15a1ef67622f4dff788c7571803228a607acad205",
+    "fold_3_seed_123.joblib": "a16442e740aa65ada49a319afffda3b803ce4553115e9c32a8f20953c1b8c674",
+    "fold_2_seed_42.joblib": "cdb56a7066d5abe8940b3bec8dff3bf2079dfbe74a4762e0c94b454355b4be41",
+    "fold_metrics.csv": "b1ff364ade4d4ae427a50817a13495ce92f15d6219faa6e6af85efd0d65e07f2",
+    "per_class.csv": "6a3fe6047aacaa1d7686c5c1b8b23d30183cd465616d5f7618c098442b739881",
+    "summary.csv": "4199a7f65b5eeafc24f1d95505046b9898a6f1a30ed25c2309bfa5fad1e95788",
+    "history.csv": "a13e3f43eb1c14de2b436563fc9c1803913ad339232d2d9ad52cc54dcdc6332a",
+    "diagnostics.csv": "fc9f802e04913327563f7fbbcafcd439b86553c461d67096d014ea9faf1b00be",
+    "logistic_comparison.csv": "0e55b5be4d29f0841563bec6e0960e858c99b0c0ecd8eb82fecd053f6f74ded9",
+    "bootstrap.npz": "80338ddacb6c77eedbabfa04ea663d88be6b806500e74d1b289d44ace7fe3137",
+    "fold_3_seed_2026.joblib": "368d4ff3534911f6f26a48e46b0bbd29aa9f3a32a10905773e72cf8a7082451a",
+    "fits.csv": "61cef3c9212454413a0180eaabad0478d7c28aebcde79a5253cccf6ce175ace9",
+    "fold_1_seed_123.joblib": "ad60b52c2f702cf37d19482ec17979c0413673b8f0d9655a9c295ed9368483a4",
+    "logistic_failures.json": "eac95d812a4fdd167bd592dc357784c9316d5084b0fcfa908f8da7d40b10aa67",
+    "logistic_C0.01_fold_2.joblib": "b5b19174f924f938a9584a6c3b21d0475a3deae7d06731a523d9067ed0782e4b",
+    "fold_3_seed_42.joblib": "4d5e53e8221d4dae7e044b413039af433075d515e619c1f0a2cbec650ab640c4",
+    "fold_2_seed_123.joblib": "e6fb14aaad9a2e29df2b66c89abb1961ad27f87a418789b50d9d95f26c08ee24",
+    "logistic_C0.1_fold_1.joblib": "9a473da9210ff667f823b47e903a7c1ffb9ce652801b7085068cab0d420c6479",
+    "predictions.csv": "36d1bbec64e275a1303a3b25ba3e5f46836e436904ffa140f4f234f267ebbd0d",
+    "seed_metrics.csv": "de051bc7829dc1634b1cdefbf7b4d99ad3f782631da3f2be36cc2e95591823a8",
+    "logistic_C0.01_fold_1.joblib": "b58fdb86b07d8d1b2da3d3a8ac52ec8e6205d348a6fd0392c8148377dc1cd14c",
+    "fold_1_seed_42.joblib": "accd4ac06534807ef3ec57f6f7c6979bfc7aab0f45f32733048b2373d63f2f9a",
+    "splits.csv": "04a30a822a4f2a0f34ab453a80514bb906dac766fe042f25813102b3c0133aab",
+    "logistic_metrics.csv": "eb14f960d833071beb842ca899fd6b07a9c518b0a4d2dbc8500f619d237ac81d",
+    "logistic_C0.1_fold_2.joblib": "6e9cf717336ac58751c8dd7343342f6a3c7f618c55b2ab7612936cc5b880b224"
+  }
+}

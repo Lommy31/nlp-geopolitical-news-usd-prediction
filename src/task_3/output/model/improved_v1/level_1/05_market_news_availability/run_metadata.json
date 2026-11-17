@@ -1,0 +1,78 @@
+{
+  "model_id": "L1-e",
+  "level": 1,
+  "phase": "validation",
+  "config": {
+    "family": "small_mlp",
+    "view": "availability",
+    "centered": false,
+    "alpha": 0.01,
+    "dropout": 0.2
+  },
+  "representation": "R3",
+  "flags": null,
+  "text_only": false,
+  "protocol_sha256": "0ad13dc9acecf4aa4fea1ebdc99b78dd81ca938ee15c2ad44084bc30cf9775ac",
+  "encoder_sources": {
+    "1": {},
+    "2": {},
+    "3": {}
+  },
+  "alias": false,
+  "new_fits": 9,
+  "written_at_wib": "2026-11-16T02:33:03.159423+07:00",
+  "training_row_counts": [
+    453,
+    612,
+    772
+  ],
+  "evaluation_row_counts": [
+    475
+  ],
+  "fit_rows": null,
+  "evaluation_rows": 475,
+  "test_rows": 0,
+  "test_used_for_fitting_or_stopping": false,
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "aggregation": "Equal fold mean of individual-seed metrics; final-test mean across individual seeds; no ensemble",
+  "uncertainty": "Paired temporal blocks of ten decisions, conditional on fitted models; selection uncertainty omitted",
+  "artifact_sha256": {
+    "fold_2_seed_2026.joblib": "e246c24b382b844ca105c1b363faba469a9151d56e7489e3b271fa9b14b56ff2",
+    "intervals.csv": "f7085bae22e17cb464b022a65be08d2e662a6ba80237c7e9a3547b73139ca5d0",
+    "logistic_C0.01_fold_3.joblib": "8115cbe85ff0ecd784b49a7e77e4012fbf5bec60af3f7068fd1481f2475de940",
+    "logistic_C0.1_fold_3.joblib": "2a73cf1451d2cde92c9365caa61ea2e323158896bad7fa0b73ffa47ff78952c2",
+    "fold_1_seed_2026.joblib": "0c195c8988f02bf1299979fd945b2fe0fb2d8a18c61ed13da703d02e6487a4bb",
+    "fold_3_seed_123.joblib": "cbdf5e898f9d8531d7866dcf65761eac38caf2baf952e6718d3f1f3b4ec90d3d",
+    "fold_2_seed_42.joblib": "0591846550f27e8753cf246cb4da7104051de458e808afc46d42aea1ddf920be",
+    "logistic_C1_fold_1.joblib": "aae9a1f3810441c33288c61b265706a787f94110c38973dcad061e1013edacd6",
+    "fold_metrics.csv": "828db0552bdff7f3d22441e801ed4db5b8d860ef7a53d2687a307558be24715d",
+    "per_class.csv": "95fe543e8ec9defb33d28d276870350c46cd7a8d0f2234791b487f5be23cf9f2",
+    "summary.csv": "383af8e02ef83b331bf3c5e241b0a132771c1cfe1f3601309e5809fb1551258c",
+    "history.csv": "c42a3567051b61a5f719dd3d8fcae9f3f0bace3af842606848bbe9fd4699a0bc",
+    "diagnostics.csv": "1b4814cf35916fd120ec25cb08e4b4c9ccdd0406d16f18af882802d75ac0eacb",
+    "logistic_comparison.csv": "2ea0d0c2040b0615427afcd605aad4b0145fc5384855fdfe7a01db530d423064",
+    "bootstrap.npz": "c8410b652044774186e1109372ee07fb8bc8ca2a8b39862bb485ebd5338ea6dd",
+    "fold_3_seed_2026.joblib": "42ff7aacdedc90a68b3e6b56b4038ef6e179f459f7ffe9f6fa853c9a4ac62dd4",
+    "fits.csv": "89b6f377fad5ff0eb38c217d866106a54cd738218cae1fd4a6f73a573744249c",
+    "fold_1_seed_123.joblib": "a23f181086db90cd1b68a7bcb2f9d926e2c5a26f4d21b668387efa7b198026db",
+    "logistic_failures.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "logistic_C0.01_fold_2.joblib": "fe134c919453b11a1d0723f26738a8fafe79a81a870b9d5af92007b9f5f31463",
+    "fold_3_seed_42.joblib": "de0bbb5e02fd8533d4b2bd59b0d252dce93061a94b46420f93d0bd87bbd9bd3c",
+    "fold_2_seed_123.joblib": "99e71d2b0ce76552a318c00c88406a97bce90b72f3adb35d8915e8beff2a9806",
+    "logistic_C0.1_fold_1.joblib": "29cda8bcc1977aee69d75552c9c48f07f4a1ee6d19418997d9a3126be94c880c",
+    "logistic_C1_fold_2.joblib": "eb817d4afabcb9000789e96a7379d8d87c37f2dadfab65c91289091faf7f6e62",
+    "predictions.csv": "1c0c8609491543416f4ef384a667db0893907dd5a146688b48b772c5aacd5a36",
+    "seed_metrics.csv": "541f9fdba5f32f41283b1f31f0905bb605e59114ae8542b1a8b0824bc002a60f",
+    "logistic_C1_fold_3.joblib": "eee6520250a538429c9c4c76329a1b96e969e044df35fccd947b3e569f095889",
+    "logistic_C0.01_fold_1.joblib": "4f4ab6e9c2c1bba8c81cce5e27cc542177d2d4f11c84a4a2e61164016fcb9357",
+    "fold_1_seed_42.joblib": "b2ebfe7e3fde0917452ebc4e389080b9cbdaebe38150b5c687306db931e1e07a",
+    "splits.csv": "04a30a822a4f2a0f34ab453a80514bb906dac766fe042f25813102b3c0133aab",
+    "logistic_metrics.csv": "601a9a6ba6ed3449b34f53e132a1e6b132fb05e3f151266727fb97c1e399a033",
+    "logistic_C0.1_fold_2.joblib": "c2624c071eddf719903073bc1e54430dc02c66f56cc8a9b2e56ef45f53ec77cc"
+  }
+}

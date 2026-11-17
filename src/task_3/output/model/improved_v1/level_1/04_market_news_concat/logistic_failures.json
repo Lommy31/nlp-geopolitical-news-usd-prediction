@@ -1,0 +1,27 @@
+[
+  {
+    "fold": 1,
+    "C": 1.0,
+    "reason": "Logistic regression did not converge."
+  },
+  {
+    "fold": 2,
+    "C": 0.1,
+    "reason": "Logistic regression did not converge."
+  },
+  {
+    "fold": 2,
+    "C": 1.0,
+    "reason": "Logistic regression did not converge."
+  },
+  {
+    "fold": 3,
+    "C": 0.1,
+    "reason": "Logistic regression did not converge."
+  },
+  {
+    "fold": 3,
+    "C": 1.0,
+    "reason": "Logistic regression did not converge."
+  }
+]
