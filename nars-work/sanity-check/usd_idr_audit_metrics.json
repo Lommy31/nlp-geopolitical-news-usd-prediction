@@ -1,0 +1,52 @@
+{
+  "input": "data/processed/usd_idr_jisdor_clean.csv",
+  "sha256": "faf181306cdb65c1d74f913ef698fe45008e721969372bb17f79175d20fe87a0",
+  "rows": 1202,
+  "valid_date_rows": 1202,
+  "first_date": "2021-09-01",
+  "last_date": "2026-09-01",
+  "weekday_counts": {
+    "Senin": 238,
+    "Selasa": 247,
+    "Rabu": 243,
+    "Kamis": 238,
+    "Jumat": 236,
+    "Sabtu": 0,
+    "Minggu": 0
+  },
+  "weekend_rows": 0,
+  "invalid_dates": [],
+  "invalid_values": [],
+  "duplicate_dates": [],
+  "dates_strictly_increasing_in_file": true,
+  "absent_monday_friday_dates": 103,
+  "expected_monday_friday_calendar_dates": 1305,
+  "longest_gaps": [
+    {
+      "previous_date": "2025-03-27",
+      "next_date": "2025-04-08",
+      "calendar_day_gap": 12
+    },
+    {
+      "previous_date": "2022-04-28",
+      "next_date": "2022-05-09",
+      "calendar_day_gap": 11
+    },
+    {
+      "previous_date": "2024-04-05",
+      "next_date": "2024-04-16",
+      "calendar_day_gap": 11
+    },
+    {
+      "previous_date": "2023-04-18",
+      "next_date": "2023-04-26",
+      "calendar_day_gap": 8
+    },
+    {
+      "previous_date": "2026-03-17",
+      "next_date": "2026-03-25",
+      "calendar_day_gap": 8
+    }
+  ],
+  "limitation": "No weekend rows proves only a property of this processed file. Missing weekdays are not classified as holidays; source rate values are not externally verified."
+}

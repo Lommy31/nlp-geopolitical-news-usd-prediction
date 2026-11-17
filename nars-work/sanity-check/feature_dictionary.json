@@ -1,0 +1,24 @@
+{
+  "event_columns": {
+    "BOJ / ECB Policy Shifts": "x_event_00",
+    "Banking & Financial Crisis": "x_event_01",
+    "Emerging Market Currency Contagion": "x_event_02",
+    "Federal Reserve Monetary Policy": "x_event_03",
+    "Indonesian Rupiah / Bank Indonesia Policy": "x_event_04",
+    "Middle East Conflict & Oil Shock": "x_event_05",
+    "Russia-Ukraine War & Sanctions": "x_event_06",
+    "Trump Tariffs / Global Trade War": "x_event_07",
+    "US Fiscal Stimulus + Rising Treasury Yields": "x_event_08",
+    "US Presidential Election": "x_event_09",
+    "US-China / Taiwan Tensions": "x_event_10"
+  },
+  "definitions": {
+    "x_news_count": "observed articles per trading day; zero means no collected article",
+    "x_domestic_count": "lead first 200 words mentions rupiah, Bank Indonesia, or USD/IDR",
+    "x_macro_count": "title + lead mentions predefined monetary/FX anchors (not validated relevance)",
+    "x_usd_title": "mean lexical USD direction in title; + strengthening, - weakening",
+    "x_usd_lead": "mean lexical USD direction in first 200 words",
+    "x_usd_full": "mean lexical USD direction across stored full text (contamination sensitivity)",
+    "x_fed_tilt": "mean hawkish-minus-dovish lexical count, gated on Fed mention, first 200 words"
+  }
+}
