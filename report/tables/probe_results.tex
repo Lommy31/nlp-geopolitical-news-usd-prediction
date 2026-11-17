@@ -1,0 +1,22 @@
+% Generated from eda-visualization/make_probe_table.py (development days only).
+\begin{table}[t]
+\centering
+\caption{Linear probe AUC (L2 logistic regression, five time-ordered folds on 930 development days) on day-mean vectors. Random: Gaussian vectors of the same size. Shuffled: direction permuted in blocks of ten, 100 runs.}
+\label{tab:probe}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\toprule
+Target & FinBERT & RoBERTa & W2V & Random \\
+\midrule
+Keyword: conflict & 0.88 & 0.86 & 0.88 & 0.49 \\
+Keyword: energy & 0.84 & 0.87 & 0.87 & 0.49 \\
+Keyword: rates/Fed & 0.88 & 0.89 & 0.90 & 0.51 \\
+Keyword: China & 0.78 & 0.76 & 0.77 & 0.49 \\
+\midrule
+Direction (UP/DOWN) & 0.49 & 0.46 & 0.50 & 0.53 \\
+Shuffled direction & 0.50 & 0.50 & 0.50 & 0.50 \\
+\quad 95\% range & .45--.54 & .46--.53 & .46--.53 & .46--.54 \\
+\bottomrule
+\end{tabular}
+\end{table}

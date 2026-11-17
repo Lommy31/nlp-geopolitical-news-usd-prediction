@@ -1,0 +1,17 @@
+% Copied from data/final/{train,val,test}.csv via eda-visualization/make_eda_figures.py.
+\begin{table}[t]
+    \caption{Decision periods. UP is the share of rising USD/IDR days.}
+    \label{tab:splits}
+    \centering
+    \scriptsize
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{lcccc}
+        \toprule
+        Split & Period & Decisions & UP (\%) & Articles/day \\
+        \midrule
+        Train & 2021-09-29 to 2024-12-12 & 772 & 56.6 & 14.1 \\
+        Validation & 2024-12-16 to 2025-08-26 & 158 & 50.0 & 12.3 \\
+        Test & 2025-08-29 to 2026-08-31 & 235 & 58.3 & 15.0 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
