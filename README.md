@@ -43,18 +43,6 @@ The reported run is `improved_v1`. Its results are under `src/task_3/output/mode
 - `all_conditions_test_v1/<condition>/predictions.csv`: per-day predictions used by the error figures.
 - `representation_selection.json`, `level_*/validation_summary.csv`: validation scores and the FinBERT choice.
 
-## Metrics and how to read them
-
-- **Accuracy.** Compare it with 0.583, the share of UP days in the test period. A rule that always says UP already scores 0.583, so equal accuracy means no skill.
-- **MCC.** 0 means no better than chance, negative means wrong more often than right. Any constant prediction has MCC 0.
-- **ROC-AUC.** 0.5 means the model ranks UP and DOWN days no better than a coin.
-- **Log loss.** Lower is better. A coin flip scores 0.693. The training prior, which ignores every input, scores 0.681 on the test period, so a useful model has to go below that.
-- **Intervals.** Paired circular block bootstrap, blocks of ten decisions, 1,000 resamples. They condition on the fitted models and ignore selection uncertainty.
-
-Reading the tables: almost every model has MCC near 0, AUC near 0.5, and accuracy equal to 0.583. Those models predict UP on every day. The tuned market-only model has the highest MCC (0.080), and it uses no text.
-
-Caveat the paper states too: the test period was opened several times by earlier experiments, so every test result here is exploratory.
-
 ## Where each figure and table comes from
 
 Scripts are in `report/eda-visualization/`. Run them from the repository root, for example `python report/eda-visualization/make_eda_figures.py`. Each writes a PDF to `report/figures/assets/` and a PNG next to the script.
